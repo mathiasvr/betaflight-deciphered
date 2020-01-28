@@ -508,7 +508,7 @@ Time for stage 1 to wait for recovery.
 - Allowed: `STAGE1, KILL, STAGE2`
 - BF Configurator: *Failsafe Switch Action*
 
-This option determines what happens when Failsafe is activated through AUX switch: ``Stage 1`` activates Stage 1 failsafe. This is useful if you want to simulate the exact signal loss failsafe behavior. ``Stage 2`` skips Stage 1 and activates the Stage 2 procedure immediately. ``Kill`` disarms instantly (your craft will crash).
+This option determines what happens when Failsafe is activated through AUX switch: `Stage 1` activates Stage 1 failsafe. This is useful if you want to simulate the exact signal loss failsafe behavior. `Stage 2` skips Stage 1 and activates the Stage 2 procedure immediately. `Kill` disarms instantly (your craft will crash).
 
 ## `failsafe_throttle_low_delay`
 - Default: `100`
@@ -749,21 +749,21 @@ Configures the mixer to expect the motor direction to be reversed and the propel
 - Default: `-`
 - Allowed: `Unknown`
 
-Name of the rate profile. Can be seen in OSD using `osd_rate_profile_name_pos`.
+Name of the rate profile. Can be seen in OSD using [osd_rate_profile_name_pos](#osd_rate_profile_name_pos).
 
 ## `thr_mid`
 - Default: `50`
 - Allowed: `0 - 100`
 - BF Configurator: *Throttle MID*
 
-Throttle Mid. The `thr_expo` is centered around this point. Usually this is set around the hovering point.
+Throttle Mid. The [thr_expo](#thr_expo) is centered around this point. Usually this is set around the hovering point.
 
 ## `thr_expo`
 - Default: `0`
 - Allowed: `0 - 100`
 - BF Configurator: *Throttle EXPO*
 
-Throttle Expo. Creates an exponential throttle curve around the `thr_mid` point. Used to increase throttle resolution, usually to support more fine-grained hovering.
+Throttle Expo. Creates an exponential throttle curve around the [thr_mid](#thr_mid) point. Used to increase throttle resolution, usually to support more fine-grained hovering.
 
 ## `rates_type`
 - Default: `BETAFLIGHT`
@@ -819,7 +819,7 @@ Throttle Expo. Creates an exponential throttle curve around the `thr_mid` point.
 - Allowed: `0 - 100`
 - BF Configurator: *TPA*
 
-Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond `tpa_breakpoint`. Used to eliminate fast oscillations at high throttle.
+Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond [tpa_breakpoint](#tpa_breakpoint). Used to eliminate fast oscillations at high throttle.
 
 ## `tpa_breakpoint`
 - Default: `1250`
@@ -839,14 +839,14 @@ Throttle PID Attenuation mode. Determines which PID gains should be reduced. Use
 - Allowed: `OFF, SCALE, CLIP`
 - BF Configurator: *Throttle Limit*
 
-Select how `throttle_limit_percent` should limit maximum throttle. ``OFF`` disables the feature. ``SCALE`` will transform the throttle range from 0 to the selected percentage using the full stick travel (linear throttle curve). ``CLIP`` will set a max throttle percentage and stick travel above that will have no additional effect.
+Select how [throttle_limit_percent](#throttle_limit_percent) should limit maximum throttle. `OFF` disables the feature. `SCALE` will transform the throttle range from 0 to the selected percentage using the full stick travel (linear throttle curve). `CLIP` will set a max throttle percentage and stick travel above that will have no additional effect.
 
 ## `throttle_limit_percent`
 - Default: `100`
 - Allowed: `25 - 100`
 - BF Configurator: *Throttle Limit %*
 
-Sets the desired maximum throttle percentage, according to `throttle_limit_type`.
+Sets the desired maximum throttle percentage, according to [throttle_limit_type](#throttle_limit_type).
 
 ## `roll_rate_limit`
 - Default: `1998`
@@ -1320,21 +1320,21 @@ Integrated Yaw is a feature which corrects a fundamental issue with quad control
 - Allowed: `0 - 100`
 - BF Configurator: *D Min Roll*
 
-Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_pitch`).
+Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_pitch](#d_pitch)).
 
 ## `d_min_pitch`
 - Default: `22`
 - Allowed: `0 - 100`
 - BF Configurator: *D Min Pitch*
 
-Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_pitch`).
+Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_pitch](#d_pitch)).
 
 ## `d_min_yaw`
 - Default: `0`
 - Allowed: `0 - 100`
 - BF Configurator: * D Min Yaw*
 
-Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_yaw`).
+Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_yaw](#d_yaw)).
 
 ## `d_min_boost_gain`
 - Default: `27`
@@ -2320,25 +2320,25 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 - Allowed: `DEFAULT, CW0, CW90, CW180, CW270, CW0FLIP, CW90FLIP, CW180FLIP, CW270FLIP, CUSTOM`
 - BF Configurator: *First GYRO*
 
-GUESS: Alignment of the first gyro sensor. Represented as a rotation string in degrees, e.g. 'CW90'. This seems to be closely coupled with the `gyro_1_align_*` variables.
+GUESS: Alignment of the first gyro sensor. Represented as a rotation string in degrees, e.g. 'CW90'. This seems to be closely coupled with the [gyro_1_align_*](#gyro_1_align_roll) variables.
 
 ## `gyro_1_align_roll`
 - Default: `0`
 - Allowed: `-3600 - 3600`
 
-Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator.
+Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
 
 ## `gyro_1_align_pitch`
 - Default: `0`
 - Allowed: `-3600 - 3600`
 
-Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator.
+Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
 
 ## `gyro_1_align_yaw`
 - Default: `0`
 - Allowed: `-3600 - 3600`
 
-Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator.
+Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
 
 ## `gyro_2_bustype`
 - Default: `SPI`
@@ -2360,25 +2360,25 @@ Assigns how the gyro sensor yaw axis is aligned, independent of board alignment.
 - Default: `CW0`
 - Allowed: `DEFAULT, CW0, CW90, CW180, CW270, CW0FLIP, CW90FLIP, CW180FLIP, CW270FLIP, CUSTOM`
 
-Like `gyro_1_sensor_align`, but for the second gyro sensor.
+Like [gyro_1_sensor_align](#gyro_1_sensor_align), but for the second gyro sensor.
 
 ## `gyro_2_align_roll`
 - Default: `0`
 - Allowed: `-3600 - 3600`
 
-Like `gyro_1_align_roll`, but for the second gyro sensor.
+Like [gyro_1_align_roll](#gyro_1_align_roll), but for the second gyro sensor.
 
 ## `gyro_2_align_pitch`
 - Default: `0`
 - Allowed: `-3600 - 3600`
 
-Like `gyro_1_align_pitch`, but for the second gyro sensor.
+Like [gyro_1_align_pitch](#gyro_1_align_pitch), but for the second gyro sensor.
 
 ## `gyro_2_align_yaw`
 - Default: `0`
 - Allowed: `-3600 - 3600`
 
-Like `gyro_1_align_yaw`, but for the second gyro sensor.
+Like [gyro_1_align_yaw](#gyro_1_align_yaw), but for the second gyro sensor.
 
 ## `i2c1_pullup`
 - Default: `OFF`
@@ -2469,14 +2469,14 @@ Like `gyro_1_align_yaw`, but for the second gyro sensor.
 - Allowed: `Unknown`
 - BF Configurator: *Craft Name*
 
-Name of the craft. Used in log and config files, and can be displayed in OSD with `osd_craft_name_pos`.
+Name of the craft. Used in log and config files, and can be displayed in OSD with [osd_craft_name_pos](#osd_craft_name_pos).
 
 ## `display_name`
 - Default: `-`
 - Allowed: `Unknown`
 - BF Configurator: *Display Name*
 
-Text that can be displayed in OSD with `osd_display_name_pos`. E.g. name of the pilot.
+Text that can be displayed in OSD with [osd_display_name_pos](#osd_display_name_pos). E.g. name of the pilot.
 
 ## `position_alt_source`
 - Default: `DEFAULT`

@@ -342,7 +342,7 @@
     "desc": ""
   },
   "failsafe_switch_mode": {
-    "desc": "This option determines what happens when Failsafe is activated through AUX switch: ``Stage 1`` activates Stage 1 failsafe. This is useful if you want to simulate the exact signal loss failsafe behavior. ``Stage 2`` skips Stage 1 and activates the Stage 2 procedure immediately. ``Kill`` disarms instantly (your craft will crash).",
+    "desc": "This option determines what happens when Failsafe is activated through AUX switch: `Stage 1` activates Stage 1 failsafe. This is useful if you want to simulate the exact signal loss failsafe behavior. `Stage 2` skips Stage 1 and activates the Stage 2 procedure immediately. `Kill` disarms instantly (your craft will crash).",
     "aka": "Failsafe Switch Action"
   },
   "failsafe_throttle_low_delay": {
@@ -508,14 +508,14 @@
     "desc": ""
   },
   "rateprofile_name": {
-    "desc": "Name of the rate profile. Can be seen in OSD using `osd_rate_profile_name_pos`."
+    "desc": "Name of the rate profile. Can be seen in OSD using [osd_rate_profile_name_pos](#osd_rate_profile_name_pos)."
   },
   "thr_mid": {
-    "desc": "Throttle Mid. The `thr_expo` is centered around this point. Usually this is set around the hovering point.",
+    "desc": "Throttle Mid. The [thr_expo](#thr_expo) is centered around this point. Usually this is set around the hovering point.",
     "aka": "Throttle MID"
   },
   "thr_expo": {
-    "desc": "Throttle Expo. Creates an exponential throttle curve around the `thr_mid` point. Used to increase throttle resolution, usually to support more fine-grained hovering.",
+    "desc": "Throttle Expo. Creates an exponential throttle curve around the [thr_mid](#thr_mid) point. Used to increase throttle resolution, usually to support more fine-grained hovering.",
     "aka": "Throttle EXPO"
   },
   "rates_type": {
@@ -558,7 +558,7 @@
     "aka": "Yaw Super Rate"
   },
   "tpa_rate": {
-    "desc": "Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond `tpa_breakpoint`. Used to eliminate fast oscillations at high throttle.",
+    "desc": "Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond [tpa_breakpoint](#tpa_breakpoint). Used to eliminate fast oscillations at high throttle.",
     "aka": "TPA"
   },
   "tpa_breakpoint": {
@@ -569,11 +569,11 @@
     "desc": "Throttle PID Attenuation mode. Determines which PID gains should be reduced. Used to be both P and D, but by default only D since Betaflight 4.0."
   },
   "throttle_limit_type": {
-    "desc": "Select how `throttle_limit_percent` should limit maximum throttle. ``OFF`` disables the feature. ``SCALE`` will transform the throttle range from 0 to the selected percentage using the full stick travel (linear throttle curve). ``CLIP`` will set a max throttle percentage and stick travel above that will have no additional effect.",
+    "desc": "Select how [throttle_limit_percent](#throttle_limit_percent) should limit maximum throttle. `OFF` disables the feature. `SCALE` will transform the throttle range from 0 to the selected percentage using the full stick travel (linear throttle curve). `CLIP` will set a max throttle percentage and stick travel above that will have no additional effect.",
     "aka": "Throttle Limit"
   },
   "throttle_limit_percent": {
-    "desc": "Sets the desired maximum throttle percentage, according to `throttle_limit_type`.",
+    "desc": "Sets the desired maximum throttle percentage, according to [throttle_limit_type](#throttle_limit_type).",
     "aka": "Throttle Limit %"
   },
   "roll_rate_limit": {
@@ -919,15 +919,15 @@
     "desc": ""
   },
   "d_min_roll": {
-    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_pitch`).",
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_pitch](#d_pitch)).",
     "aka": "D Min Roll"
   },
   "d_min_pitch": {
-    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_pitch`).",
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_pitch](#d_pitch)).",
     "aka": "D Min Pitch"
   },
   "d_min_yaw": {
-    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_yaw`).",
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_yaw](#d_yaw)).",
     "aka": " D Min Yaw"
   },
   "d_min_boost_gain": {
@@ -1655,17 +1655,17 @@
     "desc": ""
   },
   "gyro_1_sensor_align": {
-    "desc": "GUESS: Alignment of the first gyro sensor. Represented as a rotation string in degrees, e.g. 'CW90'. This seems to be closely coupled with the `gyro_1_align_*` variables.",
+    "desc": "GUESS: Alignment of the first gyro sensor. Represented as a rotation string in degrees, e.g. 'CW90'. This seems to be closely coupled with the [gyro_1_align_*](#gyro_1_align_roll) variables.",
     "aka": "First GYRO"
   },
   "gyro_1_align_roll": {
-    "desc": "Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator."
+    "desc": "Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
   },
   "gyro_1_align_pitch": {
-    "desc": "Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator."
+    "desc": "Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
   },
   "gyro_1_align_yaw": {
-    "desc": "Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator."
+    "desc": "Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
   },
   "gyro_2_bustype": {
     "desc": ""
@@ -1680,16 +1680,16 @@
     "desc": ""
   },
   "gyro_2_sensor_align": {
-    "desc": "Like `gyro_1_sensor_align`, but for the second gyro sensor."
+    "desc": "Like [gyro_1_sensor_align](#gyro_1_sensor_align), but for the second gyro sensor."
   },
   "gyro_2_align_roll": {
-    "desc": "Like `gyro_1_align_roll`, but for the second gyro sensor."
+    "desc": "Like [gyro_1_align_roll](#gyro_1_align_roll), but for the second gyro sensor."
   },
   "gyro_2_align_pitch": {
-    "desc": "Like `gyro_1_align_pitch`, but for the second gyro sensor."
+    "desc": "Like [gyro_1_align_pitch](#gyro_1_align_pitch), but for the second gyro sensor."
   },
   "gyro_2_align_yaw": {
-    "desc": "Like `gyro_1_align_yaw`, but for the second gyro sensor."
+    "desc": "Like [gyro_1_align_yaw](#gyro_1_align_yaw), but for the second gyro sensor."
   },
   "i2c1_pullup": {
     "desc": ""
@@ -1755,11 +1755,11 @@
     "desc": ""
   },
   "name": {
-    "desc": "Name of the craft. Used in log and config files, and can be displayed in OSD with `osd_craft_name_pos`.",
+    "desc": "Name of the craft. Used in log and config files, and can be displayed in OSD with [osd_craft_name_pos](#osd_craft_name_pos).",
     "aka": "Craft Name"
   },
   "display_name": {
-    "desc": "Text that can be displayed in OSD with `osd_display_name_pos`. E.g. name of the pilot.",
+    "desc": "Text that can be displayed in OSD with [osd_display_name_pos](#osd_display_name_pos). E.g. name of the pilot.",
     "aka": "Display Name"
   },
   "position_alt_source": {
