@@ -10,6 +10,8 @@ Parts of this document has been based on information from [Betaflight Configurat
 If you have trouble understanding any of the explanations, please open an issue so we can rewrite it and hopefully clear things up.
 
 # Betaflight CLI Variables
+Betaflight can be configured through a CLI by setting the following list of variables, which can also be saved and loaded from a diff. Variables are read by entering `get <variable_name>` into the CLI, and written with `set <variable_name> = <value>`.
+The listed entries includes default and allowed values.
 
 ## `gyro_hardware_lpf`
 - Default: `NORMAL`
