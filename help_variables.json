@@ -1460,16 +1460,16 @@
     "desc": ""
   },
   "osd_profile": {
-    "desc": ""
+    "desc": "GUESS: Selects the active OSD Profile."
   },
   "osd_profile_1_name": {
-    "desc": ""
+    "desc": "Name of OSD Profile 1. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos)."
   },
   "osd_profile_2_name": {
-    "desc": ""
+    "desc": "Name of OSD Profile 2. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos)."
   },
   "osd_profile_3_name": {
-    "desc": ""
+    "desc": "Name of OSD Profile 3. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos)."
   },
   "osd_gps_sats_show_hdop": {
     "desc": ""
@@ -1487,7 +1487,7 @@
     "desc": "Allows selection of all 6 rate profiles using a six position switch or pot. Normally, when configuring an adjustment channel for rate profile selection the channel value is divided into 3 ranges instead of 6."
   },
   "cpu_overclock": {
-    "desc": ""
+    "desc": "Overclocks the flight controller CPU to run at a higher clock rate. It's recommended to only overclock if you have a CPU load higher than 50%. Overclocking can potentially overheat the CPU if not properly ventilated. Overclocking has previously been used to allow F4 FC to enable 'Gyro 32KHz sampling mode' which was removed in Betaflight 4.0."
   },
   "pwr_on_arm_grace": {
     "desc": ""
@@ -1496,22 +1496,28 @@
     "desc": ""
   },
   "vtx_band": {
-    "desc": ""
+    "desc": "The band (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.",
+    "aka": "Band"
   },
   "vtx_channel": {
-    "desc": ""
+    "desc": "The channel (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.",
+    "aka": "Channel"
   },
   "vtx_power": {
-    "desc": "TODO: The power level (index) to be used by the VTX. Must have SmartAudio set up to work."
+    "desc": "TODO: The power level (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work. It can be modified if Pit Mode or [vtx_low_power_disarm](#vtx_low_power_disarm) is enabled.",
+    "aka": "Power"
   },
   "vtx_low_power_disarm": {
-    "desc": ""
+    "desc": "When enabled, the VTX uses the lowest available power when disarmed (except if a failsafe has occurred).",
+    "aka": "Low Power Disarm"
   },
   "vtx_freq": {
-    "desc": "TODO: The frequency to be used by the VTX. Must have SmartAudio set up to work. (todo: how does this affect band and channel)"
+    "desc": "The frequency to be used by the VTX. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set [vtx_band](#vtx_band) and [vtx_channel](#vtx_channel).",
+    "aka": "Frequency"
   },
   "vtx_pit_mode_freq": {
-    "desc": ""
+    "desc": "Frequency at which the Pit Mode changes when enabled.",
+    "aka": "Pit Mode frequency"
   },
   "vtx_halfduplex": {
     "desc": ""
