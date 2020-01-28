@@ -1,0 +1,1768 @@
+{
+  "gyro_hardware_lpf": {
+    "desc": ""
+  },
+  "gyro_sync_denom": {
+    "desc": ""
+  },
+  "gyro_lowpass_type": {
+    "desc": ""
+  },
+  "gyro_lowpass_hz": {
+    "desc": ""
+  },
+  "gyro_lowpass2_type": {
+    "desc": ""
+  },
+  "gyro_lowpass2_hz": {
+    "desc": ""
+  },
+  "gyro_notch1_hz": {
+    "desc": ""
+  },
+  "gyro_notch1_cutoff": {
+    "desc": ""
+  },
+  "gyro_notch2_hz": {
+    "desc": ""
+  },
+  "gyro_notch2_cutoff": {
+    "desc": ""
+  },
+  "gyro_calib_duration": {
+    "desc": ""
+  },
+  "gyro_calib_noise_limit": {
+    "desc": ""
+  },
+  "gyro_offset_yaw": {
+    "desc": ""
+  },
+  "gyro_overflow_detect": {
+    "desc": ""
+  },
+  "yaw_spin_recovery": {
+    "desc": ""
+  },
+  "yaw_spin_threshold": {
+    "desc": ""
+  },
+  "gyro_to_use": {
+    "desc": "TODO: Selects the gyro(s) that should be used."
+  },
+  "dyn_notch_range": {
+    "desc": ""
+  },
+  "dyn_notch_width_percent": {
+    "desc": ""
+  },
+  "dyn_notch_q": {
+    "desc": ""
+  },
+  "dyn_notch_min_hz": {
+    "desc": ""
+  },
+  "dyn_lpf_gyro_min_hz": {
+    "desc": ""
+  },
+  "dyn_lpf_gyro_max_hz": {
+    "desc": ""
+  },
+  "gyro_filter_debug_axis": {
+    "desc": ""
+  },
+  "acc_hardware": {
+    "desc": ""
+  },
+  "acc_lpf_hz": {
+    "desc": ""
+  },
+  "acc_trim_pitch": {
+    "desc": ""
+  },
+  "acc_trim_roll": {
+    "desc": ""
+  },
+  "acc_calibration": {
+    "desc": "TODO: Accelerometer calibration values. Normally set automatically by pressing 'Calibrate Accelerometer' in BF Configurator."
+  },
+  "align_mag": {
+    "desc": ""
+  },
+  "mag_align_roll": {
+    "desc": ""
+  },
+  "mag_align_pitch": {
+    "desc": ""
+  },
+  "mag_align_yaw": {
+    "desc": ""
+  },
+  "mag_bustype": {
+    "desc": ""
+  },
+  "mag_i2c_device": {
+    "desc": ""
+  },
+  "mag_i2c_address": {
+    "desc": ""
+  },
+  "mag_spi_device": {
+    "desc": ""
+  },
+  "mag_hardware": {
+    "desc": ""
+  },
+  "mag_declination": {
+    "desc": ""
+  },
+  "mag_calibration": {
+    "desc": ""
+  },
+  "baro_bustype": {
+    "desc": ""
+  },
+  "baro_spi_device": {
+    "desc": ""
+  },
+  "baro_i2c_device": {
+    "desc": ""
+  },
+  "baro_i2c_address": {
+    "desc": ""
+  },
+  "baro_hardware": {
+    "desc": ""
+  },
+  "baro_tab_size": {
+    "desc": ""
+  },
+  "baro_noise_lpf": {
+    "desc": ""
+  },
+  "baro_cf_vel": {
+    "desc": ""
+  },
+  "mid_rc": {
+    "desc": "The value (in us) used to determine if a stick is centered.",
+    "aka": "Stick Center"
+  },
+  "min_check": {
+    "desc": "TODO: The maximum value (in us) for a stick to be recognised as low. I think this is only used for stick commands, and not a to cap channel values.",
+    "aka": "'Stick Low' Threshold"
+  },
+  "max_check": {
+    "desc": "TODO: The minimum value (in us) for a stick to be recognised as high.",
+    "aka": "'Stick High' Threshold"
+  },
+  "rssi_channel": {
+    "desc": "Receiver channel (AUX channel + 4) that reports RSSI info.",
+    "aka": "RSSI Channel"
+  },
+  "rssi_src_frame_errors": {
+    "desc": ""
+  },
+  "rssi_scale": {
+    "desc": "GUESS: Scales the RSSI value."
+  },
+  "rssi_offset": {
+    "desc": "GUESS: Offsets the RSSI value by a given amount."
+  },
+  "rssi_invert": {
+    "desc": "GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal)"
+  },
+  "rssi_src_frame_lpf_period": {
+    "desc": ""
+  },
+  "rc_interp": {
+    "desc": ""
+  },
+  "rc_interp_ch": {
+    "desc": ""
+  },
+  "rc_interp_int": {
+    "desc": ""
+  },
+  "rc_smoothing_type": {
+    "desc": ""
+  },
+  "rc_smoothing_input_hz": {
+    "desc": ""
+  },
+  "rc_smoothing_derivative_hz": {
+    "desc": ""
+  },
+  "rc_smoothing_debug_axis": {
+    "desc": ""
+  },
+  "rc_smoothing_input_type": {
+    "desc": ""
+  },
+  "rc_smoothing_derivative_type": {
+    "desc": ""
+  },
+  "rc_smoothing_auto_smoothness": {
+    "desc": ""
+  },
+  "fpv_mix_degrees": {
+    "desc": "Camera tilt angle in degrees that should be compensated for when enabling 'FPV Angle Mix' mode. It can be used to fly FPV as if the camera was tilted differently. Also known as uptilt compensation.",
+    "aka": "FPV Camera Angle [degrees]"
+  },
+  "max_aux_channels": {
+    "desc": ""
+  },
+  "serialrx_provider": {
+    "desc": ""
+  },
+  "serialrx_inverted": {
+    "desc": ""
+  },
+  "spektrum_sat_bind": {
+    "desc": ""
+  },
+  "spektrum_sat_bind_autoreset": {
+    "desc": ""
+  },
+  "srxl2_unit_id": {
+    "desc": ""
+  },
+  "srxl2_baud_fast": {
+    "desc": ""
+  },
+  "sbus_baud_fast": {
+    "desc": ""
+  },
+  "airmode_start_throttle_percent": {
+    "desc": ""
+  },
+  "rx_min_usec": {
+    "desc": "Minimum valid pulse length [usec]. Pulses shorter than minimum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.",
+    "aka": "Minimum length"
+  },
+  "rx_max_usec": {
+    "desc": "Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.",
+    "aka": "Maximum length"
+  },
+  "serialrx_halfduplex": {
+    "desc": ""
+  },
+  "rx_spi_protocol": {
+    "desc": ""
+  },
+  "rx_spi_bus": {
+    "desc": ""
+  },
+  "rx_spi_led_inversion": {
+    "desc": ""
+  },
+  "adc_device": {
+    "desc": ""
+  },
+  "adc_vrefint_calibration": {
+    "desc": ""
+  },
+  "adc_tempsensor_calibration30": {
+    "desc": ""
+  },
+  "adc_tempsensor_calibration110": {
+    "desc": ""
+  },
+  "input_filtering_mode": {
+    "desc": ""
+  },
+  "blackbox_p_ratio": {
+    "desc": "Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the 'Blackbox logging rate' option in hz units."
+  },
+  "blackbox_device": {
+    "desc": "TODO: Device used for logging blackbox stats.",
+    "aka": "Blackbox logging device"
+  },
+  "blackbox_record_acc": {
+    "desc": "GUESS: Include accelerometer data in the blackbox logs."
+  },
+  "blackbox_mode": {
+    "desc": "Determines when to enable blackbox logging. E.g. flipping a switch or when testing motors in BF Configurator."
+  },
+  "min_throttle": {
+    "desc": ""
+  },
+  "max_throttle": {
+    "desc": ""
+  },
+  "min_command": {
+    "desc": ""
+  },
+  "dshot_idle_value": {
+    "desc": "This is the 'idle' value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. 2000 equals 20 percent.",
+    "aka": "Motor Idle Throttle Value [percent]"
+  },
+  "dshot_burst": {
+    "desc": ""
+  },
+  "dshot_bidir": {
+    "desc": "Bidirectional DShot. When enabled lets the DSHOT protocol receive information directly from the ESC, needed by the RPM Filter and other features. This requires custom firmware on BLHELI_S or the latest BLHELI_32 firmware.",
+    "aka": "Bidirectional DShot (requires supported ESC firmware)"
+  },
+  "dshot_bitbang": {
+    "desc": ""
+  },
+  "dshot_bitbang_timer": {
+    "desc": ""
+  },
+  "use_unsynced_pwm": {
+    "desc": ""
+  },
+  "motor_pwm_protocol": {
+    "desc": ""
+  },
+  "motor_pwm_rate": {
+    "desc": ""
+  },
+  "motor_pwm_inversion": {
+    "desc": ""
+  },
+  "motor_poles": {
+    "desc": "This setting is used for some features like the RPM Filter.<br><br>Represents the number of magnets that are on the bell of the motor. <b>Do NOT count the stators</b> where the windings are located. Typical 5\" motors have 14 magnets, smaller ones like 3\" or less usually have 12 magnets.",
+    "aka": "Motor poles (number of magnets on the motor bell)"
+  },
+  "thr_corr_value": {
+    "desc": ""
+  },
+  "thr_corr_angle": {
+    "desc": ""
+  },
+  "failsafe_delay": {
+    "desc": "Time for stage 1 to wait for recovery.",
+    "aka": "Guard time for stage 2 activation after signal lost [1 = 0.1 sec.]"
+  },
+  "failsafe_off_delay": {
+    "desc": ""
+  },
+  "failsafe_throttle": {
+    "desc": ""
+  },
+  "failsafe_switch_mode": {
+    "desc": "This option determines what happens when Failsafe is activated through AUX switch: ``Stage 1`` activates Stage 1 failsafe. This is useful if you want to simulate the exact signal loss failsafe behavior. ``Stage 2`` skips Stage 1 and activates the Stage 2 procedure immediately. ``Kill`` disarms instantly (your craft will crash).",
+    "aka": "Failsafe Switch Action"
+  },
+  "failsafe_throttle_low_delay": {
+    "desc": "Just disarm the craft instead of executing the selected failsafe procedure when the throttle was low for this amount of time.",
+    "aka": "Failsafe Throttle Low Delay [1 = 0.1 sec.]"
+  },
+  "failsafe_procedure": {
+    "desc": "",
+    "aka": "Stage 2 - Failsafe Procedure"
+  },
+  "failsafe_recovery_delay": {
+    "desc": ""
+  },
+  "failsafe_stick_threshold": {
+    "desc": ""
+  },
+  "align_board_roll": {
+    "desc": "Assigns how the flight controller board is aligned on the roll axis.",
+    "aka": "Roll Degrees"
+  },
+  "align_board_pitch": {
+    "desc": "Assigns how the flight controller board is aligned on the pitch axis.",
+    "aka": "Pitch Degrees"
+  },
+  "align_board_yaw": {
+    "desc": "Assigns how the flight controller board is aligned on the yaw axis.",
+    "aka": "Yaw Degrees"
+  },
+  "gimbal_mode": {
+    "desc": ""
+  },
+  "bat_capacity": {
+    "desc": "GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at '0' to disable."
+  },
+  "vbat_max_cell_voltage": {
+    "desc": "TODO: Maximum voltage of a single cell in the battery. Not sure what this is used for?",
+    "aka": "Maximum Cell Voltage"
+  },
+  "vbat_full_cell_voltage": {
+    "desc": "TODO: Voltage of a single cell in battery to be considered fully charged. I think used for warning if battery is not fully charged."
+  },
+  "vbat_min_cell_voltage": {
+    "desc": "Minimum voltage allowed for a single cell in the battery. Warnings can be issued with beeper and OSD if this happens.",
+    "aka": "Minimum Cell Voltage"
+  },
+  "vbat_warning_cell_voltage": {
+    "desc": "Voltage of a single cell in the battery that should issue a warning, which can be detected with beeper and OSD.",
+    "aka": "Warning Cell Voltage"
+  },
+  "vbat_hysteresis": {
+    "desc": ""
+  },
+  "current_meter": {
+    "desc": ""
+  },
+  "battery_meter": {
+    "desc": ""
+  },
+  "vbat_detect_cell_voltage": {
+    "desc": ""
+  },
+  "use_vbat_alerts": {
+    "desc": ""
+  },
+  "use_cbat_alerts": {
+    "desc": ""
+  },
+  "cbat_alert_percent": {
+    "desc": ""
+  },
+  "vbat_cutoff_percent": {
+    "desc": ""
+  },
+  "force_battery_cell_count": {
+    "desc": ""
+  },
+  "vbat_lpf_period": {
+    "desc": ""
+  },
+  "ibat_lpf_period": {
+    "desc": ""
+  },
+  "vbat_duration_for_warning": {
+    "desc": ""
+  },
+  "vbat_duration_for_critical": {
+    "desc": ""
+  },
+  "vbat_scale": {
+    "desc": ""
+  },
+  "vbat_divider": {
+    "desc": ""
+  },
+  "vbat_multiplier": {
+    "desc": ""
+  },
+  "ibata_scale": {
+    "desc": ""
+  },
+  "ibata_offset": {
+    "desc": ""
+  },
+  "ibatv_scale": {
+    "desc": ""
+  },
+  "ibatv_offset": {
+    "desc": ""
+  },
+  "beeper_inversion": {
+    "desc": ""
+  },
+  "beeper_od": {
+    "desc": ""
+  },
+  "beeper_frequency": {
+    "desc": ""
+  },
+  "beeper_dshot_beacon_tone": {
+    "desc": "Adjusts the tone of the of the DShot beacon. Higher value equals a higher tone frequency."
+  },
+  "yaw_motors_reversed": {
+    "desc": "Configures the mixer to expect the motor direction to be reversed and the propellers to be on accordingly, in order to perform correct yaw movement. Warning: This does not reverse the motor direction. Use the configuration tool for your ESCs or switch the ESC motor wiring order to achieve this. Also known as 'Props out' configuration.",
+    "aka": "Motor direction is reversed"
+  },
+  "crashflip_motor_percent": {
+    "desc": ""
+  },
+  "3d_deadband_low": {
+    "desc": ""
+  },
+  "3d_deadband_high": {
+    "desc": ""
+  },
+  "3d_neutral": {
+    "desc": ""
+  },
+  "3d_deadband_throttle": {
+    "desc": ""
+  },
+  "3d_limit_low": {
+    "desc": ""
+  },
+  "3d_limit_high": {
+    "desc": ""
+  },
+  "3d_switched_mode": {
+    "desc": ""
+  },
+  "servo_center_pulse": {
+    "desc": ""
+  },
+  "servo_pwm_rate": {
+    "desc": ""
+  },
+  "servo_lowpass_hz": {
+    "desc": ""
+  },
+  "tri_unarmed_servo": {
+    "desc": ""
+  },
+  "channel_forwarding_start": {
+    "desc": ""
+  },
+  "rateprofile_name": {
+    "desc": "Name of the rate profile. Can be seen in OSD using `osd_rate_profile_name_pos`."
+  },
+  "thr_mid": {
+    "desc": "Throttle Mid. The `thr_expo` is centered around this point. Usually this is set around the hovering point.",
+    "aka": "Throttle MID"
+  },
+  "thr_expo": {
+    "desc": "Throttle Expo. Creates an exponential throttle curve around the `thr_mid` point. Used to increase throttle resolution, usually to support more fine-grained hovering.",
+    "aka": "Throttle EXPO"
+  },
+  "rates_type": {
+    "desc": ""
+  },
+  "roll_rc_rate": {
+    "desc": "",
+    "aka": "Roll RC Rate"
+  },
+  "pitch_rc_rate": {
+    "desc": "",
+    "aka": "Pitch RC Rate"
+  },
+  "yaw_rc_rate": {
+    "desc": "",
+    "aka": "Yaw RC Rate"
+  },
+  "roll_expo": {
+    "desc": "",
+    "aka": "Roll RC Expo"
+  },
+  "pitch_expo": {
+    "desc": "",
+    "aka": "Pitch RC Expo"
+  },
+  "yaw_expo": {
+    "desc": "",
+    "aka": "Yaw RC Expo"
+  },
+  "roll_srate": {
+    "desc": "",
+    "aka": "Roll Super Rate"
+  },
+  "pitch_srate": {
+    "desc": "",
+    "aka": "Pitch Super Rate"
+  },
+  "yaw_srate": {
+    "desc": "",
+    "aka": "Yaw Super Rate"
+  },
+  "tpa_rate": {
+    "desc": "Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond `tpa_breakpoint`. Used to eliminate fast oscillations at high throttle.",
+    "aka": "TPA"
+  },
+  "tpa_breakpoint": {
+    "desc": "Throttle PID Attenuation breakpoint. The point at which TPA should take effect. This should be set around the throttle point at which fast oscillations would occur.",
+    "aka": "TPA Breakpoint"
+  },
+  "tpa_mode": {
+    "desc": "Throttle PID Attenuation mode. Determines which PID gains should be reduced. Used to be both P and D, but by default only D since Betaflight 4.0."
+  },
+  "throttle_limit_type": {
+    "desc": "Select how `throttle_limit_percent` should limit maximum throttle. ``OFF`` disables the feature. ``SCALE`` will transform the throttle range from 0 to the selected percentage using the full stick travel (linear throttle curve). ``CLIP`` will set a max throttle percentage and stick travel above that will have no additional effect.",
+    "aka": "Throttle Limit"
+  },
+  "throttle_limit_percent": {
+    "desc": "Sets the desired maximum throttle percentage, according to `throttle_limit_type`.",
+    "aka": "Throttle Limit %"
+  },
+  "roll_rate_limit": {
+    "desc": "Maximum velocity (deg/s) for roll. Caps a roll rate curve that would otherwise become higher."
+  },
+  "pitch_rate_limit": {
+    "desc": "Maximum velocity (deg/s) for pitch. Caps a pitch rate curve that would otherwise become higher."
+  },
+  "yaw_rate_limit": {
+    "desc": "Maximum velocity (deg/s) for yaw. Caps a yaw rate curve that would otherwise become higher."
+  },
+  "reboot_character": {
+    "desc": ""
+  },
+  "serial_update_rate_hz": {
+    "desc": ""
+  },
+  "imu_dcm_kp": {
+    "desc": ""
+  },
+  "imu_dcm_ki": {
+    "desc": ""
+  },
+  "small_angle": {
+    "desc": "Craft will not ARM if tilted more than specified number of degrees. Only applies if accelerometer is enabled. Setting to 180 will effectivly disable check.",
+    "aka": "Maximum ARM Angle [degrees]"
+  },
+  "auto_disarm_delay": {
+    "desc": ""
+  },
+  "gyro_cal_on_first_arm": {
+    "desc": ""
+  },
+  "gps_provider": {
+    "desc": ""
+  },
+  "gps_sbas_mode": {
+    "desc": ""
+  },
+  "gps_auto_config": {
+    "desc": ""
+  },
+  "gps_auto_baud": {
+    "desc": ""
+  },
+  "gps_ublox_use_galileo": {
+    "desc": ""
+  },
+  "gps_set_home_point_once": {
+    "desc": ""
+  },
+  "gps_use_3d_speed": {
+    "desc": ""
+  },
+  "gps_rescue_angle": {
+    "desc": ""
+  },
+  "gps_rescue_initial_alt": {
+    "desc": ""
+  },
+  "gps_rescue_descent_dist": {
+    "desc": ""
+  },
+  "gps_rescue_landing_alt": {
+    "desc": ""
+  },
+  "gps_rescue_landing_dist": {
+    "desc": ""
+  },
+  "gps_rescue_ground_speed": {
+    "desc": ""
+  },
+  "gps_rescue_throttle_p": {
+    "desc": ""
+  },
+  "gps_rescue_throttle_i": {
+    "desc": ""
+  },
+  "gps_rescue_throttle_d": {
+    "desc": ""
+  },
+  "gps_rescue_velocity_p": {
+    "desc": ""
+  },
+  "gps_rescue_velocity_i": {
+    "desc": ""
+  },
+  "gps_rescue_velocity_d": {
+    "desc": ""
+  },
+  "gps_rescue_yaw_p": {
+    "desc": ""
+  },
+  "gps_rescue_throttle_min": {
+    "desc": ""
+  },
+  "gps_rescue_throttle_max": {
+    "desc": ""
+  },
+  "gps_rescue_ascend_rate": {
+    "desc": ""
+  },
+  "gps_rescue_descend_rate": {
+    "desc": ""
+  },
+  "gps_rescue_throttle_hover": {
+    "desc": ""
+  },
+  "gps_rescue_sanity_checks": {
+    "desc": ""
+  },
+  "gps_rescue_min_sats": {
+    "desc": ""
+  },
+  "gps_rescue_min_dth": {
+    "desc": ""
+  },
+  "gps_rescue_allow_arming_without_fix": {
+    "desc": ""
+  },
+  "gps_rescue_alt_mode": {
+    "desc": ""
+  },
+  "gps_rescue_use_mag": {
+    "desc": ""
+  },
+  "deadband": {
+    "desc": ""
+  },
+  "yaw_deadband": {
+    "desc": ""
+  },
+  "yaw_control_reversed": {
+    "desc": ""
+  },
+  "pid_process_denom": {
+    "desc": ""
+  },
+  "runaway_takeoff_prevention": {
+    "desc": ""
+  },
+  "runaway_takeoff_deactivate_delay": {
+    "desc": ""
+  },
+  "runaway_takeoff_deactivate_throttle_percent": {
+    "desc": ""
+  },
+  "profile_name": {
+    "desc": ""
+  },
+  "dyn_lpf_dterm_min_hz": {
+    "desc": ""
+  },
+  "dyn_lpf_dterm_max_hz": {
+    "desc": ""
+  },
+  "dterm_lowpass_type": {
+    "desc": ""
+  },
+  "dterm_lowpass_hz": {
+    "desc": ""
+  },
+  "dterm_lowpass2_type": {
+    "desc": ""
+  },
+  "dterm_lowpass2_hz": {
+    "desc": ""
+  },
+  "dterm_notch_hz": {
+    "desc": ""
+  },
+  "dterm_notch_cutoff": {
+    "desc": ""
+  },
+  "vbat_pid_gain": {
+    "desc": ""
+  },
+  "pid_at_min_throttle": {
+    "desc": ""
+  },
+  "anti_gravity_mode": {
+    "desc": ""
+  },
+  "anti_gravity_threshold": {
+    "desc": ""
+  },
+  "anti_gravity_gain": {
+    "desc": ""
+  },
+  "feedforward_transition": {
+    "desc": ""
+  },
+  "acc_limit_yaw": {
+    "desc": ""
+  },
+  "acc_limit": {
+    "desc": ""
+  },
+  "crash_dthreshold": {
+    "desc": ""
+  },
+  "crash_gthreshold": {
+    "desc": ""
+  },
+  "crash_setpoint_threshold": {
+    "desc": ""
+  },
+  "crash_time": {
+    "desc": ""
+  },
+  "crash_delay": {
+    "desc": ""
+  },
+  "crash_recovery_angle": {
+    "desc": ""
+  },
+  "crash_recovery_rate": {
+    "desc": ""
+  },
+  "crash_limit_yaw": {
+    "desc": ""
+  },
+  "crash_recovery": {
+    "desc": ""
+  },
+  "iterm_rotation": {
+    "desc": ""
+  },
+  "iterm_relax": {
+    "desc": ""
+  },
+  "iterm_relax_type": {
+    "desc": ""
+  },
+  "iterm_relax_cutoff": {
+    "desc": ""
+  },
+  "iterm_windup": {
+    "desc": ""
+  },
+  "iterm_limit": {
+    "desc": ""
+  },
+  "pidsum_limit": {
+    "desc": ""
+  },
+  "pidsum_limit_yaw": {
+    "desc": ""
+  },
+  "yaw_lowpass_hz": {
+    "desc": ""
+  },
+  "throttle_boost": {
+    "desc": ""
+  },
+  "throttle_boost_cutoff": {
+    "desc": ""
+  },
+  "acro_trainer_angle_limit": {
+    "desc": "Adds an angle limiting mode for pilots who are learning to fly in acro mode. The range valid is 10-80 and must be activated with a switch in the modes tab.",
+    "aka": "Acro Trainer Angle Limit"
+  },
+  "acro_trainer_lookahead_ms": {
+    "desc": ""
+  },
+  "acro_trainer_debug_axis": {
+    "desc": ""
+  },
+  "acro_trainer_gain": {
+    "desc": ""
+  },
+  "p_pitch": {
+    "desc": ""
+  },
+  "i_pitch": {
+    "desc": ""
+  },
+  "d_pitch": {
+    "desc": ""
+  },
+  "f_pitch": {
+    "desc": ""
+  },
+  "p_roll": {
+    "desc": ""
+  },
+  "i_roll": {
+    "desc": ""
+  },
+  "d_roll": {
+    "desc": ""
+  },
+  "f_roll": {
+    "desc": ""
+  },
+  "p_yaw": {
+    "desc": ""
+  },
+  "i_yaw": {
+    "desc": ""
+  },
+  "d_yaw": {
+    "desc": ""
+  },
+  "f_yaw": {
+    "desc": ""
+  },
+  "angle_level_strength": {
+    "desc": ""
+  },
+  "horizon_level_strength": {
+    "desc": ""
+  },
+  "horizon_transition": {
+    "desc": ""
+  },
+  "level_limit": {
+    "desc": ""
+  },
+  "horizon_tilt_effect": {
+    "desc": ""
+  },
+  "horizon_tilt_expert_mode": {
+    "desc": ""
+  },
+  "abs_control_gain": {
+    "desc": ""
+  },
+  "abs_control_limit": {
+    "desc": ""
+  },
+  "abs_control_error_limit": {
+    "desc": ""
+  },
+  "abs_control_cutoff": {
+    "desc": ""
+  },
+  "use_integrated_yaw": {
+    "desc": "Integrated Yaw is a feature which corrects a fundamental issue with quad control: while the pitch and roll axis are controlled by the thrust differentials the props generate yaw is different. Integrated Yaw fixes this by integrating the output of the yaw pid before applying them to the mixer. This normalizes the way the pids work. You can now tune as any other axis. It requires use of absolute control since no I is needed with Integrated Yaw.",
+    "aka": "Integrated Yaw"
+  },
+  "integrated_yaw_relax": {
+    "desc": ""
+  },
+  "d_min_roll": {
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_pitch`).",
+    "aka": "D Min Roll"
+  },
+  "d_min_pitch": {
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_pitch`).",
+    "aka": "D Min Pitch"
+  },
+  "d_min_yaw": {
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (`d_yaw`).",
+    "aka": " D Min Yaw"
+  },
+  "d_min_boost_gain": {
+    "desc": "Adjusts how fast D gets up to its maximum value and is based on gyro to determine sharp moves and propwash events.",
+    "aka": "D Min Gain"
+  },
+  "d_min_advance": {
+    "desc": "Makes D go up earlier by using setpoint instead of gyro to determine sharp moves. aka D Min Advance"
+  },
+  "motor_output_limit": {
+    "desc": ""
+  },
+  "auto_profile_cell_count": {
+    "desc": ""
+  },
+  "launch_control_mode": {
+    "desc": ""
+  },
+  "launch_trigger_allow_reset": {
+    "desc": ""
+  },
+  "launch_trigger_throttle_percent": {
+    "desc": ""
+  },
+  "launch_angle_limit": {
+    "desc": ""
+  },
+  "launch_control_gain": {
+    "desc": ""
+  },
+  "thrust_linear": {
+    "desc": ""
+  },
+  "transient_throttle_limit": {
+    "desc": ""
+  },
+  "ff_interpolate_sp": {
+    "desc": ""
+  },
+  "ff_spike_limit": {
+    "desc": ""
+  },
+  "ff_max_rate_limit": {
+    "desc": ""
+  },
+  "ff_boost": {
+    "desc": ""
+  },
+  "idle_min_rpm": {
+    "desc": ""
+  },
+  "idle_adjustment_speed": {
+    "desc": ""
+  },
+  "idle_p": {
+    "desc": ""
+  },
+  "idle_pid_limit": {
+    "desc": ""
+  },
+  "idle_max_increase": {
+    "desc": ""
+  },
+  "tlm_inverted": {
+    "desc": ""
+  },
+  "tlm_halfduplex": {
+    "desc": ""
+  },
+  "frsky_default_lat": {
+    "desc": ""
+  },
+  "frsky_default_long": {
+    "desc": ""
+  },
+  "frsky_gps_format": {
+    "desc": ""
+  },
+  "frsky_unit": {
+    "desc": ""
+  },
+  "frsky_vfas_precision": {
+    "desc": ""
+  },
+  "hott_alarm_int": {
+    "desc": ""
+  },
+  "pid_in_tlm": {
+    "desc": ""
+  },
+  "report_cell_voltage": {
+    "desc": ""
+  },
+  "ibus_sensor": {
+    "desc": ""
+  },
+  "mavlink_mah_as_heading_divisor": {
+    "desc": ""
+  },
+  "telemetry_disabled_voltage": {
+    "desc": ""
+  },
+  "telemetry_disabled_current": {
+    "desc": ""
+  },
+  "telemetry_disabled_fuel": {
+    "desc": ""
+  },
+  "telemetry_disabled_mode": {
+    "desc": ""
+  },
+  "telemetry_disabled_acc_x": {
+    "desc": ""
+  },
+  "telemetry_disabled_acc_y": {
+    "desc": ""
+  },
+  "telemetry_disabled_acc_z": {
+    "desc": ""
+  },
+  "telemetry_disabled_pitch": {
+    "desc": ""
+  },
+  "telemetry_disabled_roll": {
+    "desc": ""
+  },
+  "telemetry_disabled_heading": {
+    "desc": ""
+  },
+  "telemetry_disabled_altitude": {
+    "desc": ""
+  },
+  "telemetry_disabled_vario": {
+    "desc": ""
+  },
+  "telemetry_disabled_lat_long": {
+    "desc": ""
+  },
+  "telemetry_disabled_ground_speed": {
+    "desc": ""
+  },
+  "telemetry_disabled_distance": {
+    "desc": ""
+  },
+  "telemetry_disabled_esc_current": {
+    "desc": ""
+  },
+  "telemetry_disabled_esc_voltage": {
+    "desc": ""
+  },
+  "telemetry_disabled_esc_rpm": {
+    "desc": ""
+  },
+  "telemetry_disabled_esc_temperature": {
+    "desc": ""
+  },
+  "telemetry_disabled_temperature": {
+    "desc": ""
+  },
+  "ledstrip_visual_beeper": {
+    "desc": ""
+  },
+  "ledstrip_visual_beeper_color": {
+    "desc": ""
+  },
+  "ledstrip_grb_rgb": {
+    "desc": ""
+  },
+  "ledstrip_profile": {
+    "desc": ""
+  },
+  "ledstrip_race_color": {
+    "desc": ""
+  },
+  "ledstrip_beacon_color": {
+    "desc": ""
+  },
+  "ledstrip_beacon_period_ms": {
+    "desc": ""
+  },
+  "ledstrip_beacon_percent": {
+    "desc": ""
+  },
+  "ledstrip_beacon_armed_only": {
+    "desc": ""
+  },
+  "sdcard_detect_inverted": {
+    "desc": ""
+  },
+  "sdcard_mode": {
+    "desc": ""
+  },
+  "sdcard_dma": {
+    "desc": ""
+  },
+  "sdcard_spi_bus": {
+    "desc": ""
+  },
+  "osd_units": {
+    "desc": ""
+  },
+  "osd_warn_arming_disable": {
+    "desc": ""
+  },
+  "osd_warn_batt_not_full": {
+    "desc": ""
+  },
+  "osd_warn_batt_warning": {
+    "desc": ""
+  },
+  "osd_warn_batt_critical": {
+    "desc": ""
+  },
+  "osd_warn_visual_beeper": {
+    "desc": ""
+  },
+  "osd_warn_crash_flip": {
+    "desc": ""
+  },
+  "osd_warn_esc_fail": {
+    "desc": ""
+  },
+  "osd_warn_core_temp": {
+    "desc": ""
+  },
+  "osd_warn_rc_smoothing": {
+    "desc": ""
+  },
+  "osd_warn_fail_safe": {
+    "desc": ""
+  },
+  "osd_warn_launch_control": {
+    "desc": ""
+  },
+  "osd_warn_no_gps_rescue": {
+    "desc": ""
+  },
+  "osd_warn_gps_rescue_disabled": {
+    "desc": ""
+  },
+  "osd_warn_rssi": {
+    "desc": ""
+  },
+  "osd_warn_link_quality": {
+    "desc": ""
+  },
+  "osd_rssi_alarm": {
+    "desc": ""
+  },
+  "osd_link_quality_alarm": {
+    "desc": ""
+  },
+  "osd_rssi_dbm_alarm": {
+    "desc": ""
+  },
+  "osd_cap_alarm": {
+    "desc": ""
+  },
+  "osd_alt_alarm": {
+    "desc": ""
+  },
+  "osd_esc_temp_alarm": {
+    "desc": ""
+  },
+  "osd_esc_rpm_alarm": {
+    "desc": ""
+  },
+  "osd_esc_current_alarm": {
+    "desc": ""
+  },
+  "osd_core_temp_alarm": {
+    "desc": ""
+  },
+  "osd_ah_max_pit": {
+    "desc": ""
+  },
+  "osd_ah_max_rol": {
+    "desc": ""
+  },
+  "osd_ah_invert": {
+    "desc": ""
+  },
+  "osd_tim1": {
+    "desc": ""
+  },
+  "osd_tim2": {
+    "desc": ""
+  },
+  "osd_vbat_pos": {
+    "desc": ""
+  },
+  "osd_rssi_pos": {
+    "desc": ""
+  },
+  "osd_link_quality_pos": {
+    "desc": ""
+  },
+  "osd_rssi_dbm_pos": {
+    "desc": ""
+  },
+  "osd_tim_1_pos": {
+    "desc": ""
+  },
+  "osd_tim_2_pos": {
+    "desc": ""
+  },
+  "osd_remaining_time_estimate_pos": {
+    "desc": ""
+  },
+  "osd_flymode_pos": {
+    "desc": ""
+  },
+  "osd_anti_gravity_pos": {
+    "desc": ""
+  },
+  "osd_g_force_pos": {
+    "desc": ""
+  },
+  "osd_throttle_pos": {
+    "desc": ""
+  },
+  "osd_vtx_channel_pos": {
+    "desc": ""
+  },
+  "osd_crosshairs_pos": {
+    "desc": ""
+  },
+  "osd_ah_sbar_pos": {
+    "desc": ""
+  },
+  "osd_ah_pos": {
+    "desc": ""
+  },
+  "osd_current_pos": {
+    "desc": ""
+  },
+  "osd_mah_drawn_pos": {
+    "desc": ""
+  },
+  "osd_motor_diag_pos": {
+    "desc": ""
+  },
+  "osd_craft_name_pos": {
+    "desc": ""
+  },
+  "osd_display_name_pos": {
+    "desc": ""
+  },
+  "osd_gps_speed_pos": {
+    "desc": ""
+  },
+  "osd_gps_lon_pos": {
+    "desc": ""
+  },
+  "osd_gps_lat_pos": {
+    "desc": ""
+  },
+  "osd_gps_sats_pos": {
+    "desc": ""
+  },
+  "osd_home_dir_pos": {
+    "desc": ""
+  },
+  "osd_home_dist_pos": {
+    "desc": ""
+  },
+  "osd_flight_dist_pos": {
+    "desc": ""
+  },
+  "osd_compass_bar_pos": {
+    "desc": ""
+  },
+  "osd_altitude_pos": {
+    "desc": ""
+  },
+  "osd_pid_roll_pos": {
+    "desc": ""
+  },
+  "osd_pid_pitch_pos": {
+    "desc": ""
+  },
+  "osd_pid_yaw_pos": {
+    "desc": ""
+  },
+  "osd_debug_pos": {
+    "desc": ""
+  },
+  "osd_power_pos": {
+    "desc": ""
+  },
+  "osd_pidrate_profile_pos": {
+    "desc": ""
+  },
+  "osd_warnings_pos": {
+    "desc": ""
+  },
+  "osd_avg_cell_voltage_pos": {
+    "desc": ""
+  },
+  "osd_pit_ang_pos": {
+    "desc": ""
+  },
+  "osd_rol_ang_pos": {
+    "desc": ""
+  },
+  "osd_battery_usage_pos": {
+    "desc": ""
+  },
+  "osd_disarmed_pos": {
+    "desc": ""
+  },
+  "osd_nheading_pos": {
+    "desc": ""
+  },
+  "osd_nvario_pos": {
+    "desc": ""
+  },
+  "osd_esc_tmp_pos": {
+    "desc": ""
+  },
+  "osd_esc_rpm_pos": {
+    "desc": ""
+  },
+  "osd_esc_rpm_freq_pos": {
+    "desc": ""
+  },
+  "osd_rtc_date_time_pos": {
+    "desc": ""
+  },
+  "osd_adjustment_range_pos": {
+    "desc": ""
+  },
+  "osd_flip_arrow_pos": {
+    "desc": ""
+  },
+  "osd_core_temp_pos": {
+    "desc": ""
+  },
+  "osd_log_status_pos": {
+    "desc": ""
+  },
+  "osd_stick_overlay_left_pos": {
+    "desc": ""
+  },
+  "osd_stick_overlay_right_pos": {
+    "desc": ""
+  },
+  "osd_stick_overlay_radio_mode": {
+    "desc": ""
+  },
+  "osd_rate_profile_name_pos": {
+    "desc": ""
+  },
+  "osd_pid_profile_name_pos": {
+    "desc": ""
+  },
+  "osd_profile_name_pos": {
+    "desc": ""
+  },
+  "osd_stat_rtc_date_time": {
+    "desc": ""
+  },
+  "osd_stat_tim_1": {
+    "desc": ""
+  },
+  "osd_stat_tim_2": {
+    "desc": ""
+  },
+  "osd_stat_max_spd": {
+    "desc": ""
+  },
+  "osd_stat_max_dist": {
+    "desc": ""
+  },
+  "osd_stat_min_batt": {
+    "desc": ""
+  },
+  "osd_stat_endbatt": {
+    "desc": ""
+  },
+  "osd_stat_battery": {
+    "desc": ""
+  },
+  "osd_stat_min_rssi": {
+    "desc": ""
+  },
+  "osd_stat_max_curr": {
+    "desc": ""
+  },
+  "osd_stat_used_mah": {
+    "desc": ""
+  },
+  "osd_stat_max_alt": {
+    "desc": ""
+  },
+  "osd_stat_bbox": {
+    "desc": ""
+  },
+  "osd_stat_bb_no": {
+    "desc": ""
+  },
+  "osd_stat_max_g_force": {
+    "desc": ""
+  },
+  "osd_stat_max_esc_temp": {
+    "desc": ""
+  },
+  "osd_stat_max_esc_rpm": {
+    "desc": ""
+  },
+  "osd_stat_min_link_quality": {
+    "desc": ""
+  },
+  "osd_stat_flight_dist": {
+    "desc": ""
+  },
+  "osd_stat_max_fft": {
+    "desc": ""
+  },
+  "osd_stat_total_flights": {
+    "desc": ""
+  },
+  "osd_stat_total_time": {
+    "desc": ""
+  },
+  "osd_stat_total_dist": {
+    "desc": ""
+  },
+  "osd_stat_min_rssi_dbm": {
+    "desc": ""
+  },
+  "osd_profile": {
+    "desc": ""
+  },
+  "osd_profile_1_name": {
+    "desc": ""
+  },
+  "osd_profile_2_name": {
+    "desc": ""
+  },
+  "osd_profile_3_name": {
+    "desc": ""
+  },
+  "osd_gps_sats_show_hdop": {
+    "desc": ""
+  },
+  "system_hse_mhz": {
+    "desc": ""
+  },
+  "task_statistics": {
+    "desc": ""
+  },
+  "debug_mode": {
+    "desc": ""
+  },
+  "rate_6pos_switch": {
+    "desc": "Allows selection of all 6 rate profiles using a six position switch or pot. Normally, when configuring an adjustment channel for rate profile selection the channel value is divided into 3 ranges instead of 6."
+  },
+  "cpu_overclock": {
+    "desc": ""
+  },
+  "pwr_on_arm_grace": {
+    "desc": ""
+  },
+  "scheduler_optimize_rate": {
+    "desc": ""
+  },
+  "vtx_band": {
+    "desc": ""
+  },
+  "vtx_channel": {
+    "desc": ""
+  },
+  "vtx_power": {
+    "desc": "TODO: The power level (index) to be used by the VTX. Must have SmartAudio set up to work."
+  },
+  "vtx_low_power_disarm": {
+    "desc": ""
+  },
+  "vtx_freq": {
+    "desc": "TODO: The frequency to be used by the VTX. Must have SmartAudio set up to work. (todo: how does this affect band and channel)"
+  },
+  "vtx_pit_mode_freq": {
+    "desc": ""
+  },
+  "vtx_halfduplex": {
+    "desc": ""
+  },
+  "vtx_spi_bus": {
+    "desc": ""
+  },
+  "vcd_video_system": {
+    "desc": "Sets the analog color system used by the connected FPV camera."
+  },
+  "vcd_h_offset": {
+    "desc": ""
+  },
+  "vcd_v_offset": {
+    "desc": ""
+  },
+  "max7456_clock": {
+    "desc": ""
+  },
+  "max7456_spi_bus": {
+    "desc": ""
+  },
+  "max7456_preinit_opu": {
+    "desc": ""
+  },
+  "displayport_msp_col_adjust": {
+    "desc": ""
+  },
+  "displayport_msp_row_adjust": {
+    "desc": ""
+  },
+  "displayport_max7456_col_adjust": {
+    "desc": ""
+  },
+  "displayport_max7456_row_adjust": {
+    "desc": ""
+  },
+  "displayport_max7456_inv": {
+    "desc": ""
+  },
+  "displayport_max7456_blk": {
+    "desc": ""
+  },
+  "displayport_max7456_wht": {
+    "desc": ""
+  },
+  "esc_sensor_halfduplex": {
+    "desc": ""
+  },
+  "esc_sensor_current_offset": {
+    "desc": ""
+  },
+  "frsky_spi_autobind": {
+    "desc": ""
+  },
+  "frsky_spi_tx_id": {
+    "desc": ""
+  },
+  "frsky_spi_offset": {
+    "desc": ""
+  },
+  "frsky_spi_bind_hop_data": {
+    "desc": "GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI protocol. This can avoid the need for rebinding, etc."
+  },
+  "frsky_x_rx_num": {
+    "desc": ""
+  },
+  "frsky_spi_a1_source": {
+    "desc": ""
+  },
+  "cc2500_spi_chip_detect": {
+    "desc": ""
+  },
+  "led_inversion": {
+    "desc": ""
+  },
+  "dashboard_i2c_bus": {
+    "desc": ""
+  },
+  "dashboard_i2c_addr": {
+    "desc": ""
+  },
+  "camera_control_mode": {
+    "desc": ""
+  },
+  "camera_control_ref_voltage": {
+    "desc": ""
+  },
+  "camera_control_key_delay": {
+    "desc": ""
+  },
+  "camera_control_internal_resistance": {
+    "desc": ""
+  },
+  "camera_control_button_resistance": {
+    "desc": ""
+  },
+  "camera_control_inverted": {
+    "desc": ""
+  },
+  "rangefinder_hardware": {
+    "desc": ""
+  },
+  "pinio_config": {
+    "desc": ""
+  },
+  "pinio_box": {
+    "desc": ""
+  },
+  "usb_hid_cdc": {
+    "desc": ""
+  },
+  "usb_msc_pin_pullup": {
+    "desc": ""
+  },
+  "flash_spi_bus": {
+    "desc": ""
+  },
+  "rcdevice_init_dev_attempts": {
+    "desc": ""
+  },
+  "rcdevice_init_dev_attempt_interval": {
+    "desc": ""
+  },
+  "rcdevice_protocol_version": {
+    "desc": ""
+  },
+  "rcdevice_feature": {
+    "desc": ""
+  },
+  "gyro_1_bustype": {
+    "desc": ""
+  },
+  "gyro_1_spibus": {
+    "desc": ""
+  },
+  "gyro_1_i2cBus": {
+    "desc": ""
+  },
+  "gyro_1_i2c_address": {
+    "desc": ""
+  },
+  "gyro_1_sensor_align": {
+    "desc": "GUESS: Alignment of the first gyro sensor. Represented as a rotation string in degrees, e.g. 'CW90'. This seems to be closely coupled with the `gyro_1_align_*` variables.",
+    "aka": "First GYRO"
+  },
+  "gyro_1_align_roll": {
+    "desc": "Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator."
+  },
+  "gyro_1_align_pitch": {
+    "desc": "Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator."
+  },
+  "gyro_1_align_yaw": {
+    "desc": "Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the 'First GYRO' (`gyro_1_sensor_align`) in BF Configurator."
+  },
+  "gyro_2_bustype": {
+    "desc": ""
+  },
+  "gyro_2_spibus": {
+    "desc": ""
+  },
+  "gyro_2_i2cBus": {
+    "desc": ""
+  },
+  "gyro_2_i2c_address": {
+    "desc": ""
+  },
+  "gyro_2_sensor_align": {
+    "desc": "Like `gyro_1_sensor_align`, but for the second gyro sensor."
+  },
+  "gyro_2_align_roll": {
+    "desc": "Like `gyro_1_align_roll`, but for the second gyro sensor."
+  },
+  "gyro_2_align_pitch": {
+    "desc": "Like `gyro_1_align_pitch`, but for the second gyro sensor."
+  },
+  "gyro_2_align_yaw": {
+    "desc": "Like `gyro_1_align_yaw`, but for the second gyro sensor."
+  },
+  "i2c1_pullup": {
+    "desc": ""
+  },
+  "i2c1_overclock": {
+    "desc": ""
+  },
+  "i2c2_pullup": {
+    "desc": ""
+  },
+  "i2c2_overclock": {
+    "desc": ""
+  },
+  "i2c3_pullup": {
+    "desc": ""
+  },
+  "i2c3_overclock": {
+    "desc": ""
+  },
+  "mco2_on_pc9": {
+    "desc": ""
+  },
+  "timezone_offset_minutes": {
+    "desc": ""
+  },
+  "gyro_rpm_notch_harmonics": {
+    "desc": ""
+  },
+  "gyro_rpm_notch_q": {
+    "desc": ""
+  },
+  "gyro_rpm_notch_min": {
+    "desc": ""
+  },
+  "dterm_rpm_notch_harmonics": {
+    "desc": ""
+  },
+  "dterm_rpm_notch_q": {
+    "desc": ""
+  },
+  "dterm_rpm_notch_min": {
+    "desc": ""
+  },
+  "rpm_notch_lpf": {
+    "desc": ""
+  },
+  "flysky_spi_tx_id": {
+    "desc": ""
+  },
+  "flysky_spi_rf_channels": {
+    "desc": ""
+  },
+  "stats": {
+    "desc": ""
+  },
+  "stats_total_flights": {
+    "desc": ""
+  },
+  "stats_total_time_s": {
+    "desc": ""
+  },
+  "stats_total_dist_m": {
+    "desc": ""
+  },
+  "name": {
+    "desc": "Name of the craft. Used in log and config files, and can be displayed in OSD with `osd_craft_name_pos`.",
+    "aka": "Craft Name"
+  },
+  "display_name": {
+    "desc": "Text that can be displayed in OSD with `osd_display_name_pos`. E.g. name of the pilot.",
+    "aka": "Display Name"
+  },
+  "position_alt_source": {
+    "desc": ""
+  }
+}

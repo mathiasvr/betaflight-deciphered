@@ -1,0 +1,89 @@
+{
+  "RX_PPM": {
+    "desc": ""
+  },
+  "INFLIGHT_ACC_CAL": {
+    "desc": "GUESS: Allows calibration of the accelerometer using stick commands while armed and flying.",
+    "aka": "In-flight level calibration"
+  },
+  "RX_SERIAL": {
+    "desc": ""
+  },
+  "MOTOR_STOP": {
+    "desc": "Stop motors from spinning when armed. You must disable Airmode, etc. as well to completely stop them!",
+    "aka": "Don't spin the motors when armed"
+  },
+  "SERVO_TILT": {
+    "desc": "This feature enables CAMSTAB mode, which can be used to hold up to two axis steady using the accelerometer.",
+    "aka": "Servo gimbal"
+  },
+  "SOFTSERIAL": {
+    "desc": "Software Serial. Allows to configure emulated serial ports (UART) through pin remapping.",
+    "aka": "Enable CPU based serial ports"
+  },
+  "GPS": {
+    "desc": ""
+  },
+  "RANGEFINDER": {
+    "desc": "",
+    "aka": "Sonar"
+  },
+  "TELEMETRY": {
+    "desc": "",
+    "aka": "Telemetry output"
+  },
+  "3D": {
+    "desc": ""
+  },
+  "RX_PARALLEL_PWM": {
+    "desc": ""
+  },
+  "RX_MSP": {
+    "desc": ""
+  },
+  "RSSI_ADC": {
+    "desc": ""
+  },
+  "LED_STRIP": {
+    "desc": "",
+    "aka": "Multi-color RGB LED strip support"
+  },
+  "DISPLAY": {
+    "desc": "TODO: If this feature is enabled, and no display device is connected (or the display device is not powered up), there will be a delay of approx. 10 seconds on every reboot of the flight controller.",
+    "aka": "OLED Screen Display"
+  },
+  "OSD": {
+    "desc": "Enables On Screen Display, used for overlaying the video feed with various information. It can be configured in the OSD tab of BF Configurator.",
+    "aka": "On Screen Display"
+  },
+  "CHANNEL_FORWARDING": {
+    "desc": "",
+    "aka": "Forward aux channels to servo outputs"
+  },
+  "TRANSPONDER": {
+    "desc": "TODO: Configure via the Race Transponder tab after enabling.",
+    "aka": "Race Transponder"
+  },
+  "AIRMODE": {
+    "desc": "",
+    "aka": "Permanently enable Airmode"
+  },
+  "RX_SPI": {
+    "desc": ""
+  },
+  "SOFTSPI": {
+    "desc": ""
+  },
+  "ESC_SENSOR": {
+    "desc": "",
+    "aka": "Use KISS/BLHeli_32 ESC telemetry <b>over a separate wire</b>"
+  },
+  "ANTI_GRAVITY": {
+    "desc": "",
+    "aka": "Temporary boost I-Term on high throttle changes"
+  },
+  "DYNAMIC_FILTER": {
+    "desc": "",
+    "aka": "Dynamic gyro notch filtering"
+  }
+}
