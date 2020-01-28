@@ -30,10 +30,13 @@ def parse_vars_and_print():
         section = 'rateprofile'
         i += 1
 
-      matches = re.match("Allowed .+: (.+)", lines[i])
-      allowed_values = "Unknown"
+      matches = re.match("Allowed (.+): (.+)", lines[i])
+      allowed_values = ""
       if matches:
-        allowed_values = matches.groups()[0]
+        if matches.groups()[0] == 'values':
+          allowed_values ="`, `".join([s.strip() for s in matches.groups()[1].split(',')])
+        else:
+          allowed_values = matches.groups()[1]
 
       else:
         matches = re.match("(Array length.+)", lines[i])
@@ -48,8 +51,10 @@ def parse_vars_and_print():
       aka = helpdata['aka'] if 'aka' in helpdata else ''
 
       print(f"\n## `{name}`")
-      print(f"- Default: `{default_value}`")
-      print(f"- Allowed: `{allowed_values}`")
+      if default_value != '-':
+        print(f"- Default: `{default_value}`")
+      if allowed_values:
+        print(f"- Allowed: `{allowed_values}`")
       if aka:
         print(f"- BF Configurator: *{aka}*")
 

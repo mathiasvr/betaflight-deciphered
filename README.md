@@ -13,7 +13,7 @@ If you have trouble understanding any of the explanations, please open an issue 
 
 ## `gyro_hardware_lpf`
 - Default: `NORMAL`
-- Allowed: `NORMAL, 1KHZ_SAMPLING, EXPERIMENTAL`
+- Allowed: `NORMAL`, `1KHZ_SAMPLING`, `EXPERIMENTAL`
 
 ## `gyro_sync_denom`
 - Default: `1`
@@ -21,7 +21,7 @@ If you have trouble understanding any of the explanations, please open an issue 
 
 ## `gyro_lowpass_type`
 - Default: `PT1`
-- Allowed: `PT1, BIQUAD`
+- Allowed: `PT1`, `BIQUAD`
 
 ## `gyro_lowpass_hz`
 - Default: `200`
@@ -29,7 +29,7 @@ If you have trouble understanding any of the explanations, please open an issue 
 
 ## `gyro_lowpass2_type`
 - Default: `PT1`
-- Allowed: `PT1, BIQUAD`
+- Allowed: `PT1`, `BIQUAD`
 
 ## `gyro_lowpass2_hz`
 - Default: `250`
@@ -65,11 +65,11 @@ If you have trouble understanding any of the explanations, please open an issue 
 
 ## `gyro_overflow_detect`
 - Default: `ALL`
-- Allowed: `OFF, YAW, ALL`
+- Allowed: `OFF`, `YAW`, `ALL`
 
 ## `yaw_spin_recovery`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `yaw_spin_threshold`
 - Default: `1950`
@@ -77,13 +77,13 @@ If you have trouble understanding any of the explanations, please open an issue 
 
 ## `gyro_to_use`
 - Default: `FIRST`
-- Allowed: `FIRST, SECOND, BOTH`
+- Allowed: `FIRST`, `SECOND`, `BOTH`
 
 TODO: Selects the gyro(s) that should be used.
 
 ## `dyn_notch_range`
 - Default: `MEDIUM`
-- Allowed: `HIGH, MEDIUM, LOW, AUTO`
+- Allowed: `HIGH`, `MEDIUM`, `LOW`, `AUTO`
 
 ## `dyn_notch_width_percent`
 - Default: `8`
@@ -107,11 +107,11 @@ TODO: Selects the gyro(s) that should be used.
 
 ## `gyro_filter_debug_axis`
 - Default: `ROLL`
-- Allowed: `ROLL, PITCH, YAW`
+- Allowed: `ROLL`, `PITCH`, `YAW`
 
 ## `acc_hardware`
 - Default: `AUTO`
-- Allowed: `AUTO, NONE, ADXL345, MPU6050, MMA8452, BMA280, LSM303DLHC, MPU6000, MPU6500, MPU9250, ICM20601, ICM20602, ICM20608G, ICM20649, ICM20689, BMI160, FAKE`
+- Allowed: `AUTO`, `NONE`, `ADXL345`, `MPU6050`, `MMA8452`, `BMA280`, `LSM303DLHC`, `MPU6000`, `MPU6500`, `MPU9250`, `ICM20601`, `ICM20602`, `ICM20608G`, `ICM20649`, `ICM20689`, `BMI160`, `FAKE`
 
 ## `acc_lpf_hz`
 - Default: `10`
@@ -133,7 +133,7 @@ TODO: Accelerometer calibration values. Normally set automatically by pressing '
 
 ## `align_mag`
 - Default: `DEFAULT`
-- Allowed: `DEFAULT, CW0, CW90, CW180, CW270, CW0FLIP, CW90FLIP, CW180FLIP, CW270FLIP, CUSTOM`
+- Allowed: `DEFAULT`, `CW0`, `CW90`, `CW180`, `CW270`, `CW0FLIP`, `CW90FLIP`, `CW180FLIP`, `CW270FLIP`, `CUSTOM`
 
 ## `mag_align_roll`
 - Default: `0`
@@ -149,7 +149,7 @@ TODO: Accelerometer calibration values. Normally set automatically by pressing '
 
 ## `mag_bustype`
 - Default: `I2C`
-- Allowed: `NONE, I2C, SPI, SLAVE, GYROAUTO`
+- Allowed: `NONE`, `I2C`, `SPI`, `SLAVE`, `GYROAUTO`
 
 ## `mag_i2c_device`
 - Default: `1`
@@ -165,7 +165,7 @@ TODO: Accelerometer calibration values. Normally set automatically by pressing '
 
 ## `mag_hardware`
 - Default: `NONE`
-- Allowed: `AUTO, NONE, HMC5883, AK8975, AK8963, QMC5883, LIS3MDL`
+- Allowed: `AUTO`, `NONE`, `HMC5883`, `AK8975`, `AK8963`, `QMC5883`, `LIS3MDL`
 
 ## `mag_declination`
 - Default: `0`
@@ -177,7 +177,7 @@ TODO: Accelerometer calibration values. Normally set automatically by pressing '
 
 ## `baro_bustype`
 - Default: `I2C`
-- Allowed: `NONE, I2C, SPI, SLAVE, GYROAUTO`
+- Allowed: `NONE`, `I2C`, `SPI`, `SLAVE`, `GYROAUTO`
 
 ## `baro_spi_device`
 - Default: `0`
@@ -193,7 +193,7 @@ TODO: Accelerometer calibration values. Normally set automatically by pressing '
 
 ## `baro_hardware`
 - Default: `AUTO`
-- Allowed: `AUTO, NONE, BMP085, MS5611, BMP280, LPS, QMP6988, BMP388`
+- Allowed: `AUTO`, `NONE`, `BMP085`, `MS5611`, `BMP280`, `LPS`, `QMP6988`, `BMP388`
 
 ## `baro_tab_size`
 - Default: `21`
@@ -237,7 +237,7 @@ Receiver channel (AUX channel + 4) that reports RSSI info.
 
 ## `rssi_src_frame_errors`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `rssi_scale`
 - Default: `100`
@@ -253,7 +253,7 @@ GUESS: Offsets the RSSI value by a given amount.
 
 ## `rssi_invert`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal)
 
@@ -263,11 +263,11 @@ GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal
 
 ## `rc_interp`
 - Default: `AUTO`
-- Allowed: `OFF, PRESET, AUTO, MANUAL`
+- Allowed: `OFF`, `PRESET`, `AUTO`, `MANUAL`
 
 ## `rc_interp_ch`
 - Default: `RPYT`
-- Allowed: `RP, RPY, RPYT, T, RPT`
+- Allowed: `RP`, `RPY`, `RPYT`, `T`, `RPT`
 
 ## `rc_interp_int`
 - Default: `19`
@@ -275,7 +275,7 @@ GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal
 
 ## `rc_smoothing_type`
 - Default: `FILTER`
-- Allowed: `INTERPOLATION, FILTER`
+- Allowed: `INTERPOLATION`, `FILTER`
 
 ## `rc_smoothing_input_hz`
 - Default: `0`
@@ -287,15 +287,15 @@ GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal
 
 ## `rc_smoothing_debug_axis`
 - Default: `ROLL`
-- Allowed: `ROLL, PITCH, YAW, THROTTLE`
+- Allowed: `ROLL`, `PITCH`, `YAW`, `THROTTLE`
 
 ## `rc_smoothing_input_type`
 - Default: `BIQUAD`
-- Allowed: `PT1, BIQUAD`
+- Allowed: `PT1`, `BIQUAD`
 
 ## `rc_smoothing_derivative_type`
 - Default: `BIQUAD`
-- Allowed: `OFF, PT1, BIQUAD`
+- Allowed: `OFF`, `PT1`, `BIQUAD`
 
 ## `rc_smoothing_auto_smoothness`
 - Default: `10`
@@ -314,11 +314,11 @@ Camera tilt angle in degrees that should be compensated for when enabling 'FPV A
 
 ## `serialrx_provider`
 - Default: `SBUS`
-- Allowed: `SPEK1024, SPEK2048, SBUS, SUMD, SUMH, XB-B, XB-B-RJ01, IBUS, JETIEXBUS, CRSF, SRXL, CUSTOM, FPORT, SRXL2`
+- Allowed: `SPEK1024`, `SPEK2048`, `SBUS`, `SUMD`, `SUMH`, `XB-B`, `XB-B-RJ01`, `IBUS`, `JETIEXBUS`, `CRSF`, `SRXL`, `CUSTOM`, `FPORT`, `SRXL2`
 
 ## `serialrx_inverted`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `spektrum_sat_bind`
 - Default: `0`
@@ -326,7 +326,7 @@ Camera tilt angle in degrees that should be compensated for when enabling 'FPV A
 
 ## `spektrum_sat_bind_autoreset`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `srxl2_unit_id`
 - Default: `1`
@@ -334,11 +334,11 @@ Camera tilt angle in degrees that should be compensated for when enabling 'FPV A
 
 ## `srxl2_baud_fast`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `sbus_baud_fast`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `airmode_start_throttle_percent`
 - Default: `25`
@@ -360,11 +360,11 @@ Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and wi
 
 ## `serialrx_halfduplex`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `rx_spi_protocol`
 - Default: `V202_250K`
-- Allowed: `V202_250K, V202_1M, SYMA_X, SYMA_X5C, CX10, CX10A, H8_3D, INAV, FRSKY_D, FRSKY_X, FLYSKY, FLYSKY_2A, KN, SFHSS, SPEKTRUM, FRSKY_X_LBT`
+- Allowed: `V202_250K`, `V202_1M`, `SYMA_X`, `SYMA_X5C`, `CX10`, `CX10A`, `H8_3D`, `INAV`, `FRSKY_D`, `FRSKY_X`, `FLYSKY`, `FLYSKY_2A`, `KN`, `SFHSS`, `SPEKTRUM`, `FRSKY_X_LBT`
 
 ## `rx_spi_bus`
 - Default: `0`
@@ -372,7 +372,7 @@ Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and wi
 
 ## `rx_spi_led_inversion`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `adc_device`
 - Default: `1`
@@ -392,7 +392,7 @@ Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and wi
 
 ## `input_filtering_mode`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `blackbox_p_ratio`
 - Default: `32`
@@ -402,20 +402,20 @@ Describes how many blackbox P-frames (delta) are written for every I-frame (abso
 
 ## `blackbox_device`
 - Default: `SDCARD`
-- Allowed: `NONE, SPIFLASH, SDCARD, SERIAL`
+- Allowed: `NONE`, `SPIFLASH`, `SDCARD`, `SERIAL`
 - BF Configurator: *Blackbox logging device*
 
 TODO: Device used for logging blackbox stats.
 
 ## `blackbox_record_acc`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 GUESS: Include accelerometer data in the blackbox logs.
 
 ## `blackbox_mode`
 - Default: `NORMAL`
-- Allowed: `NORMAL, MOTOR_TEST, ALWAYS`
+- Allowed: `NORMAL`, `MOTOR_TEST`, `ALWAYS`
 
 Determines when to enable blackbox logging. E.g. flipping a switch or when testing motors in BF Configurator.
 
@@ -440,30 +440,30 @@ This is the 'idle' value of throttle that is sent to the ESCs when the craft is 
 
 ## `dshot_burst`
 - Default: `ON`
-- Allowed: `OFF, ON, AUTO`
+- Allowed: `OFF`, `ON`, `AUTO`
 
 ## `dshot_bidir`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 - BF Configurator: *Bidirectional DShot (requires supported ESC firmware)*
 
 Bidirectional DShot. When enabled lets the DSHOT protocol receive information directly from the ESC, needed by the RPM Filter and other features. This requires custom firmware on BLHELI_S or the latest BLHELI_32 firmware.
 
 ## `dshot_bitbang`
 - Default: `AUTO`
-- Allowed: `OFF, ON, AUTO`
+- Allowed: `OFF`, `ON`, `AUTO`
 
 ## `dshot_bitbang_timer`
 - Default: `AUTO`
-- Allowed: `AUTO, TIM1, TIM8`
+- Allowed: `AUTO`, `TIM1`, `TIM8`
 
 ## `use_unsynced_pwm`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `motor_pwm_protocol`
 - Default: `DSHOT600`
-- Allowed: `OFF, ONESHOT125, ONESHOT42, MULTISHOT, BRUSHED, DSHOT150, DSHOT300, DSHOT600, PROSHOT1000`
+- Allowed: `OFF`, `ONESHOT125`, `ONESHOT42`, `MULTISHOT`, `BRUSHED`, `DSHOT150`, `DSHOT300`, `DSHOT600`, `PROSHOT1000`
 
 ## `motor_pwm_rate`
 - Default: `480`
@@ -471,7 +471,7 @@ Bidirectional DShot. When enabled lets the DSHOT protocol receive information di
 
 ## `motor_pwm_inversion`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `motor_poles`
 - Default: `14`
@@ -505,7 +505,7 @@ Time for stage 1 to wait for recovery.
 
 ## `failsafe_switch_mode`
 - Default: `STAGE1`
-- Allowed: `STAGE1, KILL, STAGE2`
+- Allowed: `STAGE1`, `KILL`, `STAGE2`
 - BF Configurator: *Failsafe Switch Action*
 
 This option determines what happens when Failsafe is activated through AUX switch: `Stage 1` activates Stage 1 failsafe. This is useful if you want to simulate the exact signal loss failsafe behavior. `Stage 2` skips Stage 1 and activates the Stage 2 procedure immediately. `Kill` disarms instantly (your craft will crash).
@@ -519,7 +519,7 @@ Just disarm the craft instead of executing the selected failsafe procedure when 
 
 ## `failsafe_procedure`
 - Default: `DROP`
-- Allowed: `AUTO-LAND, DROP, GPS-RESCUE`
+- Allowed: `AUTO-LAND`, `DROP`, `GPS-RESCUE`
 - BF Configurator: *Stage 2 - Failsafe Procedure*
 
 ## `failsafe_recovery_delay`
@@ -553,7 +553,7 @@ Assigns how the flight controller board is aligned on the yaw axis.
 
 ## `gimbal_mode`
 - Default: `NORMAL`
-- Allowed: `NORMAL, MIXTILT`
+- Allowed: `NORMAL`, `MIXTILT`
 
 ## `bat_capacity`
 - Default: `0`
@@ -594,11 +594,11 @@ Voltage of a single cell in the battery that should issue a warning, which can b
 
 ## `current_meter`
 - Default: `ADC`
-- Allowed: `NONE, ADC, VIRTUAL, ESC, MSP`
+- Allowed: `NONE`, `ADC`, `VIRTUAL`, `ESC`, `MSP`
 
 ## `battery_meter`
 - Default: `ADC`
-- Allowed: `NONE, ADC, ESC`
+- Allowed: `NONE`, `ADC`, `ESC`
 
 ## `vbat_detect_cell_voltage`
 - Default: `300`
@@ -606,11 +606,11 @@ Voltage of a single cell in the battery that should issue a warning, which can b
 
 ## `use_vbat_alerts`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `use_cbat_alerts`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `cbat_alert_percent`
 - Default: `10`
@@ -670,11 +670,11 @@ Voltage of a single cell in the battery that should issue a warning, which can b
 
 ## `beeper_inversion`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `beeper_od`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `beeper_frequency`
 - Default: `0`
@@ -688,7 +688,7 @@ Adjusts the tone of the of the DShot beacon. Higher value equals a higher tone f
 
 ## `yaw_motors_reversed`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 - BF Configurator: *Motor direction is reversed*
 
 Configures the mixer to expect the motor direction to be reversed and the propellers to be on accordingly, in order to perform correct yaw movement. Warning: This does not reverse the motor direction. Use the configuration tool for your ESCs or switch the ESC motor wiring order to achieve this. Also known as 'Props out' configuration.
@@ -723,7 +723,7 @@ Configures the mixer to expect the motor direction to be reversed and the propel
 
 ## `3d_switched_mode`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `servo_center_pulse`
 - Default: `1500`
@@ -739,15 +739,13 @@ Configures the mixer to expect the motor direction to be reversed and the propel
 
 ## `tri_unarmed_servo`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `channel_forwarding_start`
 - Default: `4`
 - Allowed: `4 - 18`
 
 ## `rateprofile_name`
-- Default: `-`
-- Allowed: `Unknown`
 
 Name of the rate profile. Can be seen in OSD using [osd_rate_profile_name_pos](#osd_rate_profile_name_pos).
 
@@ -767,7 +765,7 @@ Throttle Expo. Creates an exponential throttle curve around the [thr_mid](#thr_m
 
 ## `rates_type`
 - Default: `BETAFLIGHT`
-- Allowed: `BETAFLIGHT, RACEFLIGHT, KISS`
+- Allowed: `BETAFLIGHT`, `RACEFLIGHT`, `KISS`
 
 ## `roll_rc_rate`
 - Default: `100`
@@ -830,13 +828,13 @@ Throttle PID Attenuation breakpoint. The point at which TPA should take effect. 
 
 ## `tpa_mode`
 - Default: `D`
-- Allowed: `PD, D`
+- Allowed: `PD`, `D`
 
 Throttle PID Attenuation mode. Determines which PID gains should be reduced. Used to be both P and D, but by default only D since Betaflight 4.0.
 
 ## `throttle_limit_type`
 - Default: `OFF`
-- Allowed: `OFF, SCALE, CLIP`
+- Allowed: `OFF`, `SCALE`, `CLIP`
 - BF Configurator: *Throttle Limit*
 
 Select how [throttle_limit_percent](#throttle_limit_percent) should limit maximum throttle. `OFF` disables the feature. `SCALE` will transform the throttle range from 0 to the selected percentage using the full stick travel (linear throttle curve). `CLIP` will set a max throttle percentage and stick travel above that will have no additional effect.
@@ -895,35 +893,35 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `gyro_cal_on_first_arm`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `gps_provider`
 - Default: `NMEA`
-- Allowed: `NMEA, UBLOX, MSP`
+- Allowed: `NMEA`, `UBLOX`, `MSP`
 
 ## `gps_sbas_mode`
 - Default: `AUTO`
-- Allowed: `AUTO, EGNOS, WAAS, MSAS, GAGAN`
+- Allowed: `AUTO`, `EGNOS`, `WAAS`, `MSAS`, `GAGAN`
 
 ## `gps_auto_config`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `gps_auto_baud`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `gps_ublox_use_galileo`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `gps_set_home_point_once`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `gps_use_3d_speed`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `gps_rescue_angle`
 - Default: `32`
@@ -999,7 +997,7 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `gps_rescue_sanity_checks`
 - Default: `RESCUE_SANITY_ON`
-- Allowed: `RESCUE_SANITY_OFF, RESCUE_SANITY_ON, RESCUE_SANITY_FS_ONLY`
+- Allowed: `RESCUE_SANITY_OFF`, `RESCUE_SANITY_ON`, `RESCUE_SANITY_FS_ONLY`
 
 ## `gps_rescue_min_sats`
 - Default: `8`
@@ -1011,15 +1009,15 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `gps_rescue_allow_arming_without_fix`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `gps_rescue_alt_mode`
 - Default: `MAX_ALT`
-- Allowed: `MAX_ALT, FIXED_ALT, CURRENT_ALT`
+- Allowed: `MAX_ALT`, `FIXED_ALT`, `CURRENT_ALT`
 
 ## `gps_rescue_use_mag`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `deadband`
 - Default: `0`
@@ -1031,7 +1029,7 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `yaw_control_reversed`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `pid_process_denom`
 - Default: `4`
@@ -1039,7 +1037,7 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `runaway_takeoff_prevention`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `runaway_takeoff_deactivate_delay`
 - Default: `500`
@@ -1050,8 +1048,6 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 - Allowed: `0 - 100`
 
 ## `profile_name`
-- Default: `-`
-- Allowed: `Unknown`
 
 ## `dyn_lpf_dterm_min_hz`
 - Default: `70`
@@ -1063,7 +1059,7 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `dterm_lowpass_type`
 - Default: `PT1`
-- Allowed: `PT1, BIQUAD`
+- Allowed: `PT1`, `BIQUAD`
 
 ## `dterm_lowpass_hz`
 - Default: `150`
@@ -1071,7 +1067,7 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `dterm_lowpass2_type`
 - Default: `PT1`
-- Allowed: `PT1, BIQUAD`
+- Allowed: `PT1`, `BIQUAD`
 
 ## `dterm_lowpass2_hz`
 - Default: `150`
@@ -1087,15 +1083,15 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `vbat_pid_gain`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `pid_at_min_throttle`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `anti_gravity_mode`
 - Default: `SMOOTH`
-- Allowed: `SMOOTH, STEP`
+- Allowed: `SMOOTH`, `STEP`
 
 ## `anti_gravity_threshold`
 - Default: `250`
@@ -1151,19 +1147,19 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 
 ## `crash_recovery`
 - Default: `OFF`
-- Allowed: `OFF, ON, BEEP, DISARM`
+- Allowed: `OFF`, `ON`, `BEEP`, `DISARM`
 
 ## `iterm_rotation`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `iterm_relax`
 - Default: `RP`
-- Allowed: `OFF, RP, RPY, RP_INC, RPY_INC`
+- Allowed: `OFF`, `RP`, `RPY`, `RP_INC`, `RPY_INC`
 
 ## `iterm_relax_type`
 - Default: `SETPOINT`
-- Allowed: `GYRO, SETPOINT`
+- Allowed: `GYRO`, `SETPOINT`
 
 ## `iterm_relax_cutoff`
 - Default: `20`
@@ -1210,7 +1206,7 @@ Adds an angle limiting mode for pilots who are learning to fly in acro mode. The
 
 ## `acro_trainer_debug_axis`
 - Default: `ROLL`
-- Allowed: `ROLL, PITCH`
+- Allowed: `ROLL`, `PITCH`
 
 ## `acro_trainer_gain`
 - Default: `75`
@@ -1286,7 +1282,7 @@ Adds an angle limiting mode for pilots who are learning to fly in acro mode. The
 
 ## `horizon_tilt_expert_mode`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `abs_control_gain`
 - Default: `0`
@@ -1306,7 +1302,7 @@ Adds an angle limiting mode for pilots who are learning to fly in acro mode. The
 
 ## `use_integrated_yaw`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 - BF Configurator: *Integrated Yaw*
 
 Integrated Yaw is a feature which corrects a fundamental issue with quad control: while the pitch and roll axis are controlled by the thrust differentials the props generate yaw is different. Integrated Yaw fixes this by integrating the output of the yaw pid before applying them to the mixer. This normalizes the way the pids work. You can now tune as any other axis. It requires use of absolute control since no I is needed with Integrated Yaw.
@@ -1359,11 +1355,11 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `launch_control_mode`
 - Default: `NORMAL`
-- Allowed: `NORMAL, PITCHONLY, FULL`
+- Allowed: `NORMAL`, `PITCHONLY`, `FULL`
 
 ## `launch_trigger_allow_reset`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `launch_trigger_throttle_percent`
 - Default: `20`
@@ -1387,7 +1383,7 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `ff_interpolate_sp`
 - Default: `AVERAGED`
-- Allowed: `OFF, ON, AVERAGED`
+- Allowed: `OFF`, `ON`, `AVERAGED`
 
 ## `ff_spike_limit`
 - Default: `60`
@@ -1423,11 +1419,11 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `tlm_inverted`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `tlm_halfduplex`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `frsky_default_lat`
 - Default: `0`
@@ -1443,7 +1439,7 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `frsky_unit`
 - Default: `IMPERIAL`
-- Allowed: `IMPERIAL, METRIC`
+- Allowed: `IMPERIAL`, `METRIC`
 
 ## `frsky_vfas_precision`
 - Default: `0`
@@ -1455,11 +1451,11 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `pid_in_tlm`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `report_cell_voltage`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `ibus_sensor`
 - Default: `1,2,3,0,0,0,0,0,0,0,0,0,0,0,0`
@@ -1471,107 +1467,107 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `telemetry_disabled_voltage`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_current`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_fuel`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_mode`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_acc_x`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_acc_y`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_acc_z`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_pitch`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_roll`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_heading`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_altitude`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_vario`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_lat_long`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_ground_speed`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_distance`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_esc_current`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_esc_voltage`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_esc_rpm`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_esc_temperature`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `telemetry_disabled_temperature`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `ledstrip_visual_beeper`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `ledstrip_visual_beeper_color`
 - Default: `WHITE`
-- Allowed: `BLACK, WHITE, RED, ORANGE, YELLOW, LIME_GREEN, GREEN, MINT_GREEN, CYAN, LIGHT_BLUE, BLUE, DARK_VIOLET, MAGENTA, DEEP_PINK`
+- Allowed: `BLACK`, `WHITE`, `RED`, `ORANGE`, `YELLOW`, `LIME_GREEN`, `GREEN`, `MINT_GREEN`, `CYAN`, `LIGHT_BLUE`, `BLUE`, `DARK_VIOLET`, `MAGENTA`, `DEEP_PINK`
 
 ## `ledstrip_grb_rgb`
 - Default: `GRB`
-- Allowed: `GRB, RGB`
+- Allowed: `GRB`, `RGB`
 
 ## `ledstrip_profile`
 - Default: `STATUS`
-- Allowed: `RACE, BEACON, STATUS`
+- Allowed: `RACE`, `BEACON`, `STATUS`
 
 ## `ledstrip_race_color`
 - Default: `ORANGE`
-- Allowed: `BLACK, WHITE, RED, ORANGE, YELLOW, LIME_GREEN, GREEN, MINT_GREEN, CYAN, LIGHT_BLUE, BLUE, DARK_VIOLET, MAGENTA, DEEP_PINK`
+- Allowed: `BLACK`, `WHITE`, `RED`, `ORANGE`, `YELLOW`, `LIME_GREEN`, `GREEN`, `MINT_GREEN`, `CYAN`, `LIGHT_BLUE`, `BLUE`, `DARK_VIOLET`, `MAGENTA`, `DEEP_PINK`
 
 ## `ledstrip_beacon_color`
 - Default: `WHITE`
-- Allowed: `BLACK, WHITE, RED, ORANGE, YELLOW, LIME_GREEN, GREEN, MINT_GREEN, CYAN, LIGHT_BLUE, BLUE, DARK_VIOLET, MAGENTA, DEEP_PINK`
+- Allowed: `BLACK`, `WHITE`, `RED`, `ORANGE`, `YELLOW`, `LIME_GREEN`, `GREEN`, `MINT_GREEN`, `CYAN`, `LIGHT_BLUE`, `BLUE`, `DARK_VIOLET`, `MAGENTA`, `DEEP_PINK`
 
 ## `ledstrip_beacon_period_ms`
 - Default: `500`
@@ -1583,19 +1579,19 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `ledstrip_beacon_armed_only`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `sdcard_detect_inverted`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `sdcard_mode`
 - Default: `SPI`
-- Allowed: `OFF, SPI, SDIO`
+- Allowed: `OFF`, `SPI`, `SDIO`
 
 ## `sdcard_dma`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `sdcard_spi_bus`
 - Default: `3`
@@ -1603,67 +1599,67 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `osd_units`
 - Default: `METRIC`
-- Allowed: `IMPERIAL, METRIC`
+- Allowed: `IMPERIAL`, `METRIC`
 
 ## `osd_warn_arming_disable`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_batt_not_full`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_batt_warning`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_batt_critical`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_visual_beeper`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_crash_flip`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_esc_fail`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_core_temp`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_rc_smoothing`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_fail_safe`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_launch_control`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_no_gps_rescue`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_gps_rescue_disabled`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_rssi`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_warn_link_quality`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_rssi_alarm`
 - Default: `20`
@@ -1711,7 +1707,7 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `osd_ah_invert`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_tim1`
 - Default: `2560`
@@ -1951,119 +1947,113 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `osd_stat_rtc_date_time`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_tim_1`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_tim_2`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_max_spd`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_max_dist`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_min_batt`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_endbatt`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_battery`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_min_rssi`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_max_curr`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_used_mah`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_max_alt`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_bbox`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_bb_no`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_max_g_force`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_max_esc_temp`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_max_esc_rpm`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_min_link_quality`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_flight_dist`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_max_fft`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_total_flights`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_total_time`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_total_dist`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_stat_min_rssi_dbm`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `osd_profile`
 - Default: `1`
 - Allowed: `1 - 3`
 
 ## `osd_profile_1_name`
-- Default: `-`
-- Allowed: `Unknown`
 
 ## `osd_profile_2_name`
-- Default: `-`
-- Allowed: `Unknown`
 
 ## `osd_profile_3_name`
-- Default: `-`
-- Allowed: `Unknown`
 
 ## `osd_gps_sats_show_hdop`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `system_hse_mhz`
 - Default: `8`
@@ -2071,21 +2061,21 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ## `task_statistics`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `debug_mode`
 - Default: `NONE`
-- Allowed: `NONE, CYCLETIME, BATTERY, GYRO_FILTERED, ACCELEROMETER, PIDLOOP, GYRO_SCALED, RC_INTERPOLATION, ANGLERATE, ESC_SENSOR, SCHEDULER, STACK, ESC_SENSOR_RPM, ESC_SENSOR_TMP, ALTITUDE, FFT, FFT_TIME, FFT_FREQ, RX_FRSKY_SPI, RX_SFHSS_SPI, GYRO_RAW, DUAL_GYRO_RAW, DUAL_GYRO_DIFF, MAX7456_SIGNAL, MAX7456_SPICLOCK, SBUS, FPORT, RANGEFINDER, RANGEFINDER_QUALITY, LIDAR_TF, ADC_INTERNAL, RUNAWAY_TAKEOFF, SDIO, CURRENT_SENSOR, USB, SMARTAUDIO, RTH, ITERM_RELAX, ACRO_TRAINER, RC_SMOOTHING, RX_SIGNAL_LOSS, RC_SMOOTHING_RATE, ANTI_GRAVITY, DYN_LPF, RX_SPEKTRUM_SPI, DSHOT_RPM_TELEMETRY, RPM_FILTER, D_MIN, AC_CORRECTION, AC_ERROR, DUAL_GYRO_SCALED, DSHOT_RPM_ERRORS, CRSF_LINK_STATISTICS_UPLINK, CRSF_LINK_STATISTICS_PWR, CRSF_LINK_STATISTICS_DOWN, BARO, GPS_RESCUE_THROTTLE_PID, DYN_IDLE, FF_LIMIT, FF_INTERPOLATED`
+- Allowed: `NONE`, `CYCLETIME`, `BATTERY`, `GYRO_FILTERED`, `ACCELEROMETER`, `PIDLOOP`, `GYRO_SCALED`, `RC_INTERPOLATION`, `ANGLERATE`, `ESC_SENSOR`, `SCHEDULER`, `STACK`, `ESC_SENSOR_RPM`, `ESC_SENSOR_TMP`, `ALTITUDE`, `FFT`, `FFT_TIME`, `FFT_FREQ`, `RX_FRSKY_SPI`, `RX_SFHSS_SPI`, `GYRO_RAW`, `DUAL_GYRO_RAW`, `DUAL_GYRO_DIFF`, `MAX7456_SIGNAL`, `MAX7456_SPICLOCK`, `SBUS`, `FPORT`, `RANGEFINDER`, `RANGEFINDER_QUALITY`, `LIDAR_TF`, `ADC_INTERNAL`, `RUNAWAY_TAKEOFF`, `SDIO`, `CURRENT_SENSOR`, `USB`, `SMARTAUDIO`, `RTH`, `ITERM_RELAX`, `ACRO_TRAINER`, `RC_SMOOTHING`, `RX_SIGNAL_LOSS`, `RC_SMOOTHING_RATE`, `ANTI_GRAVITY`, `DYN_LPF`, `RX_SPEKTRUM_SPI`, `DSHOT_RPM_TELEMETRY`, `RPM_FILTER`, `D_MIN`, `AC_CORRECTION`, `AC_ERROR`, `DUAL_GYRO_SCALED`, `DSHOT_RPM_ERRORS`, `CRSF_LINK_STATISTICS_UPLINK`, `CRSF_LINK_STATISTICS_PWR`, `CRSF_LINK_STATISTICS_DOWN`, `BARO`, `GPS_RESCUE_THROTTLE_PID`, `DYN_IDLE`, `FF_LIMIT`, `FF_INTERPOLATED`
 
 ## `rate_6pos_switch`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 Allows selection of all 6 rate profiles using a six position switch or pot. Normally, when configuring an adjustment channel for rate profile selection the channel value is divided into 3 ranges instead of 6.
 
 ## `cpu_overclock`
 - Default: `OFF`
-- Allowed: `OFF, 192MHZ, 216MHZ, 240MHZ`
+- Allowed: `OFF`, `192MHZ`, `216MHZ`, `240MHZ`
 
 ## `pwr_on_arm_grace`
 - Default: `5`
@@ -2093,7 +2083,7 @@ Allows selection of all 6 rate profiles using a six position switch or pot. Norm
 
 ## `scheduler_optimize_rate`
 - Default: `AUTO`
-- Allowed: `OFF, ON, AUTO`
+- Allowed: `OFF`, `ON`, `AUTO`
 
 ## `vtx_band`
 - Default: `0`
@@ -2111,7 +2101,7 @@ TODO: The power level (index) to be used by the VTX. Must have SmartAudio set up
 
 ## `vtx_low_power_disarm`
 - Default: `OFF`
-- Allowed: `OFF, ON, UNTIL_FIRST_ARM`
+- Allowed: `OFF`, `ON`, `UNTIL_FIRST_ARM`
 
 ## `vtx_freq`
 - Default: `0`
@@ -2125,7 +2115,7 @@ TODO: The frequency to be used by the VTX. Must have SmartAudio set up to work. 
 
 ## `vtx_halfduplex`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `vtx_spi_bus`
 - Default: `0`
@@ -2133,7 +2123,7 @@ TODO: The frequency to be used by the VTX. Must have SmartAudio set up to work. 
 
 ## `vcd_video_system`
 - Default: `AUTO`
-- Allowed: `AUTO, PAL, NTSC`
+- Allowed: `AUTO`, `PAL`, `NTSC`
 
 Sets the analog color system used by the connected FPV camera.
 
@@ -2147,7 +2137,7 @@ Sets the analog color system used by the connected FPV camera.
 
 ## `max7456_clock`
 - Default: `DEFAULT`
-- Allowed: `HALF, DEFAULT, FULL`
+- Allowed: `HALF`, `DEFAULT`, `FULL`
 
 ## `max7456_spi_bus`
 - Default: `2`
@@ -2155,7 +2145,7 @@ Sets the analog color system used by the connected FPV camera.
 
 ## `max7456_preinit_opu`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `displayport_msp_col_adjust`
 - Default: `0`
@@ -2175,7 +2165,7 @@ Sets the analog color system used by the connected FPV camera.
 
 ## `displayport_max7456_inv`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `displayport_max7456_blk`
 - Default: `0`
@@ -2187,7 +2177,7 @@ Sets the analog color system used by the connected FPV camera.
 
 ## `esc_sensor_halfduplex`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `esc_sensor_current_offset`
 - Default: `0`
@@ -2195,7 +2185,7 @@ Sets the analog color system used by the connected FPV camera.
 
 ## `frsky_spi_autobind`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `frsky_spi_tx_id`
 - Default: `0,0`
@@ -2217,11 +2207,11 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 
 ## `frsky_spi_a1_source`
 - Default: `VBAT`
-- Allowed: `VBAT, EXTADC, CONST`
+- Allowed: `VBAT`, `EXTADC`, `CONST`
 
 ## `cc2500_spi_chip_detect`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `led_inversion`
 - Default: `0`
@@ -2237,7 +2227,7 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 
 ## `camera_control_mode`
 - Default: `HARDWARE_PWM`
-- Allowed: `HARDWARE_PWM, SOFTWARE_PWM, DAC`
+- Allowed: `HARDWARE_PWM`, `SOFTWARE_PWM`, `DAC`
 
 ## `camera_control_ref_voltage`
 - Default: `330`
@@ -2257,11 +2247,11 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 
 ## `camera_control_inverted`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `rangefinder_hardware`
 - Default: `NONE`
-- Allowed: `NONE, HCSR04, TFMINI, TF02`
+- Allowed: `NONE`, `HCSR04`, `TFMINI`, `TF02`
 
 ## `pinio_config`
 - Default: `1,1,1,1`
@@ -2273,11 +2263,11 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 
 ## `usb_hid_cdc`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `usb_msc_pin_pullup`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `flash_spi_bus`
 - Default: `0`
@@ -2301,7 +2291,7 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 
 ## `gyro_1_bustype`
 - Default: `SPI`
-- Allowed: `NONE, I2C, SPI, SLAVE, GYROAUTO`
+- Allowed: `NONE`, `I2C`, `SPI`, `SLAVE`, `GYROAUTO`
 
 ## `gyro_1_spibus`
 - Default: `1`
@@ -2317,7 +2307,7 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 
 ## `gyro_1_sensor_align`
 - Default: `CW180`
-- Allowed: `DEFAULT, CW0, CW90, CW180, CW270, CW0FLIP, CW90FLIP, CW180FLIP, CW270FLIP, CUSTOM`
+- Allowed: `DEFAULT`, `CW0`, `CW90`, `CW180`, `CW270`, `CW0FLIP`, `CW90FLIP`, `CW180FLIP`, `CW270FLIP`, `CUSTOM`
 - BF Configurator: *First GYRO*
 
 GUESS: Alignment of the first gyro sensor. Represented as a rotation string in degrees, e.g. 'CW90'. This seems to be closely coupled with the [gyro_1_align_*](#gyro_1_align_roll) variables.
@@ -2342,7 +2332,7 @@ Assigns how the gyro sensor yaw axis is aligned, independent of board alignment.
 
 ## `gyro_2_bustype`
 - Default: `SPI`
-- Allowed: `NONE, I2C, SPI, SLAVE, GYROAUTO`
+- Allowed: `NONE`, `I2C`, `SPI`, `SLAVE`, `GYROAUTO`
 
 ## `gyro_2_spibus`
 - Default: `0`
@@ -2358,7 +2348,7 @@ Assigns how the gyro sensor yaw axis is aligned, independent of board alignment.
 
 ## `gyro_2_sensor_align`
 - Default: `CW0`
-- Allowed: `DEFAULT, CW0, CW90, CW180, CW270, CW0FLIP, CW90FLIP, CW180FLIP, CW270FLIP, CUSTOM`
+- Allowed: `DEFAULT`, `CW0`, `CW90`, `CW180`, `CW270`, `CW0FLIP`, `CW90FLIP`, `CW180FLIP`, `CW270FLIP`, `CUSTOM`
 
 Like [gyro_1_sensor_align](#gyro_1_sensor_align), but for the second gyro sensor.
 
@@ -2382,31 +2372,31 @@ Like [gyro_1_align_yaw](#gyro_1_align_yaw), but for the second gyro sensor.
 
 ## `i2c1_pullup`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `i2c1_overclock`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `i2c2_pullup`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `i2c2_overclock`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `i2c3_pullup`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `i2c3_overclock`
 - Default: `ON`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `mco2_on_pc9`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `timezone_offset_minutes`
 - Default: `0`
@@ -2450,7 +2440,7 @@ Like [gyro_1_align_yaw](#gyro_1_align_yaw), but for the second gyro sensor.
 
 ## `stats`
 - Default: `OFF`
-- Allowed: `OFF, ON`
+- Allowed: `OFF`, `ON`
 
 ## `stats_total_flights`
 - Default: `0`
@@ -2465,19 +2455,15 @@ Like [gyro_1_align_yaw](#gyro_1_align_yaw), but for the second gyro sensor.
 - Allowed: `0 - 4294967295`
 
 ## `name`
-- Default: `-`
-- Allowed: `Unknown`
 - BF Configurator: *Craft Name*
 
 Name of the craft. Used in log and config files, and can be displayed in OSD with [osd_craft_name_pos](#osd_craft_name_pos).
 
 ## `display_name`
-- Default: `-`
-- Allowed: `Unknown`
 - BF Configurator: *Display Name*
 
 Text that can be displayed in OSD with [osd_display_name_pos](#osd_display_name_pos). E.g. name of the pilot.
 
 ## `position_alt_source`
 - Default: `DEFAULT`
-- Allowed: `DEFAULT, BARO_ONLY, GPS_ONLY`
+- Allowed: `DEFAULT`, `BARO_ONLY`, `GPS_ONLY`
