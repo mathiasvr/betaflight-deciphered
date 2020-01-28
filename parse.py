@@ -1,22 +1,13 @@
 import json
 import re
 
-
 def parse_vars_and_print():
 
   with open('get_413_defaults.txt', 'r', encoding='utf-8') as file:
     lines = file.read().splitlines()
 
-
   with open('help_variables.json') as json_file:
       help_variables_data = json.load(json_file)
-      # for p in data['people']:
-      #     print('Name: ' + p['name'])
-      #     print('Website: ' + p['website'])
-      #     print('From: ' + p['from'])
-      #     print('')
-
-  # data = [int(i) for i in lines[0].split()]
 
   # remove empty lines (TODO: also remove whitespace?)
   lines = [line for line in lines if line != '']
@@ -30,9 +21,8 @@ def parse_vars_and_print():
 
       i += 1
 
-      # matches = re.match("(profile|rateprofile).+", lines[i])
       section = 'master'
-        # todo: profile / rateprofile entry (skip for now)
+        # TODO: split profile / rateprofile entries
       if lines[i].startswith('profile'):
         section = 'profile'
         i += 1
@@ -57,8 +47,15 @@ def parse_vars_and_print():
       desc = helpdata['desc']
       aka = helpdata['aka'] if 'aka' in helpdata else ''
 
-      print(f"| {name} | {aka} | {desc} | {default_value} | {allowed_values} |") #{section}")
-      # print(f'\t{{ "{name}": "" }},')
+      print(f"\n## `{name}`")
+      print(f"- Default: `{default_value}`")
+      print(f"- Allowed: `{allowed_values}`")
+      if aka:
+        print(f"- BF Configurator: *{aka}*")
+
+      if desc:
+        print(f"\n{desc}")
+
     else:
       print("Parsing error!")
       print("Line:")
@@ -67,8 +64,6 @@ def parse_vars_and_print():
 
     i += 1
 
-
-print("| Variable name | BF Configurator Name | Description | Default Value | Allowed Values |")
-print("| ------ | ------ | ------ | ------ | ------ |")
+print("# Betaflight CLI Variables")
 
 parse_vars_and_print()
