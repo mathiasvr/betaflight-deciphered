@@ -72,22 +72,22 @@
     "desc": ""
   },
   "acc_hardware": {
-    "desc": ""
+    "desc": "This is used to suggest which accelerometer driver should load, or to force no accelerometer in case gyro-only flight is needed. Default `AUTO` will attempt to auto-detect among enabled drivers. Otherwise, to force a particular device, set appropriately, or select `NONE` to disable accelerometer alltogether - resulting in gyro-only operation."
   },
   "acc_lpf_hz": {
     "desc": ""
   },
   "acc_trim_pitch": {
-    "desc": ""
+    "desc": "Accelerometer trim (Pitch)"
   },
   "acc_trim_roll": {
-    "desc": ""
+    "desc": "Accelerometer trim (Roll)"
   },
   "acc_calibration": {
     "desc": "TODO: Accelerometer calibration values. Normally set automatically by pressing *Calibrate Accelerometer* in BF Configurator."
   },
   "align_mag": {
-    "desc": ""
+    "desc": "When running on non-default hardware or adding support for new sensors/sensor boards, these values are used for sensor orientation. When carefully understood, these values can also be used to rotate (in 90deg steps) or flip the board."
   },
   "mag_align_roll": {
     "desc": ""
@@ -111,10 +111,10 @@
     "desc": ""
   },
   "mag_hardware": {
-    "desc": ""
+    "desc": "Set default `AUTO` to use magnetometer hardware defined for your board type. Otherwise select appropriate device, or set to `None` to disable magnetometer."
   },
   "mag_declination": {
-    "desc": ""
+    "desc": "Current location magnetic declination in dddmm format. For example, -6deg 37min = -637 for Japan. Leading zeros not required. Get your local magnetic declination here: http://magnetic-declination.com/"
   },
   "mag_calibration": {
     "desc": ""
@@ -132,44 +132,49 @@
     "desc": ""
   },
   "baro_hardware": {
-    "desc": ""
+    "desc": "Set default `AUTO` to use the barometer hardware defined for your board type. Otherwise select appropriate device, or set to `None` to disable barometer."
   },
   "baro_tab_size": {
-    "desc": ""
+    "desc": "Pressure sensor sample count."
   },
   "baro_noise_lpf": {
-    "desc": ""
+    "desc": "Barometer low-pass filter cut-off frequency in Hz."
   },
   "baro_cf_vel": {
-    "desc": ""
+    "desc": "Velocity sensor mix in altitude hold. Determines the influence accelerometer and barometer sensors have in the velocity estimation. `1000` for pure accelerometer altitude, 0 for pure barometer altitude."
   },
   "mid_rc": {
     "desc": "The value (in us) used to determine if a stick is centered.",
-    "aka": "Stick Center"
+    "aka": "Stick Center",
+    "descMore": "This is an important number to set in order to avoid trimming receiver/transmitter. Most standard receivers will have this at 1500, however Futaba transmitters will need this set to 1520. A way to find out if this needs to be changed, is to clear all trim/subtrim on transmitter, and connect to GUI. Note the value most channels idle at - this should be the number to choose. Once midrc is set, use subtrim on transmitter to make sure all channels (except throttle of course) are centered at midrc value."
   },
   "min_check": {
     "desc": "TODO: The maximum value (in us) for a stick to be recognised as low. I think this is only used for stick commands, and not a to cap channel values.",
-    "aka": "'Stick Low' Threshold"
+    "aka": "'Stick Low' Threshold",
+    "descMore": "These are min/max values (in us) which, when a channel is smaller (min) or larger (max) than the value will activate various RC commands, such as arming, or stick configuration. Normally, every RC channel should be set so that min = 1000us, max = 2000us. On most transmitters this usually means 125% endpoints. Default check values are 100us above/below this value."
   },
   "max_check": {
     "desc": "TODO: The minimum value (in us) for a stick to be recognised as high.",
-    "aka": "'Stick High' Threshold"
+    "aka": "'Stick High' Threshold",
+    "descMore": "These are min/max values (in us) which, when a channel is smaller (min) or larger (max) than the value will activate various RC commands, such as arming, or stick configuration. Normally, every RC channel should be set so that min = 1000us, max = 2000us. On most transmitters this usually means 125% endpoints. Default check values are 100us above/below this value."
   },
   "rssi_channel": {
-    "desc": "Receiver channel (AUX channel + 4) that reports RSSI info.",
+    "desc": "Receiver (RX) channel (AUX channel + 4) that contains the RSSI signal.",
     "aka": "RSSI Channel"
   },
   "rssi_src_frame_errors": {
     "desc": ""
   },
   "rssi_scale": {
-    "desc": "GUESS: Scales the RSSI value."
+    "desc": "GUESS: Scales the RSSI value.",
+    "descMore": "When using ADC RSSI, the raw ADC value will be divided by rssi_scale in order to get the RSSI percentage. RSSI scale is therefore the ADC raw value for 100% RSSI."
   },
   "rssi_offset": {
     "desc": "GUESS: Offsets the RSSI value by a given amount."
   },
   "rssi_invert": {
-    "desc": "GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal)"
+    "desc": "GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal)",
+    "descMore": "When using PWM RSSI or ADC RSSI, determines if the signal is inverted (Futaba, FrSKY)"
   },
   "rssi_src_frame_lpf_period": {
     "desc": ""
@@ -212,13 +217,13 @@
     "desc": ""
   },
   "serialrx_provider": {
-    "desc": ""
+    "desc": "When feature `SERIALRX` is enabled, this allows connection to several receivers which output data via digital interface resembling serial."
   },
   "serialrx_inverted": {
     "desc": ""
   },
   "spektrum_sat_bind": {
-    "desc": ""
+    "desc": "Used to bind the spektrum satellite to RX. Set `0` to disable."
   },
   "spektrum_sat_bind_autoreset": {
     "desc": ""
@@ -237,11 +242,13 @@
   },
   "rx_min_usec": {
     "desc": "Minimum valid pulse length [usec]. Pulses shorter than minimum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.",
-    "aka": "Minimum length"
+    "aka": "Minimum length",
+    "descMore": "Defines the shortest pulse width value used when ensuring the channel value is valid. If the receiver gives a pulse value lower than this value then the channel will be marked as bad and will default to the value of mid_rc."
   },
   "rx_max_usec": {
     "desc": "Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.",
-    "aka": "Maximum length"
+    "aka": "Maximum length",
+    "descMore": "Defines the longest pulse width value used when ensuring the channel value is valid. If the receiver gives a pulse value higher than this value then the channel will be marked as bad and will default to the value of mid_rc."
   },
   "serialrx_halfduplex": {
     "desc": ""
@@ -268,7 +275,7 @@
     "desc": ""
   },
   "input_filtering_mode": {
-    "desc": ""
+    "desc": "Filter out noise from OpenLRS Telemetry RX"
   },
   "blackbox_p_ratio": {
     "desc": "Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the *Blackbox logging rate* option in Hz."
@@ -284,13 +291,13 @@
     "desc": "Determines when to enable blackbox logging. E.g. flipping a switch or when testing motors in BF Configurator."
   },
   "min_throttle": {
-    "desc": ""
+    "desc": "TODO: These are minimum values (in us) that are sent to esc when armed."
   },
   "max_throttle": {
-    "desc": ""
+    "desc": "TODO: These are maximum values (in us) that are sent to esc when armed."
   },
   "min_command": {
-    "desc": ""
+    "desc": "This is the PWM value sent to ESCs when they are not armed. If ESCs beep slowly when powered up, try decreasing this value. It can also be used for calibrating all ESCs at once."
   },
   "dshot_idle_value": {
     "desc": "This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. 2000 equals 20 percent.",
@@ -316,7 +323,7 @@
     "desc": ""
   },
   "motor_pwm_rate": {
-    "desc": ""
+    "desc": "TODO: Output frequency (in Hz) for motor pins. Defaults are 400Hz for motor. If setting above 500Hz, will switch to brushed (direct drive) motors mode. For example, setting to 8000 will use brushed mode at 8kHz switching frequency. Up to 32kHz is supported. Default is 16000 for boards with brushed motors. Note, that in brushed mode, min_throttle is offset to zero. For brushed mode, set max_throttle to 2000."
   },
   "motor_pwm_inversion": {
     "desc": ""
@@ -333,13 +340,14 @@
   },
   "failsafe_delay": {
     "desc": "Time for stage 1 to wait for recovery.",
-    "aka": "Guard time for stage 2 activation after signal lost [1 = 0.1 sec.]"
+    "aka": "Guard time for stage 2 activation after signal lost [1 = 0.1 sec.]",
+    "descMore": "Time in deciseconds to wait before activating failsafe when signal is lost. See Failsafe documentation."
   },
   "failsafe_off_delay": {
-    "desc": ""
+    "desc": "Time in deciseconds to wait before turning off motors when failsafe is activated. See Failsafe documentation."
   },
   "failsafe_throttle": {
-    "desc": ""
+    "desc": "Throttle level used for landing when failsafe is enabled. See Failsafe documentation."
   },
   "failsafe_switch_mode": {
     "desc": "This option determines what happens when Failsafe is activated through AUX switch: `Stage 1` activates Stage 1 failsafe. This is useful if you want to simulate the exact signal loss failsafe behavior. `Stage 2` skips Stage 1 and activates the Stage 2 procedure immediately. `Kill` disarms instantly (your craft will crash).",
@@ -347,7 +355,8 @@
   },
   "failsafe_throttle_low_delay": {
     "desc": "Just disarm the craft instead of executing the selected failsafe procedure when the throttle was low for this amount of time.",
-    "aka": "Failsafe Throttle Low Delay [1 = 0.1 sec.]"
+    "aka": "Failsafe Throttle Low Delay [1 = 0.1 sec.]",
+    "descMore": "Activate failsafe when throttle is low and no RX data has been received since this value, in 10th of seconds"
   },
   "failsafe_procedure": {
     "desc": "",
@@ -361,36 +370,42 @@
   },
   "align_board_roll": {
     "desc": "Assigns how the flight controller board is aligned on the roll axis.",
-    "aka": "Roll Degrees"
+    "aka": "Roll Degrees",
+    "descMore": "Arbitrary board rotation in degrees, to allow mounting it sideways / upside down / rotated etc"
   },
   "align_board_pitch": {
     "desc": "Assigns how the flight controller board is aligned on the pitch axis.",
-    "aka": "Pitch Degrees"
+    "aka": "Pitch Degrees",
+    "descMore": "Arbitrary board rotation in degrees, to allow mounting it sideways / upside down / rotated etc"
   },
   "align_board_yaw": {
     "desc": "Assigns how the flight controller board is aligned on the yaw axis.",
-    "aka": "Yaw Degrees"
+    "aka": "Yaw Degrees",
+    "descMore": "Arbitrary board rotation in degrees, to allow mounting it sideways / upside down / rotated etc"
   },
   "gimbal_mode": {
-    "desc": ""
+    "desc": "TODO: When feature `SERVO_TILT` is enabled, this can be either NORMAL or MIXTILT"
   },
   "bat_capacity": {
     "desc": "GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at `0` to disable."
   },
   "vbat_max_cell_voltage": {
     "desc": "Maximum voltage of a single cell in the battery. Used for battery PID compensation [vbat_pid_gain](#vbat_pid_gain), so be sure to set accordingly if enabling this option.",
-    "aka": "Maximum Cell Voltage"
+    "aka": "Maximum Cell Voltage",
+    "descMore": "Maximum voltage per cell, used for auto-detecting battery voltage in 0.1V units, default is 43 (4.3V)"
   },
   "vbat_full_cell_voltage": {
     "desc": "TODO: Voltage of a single cell in battery to be considered fully charged. I think used for warning if battery is not fully charged."
   },
   "vbat_min_cell_voltage": {
     "desc": "Minimum voltage allowed for a single cell in the battery. Warnings can be issued with beeper and OSD if this happens.",
-    "aka": "Minimum Cell Voltage"
+    "aka": "Minimum Cell Voltage",
+    "descMore": "Minimum voltage per cell, this triggers battery-critical alarms, in 0.1V units, default is 33 (3.3V)"
   },
   "vbat_warning_cell_voltage": {
     "desc": "Voltage of a single cell in the battery that should issue a warning, which can be detected with beeper and OSD.",
-    "aka": "Warning Cell Voltage"
+    "aka": "Warning Cell Voltage",
+    "descMore": "Warning voltage per cell, this triggers battery-warning alarms, in 0.1V units, default is 35 (3.5V)"
   },
   "vbat_hysteresis": {
     "desc": "Sets the hysteresis value for low-battery alarms, in 0.1V units, i.e. 1 = 0.1V. The alarm will only go off if the voltage dips this amount below the warning voltage. Can be used to tame alarms that go off too easily with sagging batteries etc."
@@ -432,7 +447,7 @@
     "desc": ""
   },
   "vbat_scale": {
-    "desc": ""
+    "desc": "TODO: Result is Vbatt in 0.1V steps. 3.3V = ADC Vref, 4095 = 12bit adc, 110 = 11:1 voltage divider (10k:1k) x 10 for 0.1V. Adjust this slightly if reported pack voltage is different from multimeter reading. You can get current voltage by typing \"status\" in cli."
   },
   "vbat_divider": {
     "desc": ""
@@ -472,16 +487,16 @@
     "desc": ""
   },
   "3d_deadband_low": {
-    "desc": ""
+    "desc": "TODO: Low value of throttle deadband for 3D mode (when stick is in the 3d_deadband_throttle range, the fixed values of 3d_deadband_low / _high are used instead)"
   },
   "3d_deadband_high": {
-    "desc": ""
+    "desc": "TODO: High value of throttle deadband for 3D mode (when stick is in the deadband range, the value in 3d_neutral is used instead)"
   },
   "3d_neutral": {
-    "desc": ""
+    "desc": "Neutral (stop) throttle value for 3D mode"
   },
   "3d_deadband_throttle": {
-    "desc": ""
+    "desc": "TODO: Throttle signal will be held to a fixed value when throttle is centered with an error margin defined in this parameter."
   },
   "3d_limit_low": {
     "desc": ""
@@ -493,16 +508,16 @@
     "desc": ""
   },
   "servo_center_pulse": {
-    "desc": ""
+    "desc": "TODO: Servo midpoint"
   },
   "servo_pwm_rate": {
-    "desc": ""
+    "desc": "Output frequency (in Hz) servo pins. When using tricopters or gimbal with digital servo, this rate can be increased. Max of 498Hz (for 500Hz pwm period), and min of 50Hz. Most digital servos will support for example 330Hz."
   },
   "servo_lowpass_hz": {
     "desc": ""
   },
   "tri_unarmed_servo": {
-    "desc": ""
+    "desc": "On tricopter mix only, if this is enabled, servo will always be correcting regardless of armed state."
   },
   "channel_forwarding_start": {
     "desc": ""
@@ -512,11 +527,13 @@
   },
   "thr_mid": {
     "desc": "Throttle Mid. The [thr_expo](#thr_expo) is centered around this point. Usually this is set around the hovering point.",
-    "aka": "Throttle MID"
+    "aka": "Throttle MID",
+    "descMore": "Throttle value when the stick is set to mid-position. Used in the throttle curve calculation."
   },
   "thr_expo": {
     "desc": "Throttle Expo. Creates an exponential throttle curve around the [thr_mid](#thr_mid) point. Used to increase throttle resolution, usually to support more fine-grained hovering.",
-    "aka": "Throttle EXPO"
+    "aka": "Throttle EXPO",
+    "descMore": "Throttle exposition value"
   },
   "rates_type": {
     "desc": ""
@@ -559,11 +576,13 @@
   },
   "tpa_rate": {
     "desc": "Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond [tpa_breakpoint](#tpa_breakpoint). Used to eliminate fast oscillations at high throttle.",
-    "aka": "TPA"
+    "aka": "TPA",
+    "descMore": "Throttle PID attenuation reduces influence of P on ROLL and PITCH as throttle increases. For every 1% throttle after the TPA breakpoint, P is reduced by the TPA rate."
   },
   "tpa_breakpoint": {
     "desc": "Throttle PID Attenuation breakpoint. The point at which TPA should take effect. This should be set around the throttle point at which fast oscillations would occur.",
-    "aka": "TPA Breakpoint"
+    "aka": "TPA Breakpoint",
+    "descMore": "See tpa_rate."
   },
   "tpa_mode": {
     "desc": "Throttle PID Attenuation mode. Determines which PID gains should be reduced. Used to be both P and D, but by default only D since Betaflight 4.0."
@@ -586,38 +605,38 @@
     "desc": "Maximum velocity (deg/s) for yaw. Caps a yaw rate curve that would otherwise become higher."
   },
   "reboot_character": {
-    "desc": ""
+    "desc": "Special character used to trigger reboot."
   },
   "serial_update_rate_hz": {
     "desc": ""
   },
   "imu_dcm_kp": {
-    "desc": ""
+    "desc": "TODO: Inertial Measurement Unit KP Gain."
   },
   "imu_dcm_ki": {
-    "desc": ""
+    "desc": "TODO: Inertial Measurement Unit KI Gain."
   },
   "small_angle": {
     "desc": "Craft will not ARM if tilted more than specified number of degrees. Only applies if accelerometer is enabled. Setting to 180 will effectivly disable check.",
     "aka": "Maximum ARM Angle [degrees]"
   },
   "auto_disarm_delay": {
-    "desc": ""
+    "desc": "Delay before automatic disarming."
   },
   "gyro_cal_on_first_arm": {
     "desc": ""
   },
   "gps_provider": {
-    "desc": ""
+    "desc": "GPS standard."
   },
   "gps_sbas_mode": {
-    "desc": ""
+    "desc": "Ground assistance type."
   },
   "gps_auto_config": {
-    "desc": ""
+    "desc": "TODO: Enable automatic configuration of UBlox GPS receivers."
   },
   "gps_auto_baud": {
-    "desc": ""
+    "desc": "Enable automatic detection of GPS baudrate."
   },
   "gps_ublox_use_galileo": {
     "desc": ""
@@ -701,10 +720,10 @@
     "desc": ""
   },
   "deadband": {
-    "desc": ""
+    "desc": "These are values (in us) by how much RC input can be different before it's considered valid for roll and pitch axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint."
   },
   "yaw_deadband": {
-    "desc": ""
+    "desc": "These are values (in us) by how much RC input can be different before it's considered valid for the yaw axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint."
   },
   "yaw_control_reversed": {
     "desc": ""
@@ -753,7 +772,7 @@
     "aka": "Vbat PID Compensation"
   },
   "pid_at_min_throttle": {
-    "desc": ""
+    "desc": "TODO: If enabled, the copter will process the pid algorithm at minimum throttle."
   },
   "anti_gravity_mode": {
     "desc": ""
@@ -847,37 +866,37 @@
     "desc": ""
   },
   "p_pitch": {
-    "desc": ""
+    "desc": "Pitch P parameter"
   },
   "i_pitch": {
-    "desc": ""
+    "desc": "Pitch I parameter"
   },
   "d_pitch": {
-    "desc": ""
+    "desc": "Pitch D parameter"
   },
   "f_pitch": {
     "desc": ""
   },
   "p_roll": {
-    "desc": ""
+    "desc": "Roll P parameter"
   },
   "i_roll": {
-    "desc": ""
+    "desc": "Roll I parameter"
   },
   "d_roll": {
-    "desc": ""
+    "desc": "Roll D parameter"
   },
   "f_roll": {
     "desc": ""
   },
   "p_yaw": {
-    "desc": ""
+    "desc": "Yaw P parameter"
   },
   "i_yaw": {
-    "desc": ""
+    "desc": "Yaw I parameter"
   },
   "d_yaw": {
-    "desc": ""
+    "desc": "Yaw D parameter"
   },
   "f_yaw": {
     "desc": ""
@@ -1011,7 +1030,7 @@
     "desc": ""
   },
   "frsky_vfas_precision": {
-    "desc": ""
+    "desc": "TODO: Set to 1 to send raw VBat value in 0.1V resolution for receivers that can handle it, or 0 (default) to use the standard method."
   },
   "hott_alarm_int": {
     "desc": ""
@@ -1501,7 +1520,7 @@
     "aka": "Band"
   },
   "vtx_channel": {
-    "desc": "The channel (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.",
+    "desc": "The channel (index) to be used by the VTX within the configured [vtx_band](#vtx_band). You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.",
     "aka": "Channel"
   },
   "vtx_power": {
@@ -1510,18 +1529,19 @@
   },
   "vtx_low_power_disarm": {
     "desc": "When enabled, the VTX uses the lowest available power when disarmed (except if a failsafe has occurred).",
-    "aka": "Low Power Disarm"
+    "aka": "Low Power Disarm",
+    "descMore": "When the craft is disarmed, set the VTX to its lowest power. ON will set the power to its minimum value on startup, increase it to vtx_power when arming and change it back to its lowest setting after disarming. UNTIL_FIRST_ARM will start with minimum power, but once the craft is armed it will increase to vtx_power and it will never decrease until the craft is power cycled."
   },
   "vtx_freq": {
     "desc": "The frequency to be used by the VTX in MHz. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set [vtx_band](#vtx_band) and [vtx_channel](#vtx_channel).",
     "aka": "Frequency"
   },
   "vtx_pit_mode_freq": {
-    "desc": "Frequency at which the Pit Mode changes when enabled.",
+    "desc": "Frequency to use (in MHz) when the VTX is in pit mode.",
     "aka": "Pit Mode frequency"
   },
   "vtx_halfduplex": {
-    "desc": ""
+    "desc": "Use half duplex UART to communicate with the VTX, using only a TX pin in the FC."
   },
   "vtx_spi_bus": {
     "desc": ""
