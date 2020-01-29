@@ -33,14 +33,16 @@ def parse_vars_and_print():
       allowed_values = ""
       if matches:
         if matches.groups()[0] == 'values':
-          allowed_values ="`, `".join([s.strip() for s in matches.groups()[1].split(',')])
-        else:
-          allowed_values = matches.groups()[1]
+          # allowed_values = "`, `".join([s.strip() for s in matches.groups()[1].split(',')])
+          allowed_values =matches.groups()[1].replace(', ', '`, `')
+        else: # range
+          # allowed_values = "` - `".join(matches.groups()[1].split(' - '))
+          allowed_values = matches.groups()[1].replace(' - ', '` - `')
 
       else:
-        matches = re.match("(Array length.+)", lines[i])
+        matches = re.match("Array length: (.+)", lines[i])
         if matches:
-          allowed_values = matches.groups()[0]
+          allowed_values = f"Array[{matches.groups()[0]}]"
         else:
           # reparse entry
           i -= 1
