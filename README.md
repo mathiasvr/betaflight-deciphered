@@ -117,6 +117,8 @@ TODO: Selects the gyro(s) that should be used.
 - Default: `AUTO`
 - Allowed: `AUTO`, `NONE`, `ADXL345`, `MPU6050`, `MMA8452`, `BMA280`, `LSM303DLHC`, `MPU6000`, `MPU6500`, `MPU9250`, `ICM20601`, `ICM20602`, `ICM20608G`, `ICM20649`, `ICM20689`, `BMI160`, `FAKE`
 
+This is used to suggest which accelerometer driver should load, or to force no accelerometer in case gyro-only flight is needed. Default `AUTO` will attempt to auto-detect among enabled drivers. Otherwise, to force a particular device, set appropriately, or select `NONE` to disable accelerometer alltogether - resulting in gyro-only operation.
+
 ## `acc_lpf_hz`
 - Default: `10`
 - Allowed: `0` - `400`
@@ -125,9 +127,13 @@ TODO: Selects the gyro(s) that should be used.
 - Default: `0`
 - Allowed: `-300` - `300`
 
+Accelerometer trim (Pitch)
+
 ## `acc_trim_roll`
 - Default: `0`
 - Allowed: `-300` - `300`
+
+Accelerometer trim (Roll)
 
 ## `acc_calibration`
 - Default: `0,0,0`
@@ -138,6 +144,8 @@ TODO: Accelerometer calibration values. Normally set automatically by pressing *
 ## `align_mag`
 - Default: `DEFAULT`
 - Allowed: `DEFAULT`, `CW0`, `CW90`, `CW180`, `CW270`, `CW0FLIP`, `CW90FLIP`, `CW180FLIP`, `CW270FLIP`, `CUSTOM`
+
+When running on non-default hardware or adding support for new sensors/sensor boards, these values are used for sensor orientation. When carefully understood, these values can also be used to rotate (in 90deg steps) or flip the board.
 
 ## `mag_align_roll`
 - Default: `0`
@@ -171,9 +179,13 @@ TODO: Accelerometer calibration values. Normally set automatically by pressing *
 - Default: `NONE`
 - Allowed: `AUTO`, `NONE`, `HMC5883`, `AK8975`, `AK8963`, `QMC5883`, `LIS3MDL`
 
+Set default `AUTO` to use magnetometer hardware defined for your board type. Otherwise select appropriate device, or set to `None` to disable magnetometer.
+
 ## `mag_declination`
 - Default: `0`
 - Allowed: `-18000` - `18000`
+
+Current location magnetic declination in dddmm format. For example, -6deg 37min = -637 for Japan. Leading zeros not required. Get your local magnetic declination here: http://magnetic-declination.com/
 
 ## `mag_calibration`
 - Default: `0,0,0`
@@ -199,17 +211,25 @@ TODO: Accelerometer calibration values. Normally set automatically by pressing *
 - Default: `AUTO`
 - Allowed: `AUTO`, `NONE`, `BMP085`, `MS5611`, `BMP280`, `LPS`, `QMP6988`, `BMP388`
 
+Set default `AUTO` to use the barometer hardware defined for your board type. Otherwise select appropriate device, or set to `None` to disable barometer.
+
 ## `baro_tab_size`
 - Default: `21`
 - Allowed: `0` - `48`
+
+Pressure sensor sample count.
 
 ## `baro_noise_lpf`
 - Default: `600`
 - Allowed: `0` - `1000`
 
+Barometer low-pass filter cut-off frequency in Hz.
+
 ## `baro_cf_vel`
 - Default: `985`
 - Allowed: `0` - `1000`
+
+Velocity sensor mix in altitude hold. Determines the influence accelerometer and barometer sensors have in the velocity estimation. `1000` for pure accelerometer altitude, 0 for pure barometer altitude.
 
 ## `mid_rc`
 - Default: `1500`
@@ -237,7 +257,7 @@ TODO: The minimum value (in us) for a stick to be recognised as high.
 - Allowed: `0` - `18`
 - BF Configurator: *RSSI Channel*
 
-Receiver channel (AUX channel + 4) that reports RSSI info.
+Receiver (RX) channel (AUX channel + 4) that contains the RSSI signal.
 
 ## `rssi_src_frame_errors`
 - Default: `OFF`
@@ -320,6 +340,8 @@ Camera tilt angle in degrees that should be compensated for when enabling *FPV A
 - Default: `SBUS`
 - Allowed: `SPEK1024`, `SPEK2048`, `SBUS`, `SUMD`, `SUMH`, `XB-B`, `XB-B-RJ01`, `IBUS`, `JETIEXBUS`, `CRSF`, `SRXL`, `CUSTOM`, `FPORT`, `SRXL2`
 
+When feature `SERIALRX` is enabled, this allows connection to several receivers which output data via digital interface resembling serial.
+
 ## `serialrx_inverted`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
@@ -327,6 +349,8 @@ Camera tilt angle in degrees that should be compensated for when enabling *FPV A
 ## `spektrum_sat_bind`
 - Default: `0`
 - Allowed: `0` - `10`
+
+Used to bind the spektrum satellite to RX. Set `0` to disable.
 
 ## `spektrum_sat_bind_autoreset`
 - Default: `ON`
@@ -347,6 +371,8 @@ Camera tilt angle in degrees that should be compensated for when enabling *FPV A
 ## `airmode_start_throttle_percent`
 - Default: `25`
 - Allowed: `0` - `100`
+
+As a safety feature when having airmode enabled, it will not become active until you throttle up above this value in percent once. After that airmode will be active in the whole throttle range, until you disarm.
 
 ## `rx_min_usec`
 - Default: `885`
@@ -398,11 +424,13 @@ Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and wi
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
+Filter out noise from OpenLRS Telemetry RX
+
 ## `blackbox_p_ratio`
 - Default: `32`
 - Allowed: `0` - `32767`
 
-Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the *Blackbox logging rate* option in hz units.
+Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the *Blackbox logging rate* option in Hz.
 
 ## `blackbox_device`
 - Default: `SDCARD`
@@ -427,13 +455,19 @@ Determines when to enable blackbox logging. E.g. flipping a switch or when testi
 - Default: `1070`
 - Allowed: `750` - `2250`
 
+TODO: These are minimum values (in us) that are sent to esc when armed.
+
 ## `max_throttle`
 - Default: `2000`
 - Allowed: `750` - `2250`
 
+TODO: These are maximum values (in us) that are sent to esc when armed.
+
 ## `min_command`
 - Default: `1000`
 - Allowed: `750` - `2250`
+
+This is the PWM value sent to ESCs when they are not armed. If ESCs beep slowly when powered up, try decreasing this value. It can also be used for calibrating all ESCs at once.
 
 ## `dshot_idle_value`
 - Default: `550`
@@ -473,6 +507,8 @@ Bidirectional DShot. When enabled lets the DSHOT protocol receive information di
 - Default: `480`
 - Allowed: `200` - `32000`
 
+TODO: Output frequency (in Hz) for motor pins. Defaults are 400Hz for motor. If setting above 500Hz, will switch to brushed (direct drive) motors mode. For example, setting to 8000 will use brushed mode at 8kHz switching frequency. Up to 32kHz is supported. Default is 16000 for boards with brushed motors. Note, that in brushed mode, min_throttle is offset to zero. For brushed mode, set max_throttle to 2000.
+
 ## `motor_pwm_inversion`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
@@ -503,9 +539,13 @@ Time for stage 1 to wait for recovery.
 - Default: `10`
 - Allowed: `0` - `200`
 
+Time in deciseconds to wait before turning off motors when failsafe is activated. See Failsafe documentation.
+
 ## `failsafe_throttle`
 - Default: `1000`
 - Allowed: `750` - `2250`
+
+Throttle level used for landing when failsafe is enabled. See Failsafe documentation.
 
 ## `failsafe_switch_mode`
 - Default: `STAGE1`
@@ -559,6 +599,8 @@ Assigns how the flight controller board is aligned on the yaw axis.
 - Default: `NORMAL`
 - Allowed: `NORMAL`, `MIXTILT`
 
+TODO: When feature `SERVO_TILT` is enabled, this can be either NORMAL or MIXTILT
+
 ## `bat_capacity`
 - Default: `0`
 - Allowed: `0` - `20000`
@@ -570,7 +612,7 @@ GUESS: Capacity of the battery in mAh. Can be used with current meter to detect 
 - Allowed: `100` - `500`
 - BF Configurator: *Maximum Cell Voltage*
 
-TODO: Maximum voltage of a single cell in the battery. Not sure what this is used for?
+Maximum voltage of a single cell in the battery. Used for battery PID compensation [vbat_pid_gain](#vbat_pid_gain), so be sure to set accordingly if enabling this option.
 
 ## `vbat_full_cell_voltage`
 - Default: `410`
@@ -595,6 +637,8 @@ Voltage of a single cell in the battery that should issue a warning, which can b
 ## `vbat_hysteresis`
 - Default: `1`
 - Allowed: `0` - `250`
+
+Sets the hysteresis value for low-battery alarms, in 0.1V units, i.e. 1 = 0.1V. The alarm will only go off if the voltage dips this amount below the warning voltage. Can be used to tame alarms that go off too easily with sagging batteries etc.
 
 ## `current_meter`
 - Default: `ADC`
@@ -647,6 +691,8 @@ Voltage of a single cell in the battery that should issue a warning, which can b
 ## `vbat_scale`
 - Default: `110`
 - Allowed: `0` - `255`
+
+TODO: Result is Vbatt in 0.1V steps. 3.3V = ADC Vref, 4095 = 12bit adc, 110 = 11:1 voltage divider (10k:1k) x 10 for 0.1V. Adjust this slightly if reported pack voltage is different from multimeter reading. You can get current voltage by typing "status" in cli.
 
 ## `vbat_divider`
 - Default: `10`
@@ -705,17 +751,25 @@ Configures the mixer to expect the motor direction to be reversed and the propel
 - Default: `1406`
 - Allowed: `750` - `1500`
 
+TODO: Low value of throttle deadband for 3D mode (when stick is in the 3d_deadband_throttle range, the fixed values of 3d_deadband_low / _high are used instead)
+
 ## `3d_deadband_high`
 - Default: `1514`
 - Allowed: `1500` - `2250`
+
+TODO: High value of throttle deadband for 3D mode (when stick is in the deadband range, the value in 3d_neutral is used instead)
 
 ## `3d_neutral`
 - Default: `1460`
 - Allowed: `750` - `2250`
 
+Neutral (stop) throttle value for 3D mode
+
 ## `3d_deadband_throttle`
 - Default: `50`
 - Allowed: `1` - `100`
+
+TODO: Throttle signal will be held to a fixed value when throttle is centered with an error margin defined in this parameter.
 
 ## `3d_limit_low`
 - Default: `1000`
@@ -733,9 +787,13 @@ Configures the mixer to expect the motor direction to be reversed and the propel
 - Default: `1500`
 - Allowed: `750` - `2250`
 
+TODO: Servo midpoint
+
 ## `servo_pwm_rate`
 - Default: `50`
 - Allowed: `50` - `498`
+
+Output frequency (in Hz) servo pins. When using tricopters or gimbal with digital servo, this rate can be increased. Max of 498Hz (for 500Hz pwm period), and min of 50Hz. Most digital servos will support for example 330Hz.
 
 ## `servo_lowpass_hz`
 - Default: `0`
@@ -744,6 +802,8 @@ Configures the mixer to expect the motor direction to be reversed and the propel
 ## `tri_unarmed_servo`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
+
+On tricopter mix only, if this is enabled, servo will always be correcting regardless of armed state.
 
 ## `channel_forwarding_start`
 - Default: `4`
@@ -872,6 +932,8 @@ Maximum velocity (deg/s) for yaw. Caps a yaw rate curve that would otherwise bec
 - Default: `82`
 - Allowed: `48` - `126`
 
+Special character used to trigger reboot.
+
 ## `serial_update_rate_hz`
 - Default: `100`
 - Allowed: `100` - `2000`
@@ -880,9 +942,13 @@ Maximum velocity (deg/s) for yaw. Caps a yaw rate curve that would otherwise bec
 - Default: `2500`
 - Allowed: `0` - `32000`
 
+TODO: Inertial Measurement Unit KP Gain.
+
 ## `imu_dcm_ki`
 - Default: `0`
 - Allowed: `0` - `32000`
+
+TODO: Inertial Measurement Unit KI Gain.
 
 ## `small_angle`
 - Default: `25`
@@ -895,6 +961,8 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 - Default: `5`
 - Allowed: `0` - `60`
 
+Delay before automatic disarming.
+
 ## `gyro_cal_on_first_arm`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
@@ -903,17 +971,25 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 - Default: `NMEA`
 - Allowed: `NMEA`, `UBLOX`, `MSP`
 
+GPS standard.
+
 ## `gps_sbas_mode`
 - Default: `AUTO`
 - Allowed: `AUTO`, `EGNOS`, `WAAS`, `MSAS`, `GAGAN`
+
+Ground assistance type.
 
 ## `gps_auto_config`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
+TODO: Enable automatic configuration of UBlox GPS receivers.
+
 ## `gps_auto_baud`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
+
+Enable automatic detection of GPS baudrate.
 
 ## `gps_ublox_use_galileo`
 - Default: `OFF`
@@ -1027,9 +1103,13 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 - Default: `0`
 - Allowed: `0` - `32`
 
+These are values (in us) by how much RC input can be different before it's considered valid for roll and pitch axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint.
+
 ## `yaw_deadband`
 - Default: `0`
 - Allowed: `0` - `100`
+
+These are values (in us) by how much RC input can be different before it's considered valid for the yaw axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint.
 
 ## `yaw_control_reversed`
 - Default: `OFF`
@@ -1052,6 +1132,8 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 - Allowed: `0` - `100`
 
 ## `profile_name`
+
+Name of the PID profile. Can be seen in OSD using [osd_pid_profile_name_pos](#osd_pid_profile_name_pos).
 
 ## `dyn_lpf_dterm_min_hz`
 - Default: `70`
@@ -1088,10 +1170,15 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 ## `vbat_pid_gain`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
+- BF Configurator: *Vbat PID Compensation*
+
+Increases the PID values to compensate when Vbat gets lower. This will give more constant flight characteristics throughout the flight. The amount of compensation that is applied is calculated from the [vbat_max_cell_voltage](#vbat_max_cell_voltage), so make sure that is set to something appropriate.
 
 ## `pid_at_min_throttle`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
+
+TODO: If enabled, the copter will process the pid algorithm at minimum throttle.
 
 ## `anti_gravity_mode`
 - Default: `SMOOTH`
@@ -1220,13 +1307,19 @@ Adds an angle limiting mode for pilots who are learning to fly in acro mode. The
 - Default: `46`
 - Allowed: `0` - `200`
 
+Pitch P parameter
+
 ## `i_pitch`
 - Default: `90`
 - Allowed: `0` - `200`
 
+Pitch I parameter
+
 ## `d_pitch`
 - Default: `38`
 - Allowed: `0` - `200`
+
+Pitch D parameter
 
 ## `f_pitch`
 - Default: `95`
@@ -1236,13 +1329,19 @@ Adds an angle limiting mode for pilots who are learning to fly in acro mode. The
 - Default: `42`
 - Allowed: `0` - `200`
 
+Roll P parameter
+
 ## `i_roll`
 - Default: `85`
 - Allowed: `0` - `200`
 
+Roll I parameter
+
 ## `d_roll`
 - Default: `35`
 - Allowed: `0` - `200`
+
+Roll D parameter
 
 ## `f_roll`
 - Default: `90`
@@ -1252,13 +1351,19 @@ Adds an angle limiting mode for pilots who are learning to fly in acro mode. The
 - Default: `30`
 - Allowed: `0` - `200`
 
+Yaw P parameter
+
 ## `i_yaw`
 - Default: `90`
 - Allowed: `0` - `200`
 
+Yaw I parameter
+
 ## `d_yaw`
 - Default: `0`
 - Allowed: `0` - `200`
+
+Yaw D parameter
 
 ## `f_yaw`
 - Default: `90`
@@ -1448,6 +1553,8 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 ## `frsky_vfas_precision`
 - Default: `0`
 - Allowed: `0` - `1`
+
+TODO: Set to 1 to send raw VBat value in 0.1V resolution for receivers that can handle it, or 0 (default) to use the standard method.
 
 ## `hott_alarm_int`
 - Default: `5`
@@ -2111,7 +2218,7 @@ The band (index) to be used by the VTX. You must configure the VTX Table and set
 - Allowed: `0` - `8`
 - BF Configurator: *Channel*
 
-The channel (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.
+The channel (index) to be used by the VTX within the configured [vtx_band](#vtx_band). You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.
 
 ## `vtx_power`
 - Default: `0`
@@ -2132,18 +2239,20 @@ When enabled, the VTX uses the lowest available power when disarmed (except if a
 - Allowed: `0` - `5999`
 - BF Configurator: *Frequency*
 
-The frequency to be used by the VTX. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set [vtx_band](#vtx_band) and [vtx_channel](#vtx_channel).
+The frequency to be used by the VTX in MHz. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set [vtx_band](#vtx_band) and [vtx_channel](#vtx_channel).
 
 ## `vtx_pit_mode_freq`
 - Default: `0`
 - Allowed: `0` - `5999`
 - BF Configurator: *Pit Mode frequency*
 
-Frequency at which the Pit Mode changes when enabled.
+Frequency to use (in MHz) when the VTX is in pit mode.
 
 ## `vtx_halfduplex`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
+
+Use half duplex UART to communicate with the VTX, using only a TX pin in the FC.
 
 ## `vtx_spi_bus`
 - Default: `0`
