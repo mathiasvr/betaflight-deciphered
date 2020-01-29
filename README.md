@@ -133,7 +133,7 @@ TODO: Selects the gyro(s) that should be used.
 - Default: `0,0,0`
 - Allowed: `Array[3]`
 
-TODO: Accelerometer calibration values. Normally set automatically by pressing 'Calibrate Accelerometer' in BF Configurator.
+TODO: Accelerometer calibration values. Normally set automatically by pressing *Calibrate Accelerometer* in BF Configurator.
 
 ## `align_mag`
 - Default: `DEFAULT`
@@ -310,7 +310,7 @@ GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal
 - Allowed: `0` - `90`
 - BF Configurator: *FPV Camera Angle [degrees]*
 
-Camera tilt angle in degrees that should be compensated for when enabling 'FPV Angle Mix' mode. It can be used to fly FPV as if the camera was tilted differently. Also known as uptilt compensation.
+Camera tilt angle in degrees that should be compensated for when enabling *FPV Angle Mix* mode. It can be used to fly FPV as if the camera was tilted differently. Also known as uptilt compensation.
 
 ## `max_aux_channels`
 - Default: `14`
@@ -402,7 +402,7 @@ Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and wi
 - Default: `32`
 - Allowed: `0` - `32767`
 
-Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the 'Blackbox logging rate' option in hz units.
+Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the *Blackbox logging rate* option in hz units.
 
 ## `blackbox_device`
 - Default: `SDCARD`
@@ -440,7 +440,7 @@ Determines when to enable blackbox logging. E.g. flipping a switch or when testi
 - Allowed: `0` - `2000`
 - BF Configurator: *Motor Idle Throttle Value [percent]*
 
-This is the 'idle' value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. 2000 equals 20 percent.
+This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. 2000 equals 20 percent.
 
 ## `dshot_burst`
 - Default: `ON`
@@ -563,7 +563,7 @@ Assigns how the flight controller board is aligned on the yaw axis.
 - Default: `0`
 - Allowed: `0` - `20000`
 
-GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at '0' to disable.
+GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at `0` to disable.
 
 ## `vbat_max_cell_voltage`
 - Default: `430`
@@ -695,7 +695,7 @@ Adjusts the tone of the of the DShot beacon. Higher value equals a higher tone f
 - Allowed: `OFF`, `ON`
 - BF Configurator: *Motor direction is reversed*
 
-Configures the mixer to expect the motor direction to be reversed and the propellers to be on accordingly, in order to perform correct yaw movement. Warning: This does not reverse the motor direction. Use the configuration tool for your ESCs or switch the ESC motor wiring order to achieve this. Also known as 'Props out' configuration.
+Configures the mixer to expect the motor direction to be reversed and the propellers to be on accordingly, in order to perform correct yaw movement. Warning: This does not reverse the motor direction. Use the configuration tool for your ESCs or switch the ESC motor wiring order to achieve this. Also known as *Props Out* configuration.
 
 ## `crashflip_motor_percent`
 - Default: `0`
@@ -2089,7 +2089,7 @@ Allows selection of all 6 rate profiles using a six position switch or pot. Norm
 - Default: `OFF`
 - Allowed: `OFF`, `192MHZ`, `216MHZ`, `240MHZ`
 
-Overclocks the flight controller CPU to run at a higher clock rate. It's recommended to only overclock if you have a CPU load higher than 50%. Overclocking can potentially overheat the CPU if not properly ventilated. Overclocking has previously been used to allow F4 FC to enable 'Gyro 32KHz sampling mode' which was removed in Betaflight 4.0.
+Overclocks the flight controller CPU to run at a higher clock rate. It's recommended to only overclock if you have a CPU load higher than 50%. Overclocking can potentially overheat the CPU if not properly ventilated. Overclocking has previously been used to allow F4 FC to enable *Gyro 32KHz sampling mode* which was removed in Betaflight 4.0.
 
 ## `pwr_on_arm_grace`
 - Default: `5`
@@ -2338,25 +2338,25 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 - Allowed: `DEFAULT`, `CW0`, `CW90`, `CW180`, `CW270`, `CW0FLIP`, `CW90FLIP`, `CW180FLIP`, `CW270FLIP`, `CUSTOM`
 - BF Configurator: *First GYRO*
 
-GUESS: Alignment of the first gyro sensor. Represented as a rotation string in degrees, e.g. 'CW90'. This seems to be closely coupled with the [gyro_1_align_*](#gyro_1_align_roll) variables.
+GUESS: Alignment of the first gyro sensor, represented as a rotation string. This seems to be closely coupled with the [gyro_1_align_*](#gyro_1_align_roll) variables.
 
 ## `gyro_1_align_roll`
 - Default: `0`
 - Allowed: `-3600` - `3600`
 
-Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
+Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
 
 ## `gyro_1_align_pitch`
 - Default: `0`
 - Allowed: `-3600` - `3600`
 
-Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
+Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
 
 ## `gyro_1_align_yaw`
 - Default: `0`
 - Allowed: `-3600` - `3600`
 
-Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
+Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.
 
 ## `gyro_2_bustype`
 - Default: `SPI`

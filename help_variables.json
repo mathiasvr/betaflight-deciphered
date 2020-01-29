@@ -84,7 +84,7 @@
     "desc": ""
   },
   "acc_calibration": {
-    "desc": "TODO: Accelerometer calibration values. Normally set automatically by pressing 'Calibrate Accelerometer' in BF Configurator."
+    "desc": "TODO: Accelerometer calibration values. Normally set automatically by pressing *Calibrate Accelerometer* in BF Configurator."
   },
   "align_mag": {
     "desc": ""
@@ -205,7 +205,7 @@
     "desc": ""
   },
   "fpv_mix_degrees": {
-    "desc": "Camera tilt angle in degrees that should be compensated for when enabling 'FPV Angle Mix' mode. It can be used to fly FPV as if the camera was tilted differently. Also known as uptilt compensation.",
+    "desc": "Camera tilt angle in degrees that should be compensated for when enabling *FPV Angle Mix* mode. It can be used to fly FPV as if the camera was tilted differently. Also known as uptilt compensation.",
     "aka": "FPV Camera Angle [degrees]"
   },
   "max_aux_channels": {
@@ -271,7 +271,7 @@
     "desc": ""
   },
   "blackbox_p_ratio": {
-    "desc": "Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the 'Blackbox logging rate' option in hz units."
+    "desc": "Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the *Blackbox logging rate* option in hz units."
   },
   "blackbox_device": {
     "desc": "TODO: Device used for logging blackbox stats.",
@@ -293,7 +293,7 @@
     "desc": ""
   },
   "dshot_idle_value": {
-    "desc": "This is the 'idle' value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. 2000 equals 20 percent.",
+    "desc": "This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. 2000 equals 20 percent.",
     "aka": "Motor Idle Throttle Value [percent]"
   },
   "dshot_burst": {
@@ -375,7 +375,7 @@
     "desc": ""
   },
   "bat_capacity": {
-    "desc": "GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at '0' to disable."
+    "desc": "GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at `0` to disable."
   },
   "vbat_max_cell_voltage": {
     "desc": "TODO: Maximum voltage of a single cell in the battery. Not sure what this is used for?",
@@ -465,7 +465,7 @@
     "desc": "Adjusts the tone of the of the DShot beacon. Higher value equals a higher tone frequency."
   },
   "yaw_motors_reversed": {
-    "desc": "Configures the mixer to expect the motor direction to be reversed and the propellers to be on accordingly, in order to perform correct yaw movement. Warning: This does not reverse the motor direction. Use the configuration tool for your ESCs or switch the ESC motor wiring order to achieve this. Also known as 'Props out' configuration.",
+    "desc": "Configures the mixer to expect the motor direction to be reversed and the propellers to be on accordingly, in order to perform correct yaw movement. Warning: This does not reverse the motor direction. Use the configuration tool for your ESCs or switch the ESC motor wiring order to achieve this. Also known as *Props Out* configuration.",
     "aka": "Motor direction is reversed"
   },
   "crashflip_motor_percent": {
@@ -1487,7 +1487,7 @@
     "desc": "Allows selection of all 6 rate profiles using a six position switch or pot. Normally, when configuring an adjustment channel for rate profile selection the channel value is divided into 3 ranges instead of 6."
   },
   "cpu_overclock": {
-    "desc": "Overclocks the flight controller CPU to run at a higher clock rate. It's recommended to only overclock if you have a CPU load higher than 50%. Overclocking can potentially overheat the CPU if not properly ventilated. Overclocking has previously been used to allow F4 FC to enable 'Gyro 32KHz sampling mode' which was removed in Betaflight 4.0."
+    "desc": "Overclocks the flight controller CPU to run at a higher clock rate. It's recommended to only overclock if you have a CPU load higher than 50%. Overclocking can potentially overheat the CPU if not properly ventilated. Overclocking has previously been used to allow F4 FC to enable *Gyro 32KHz sampling mode* which was removed in Betaflight 4.0."
   },
   "pwr_on_arm_grace": {
     "desc": ""
@@ -1661,17 +1661,17 @@
     "desc": ""
   },
   "gyro_1_sensor_align": {
-    "desc": "GUESS: Alignment of the first gyro sensor. Represented as a rotation string in degrees, e.g. 'CW90'. This seems to be closely coupled with the [gyro_1_align_*](#gyro_1_align_roll) variables.",
+    "desc": "GUESS: Alignment of the first gyro sensor, represented as a rotation string. This seems to be closely coupled with the [gyro_1_align_*](#gyro_1_align_roll) variables.",
     "aka": "First GYRO"
   },
   "gyro_1_align_roll": {
-    "desc": "Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
+    "desc": "Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
   },
   "gyro_1_align_pitch": {
-    "desc": "Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
+    "desc": "Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
   },
   "gyro_1_align_yaw": {
-    "desc": "Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the 'First GYRO' ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
+    "desc": "Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator."
   },
   "gyro_2_bustype": {
     "desc": ""
