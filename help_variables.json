@@ -233,7 +233,7 @@
     "desc": ""
   },
   "airmode_start_throttle_percent": {
-    "desc": ""
+    "desc": "As a safety feature when having airmode enabled, it will not become active until you throttle up above this value in percent once. After that airmode will be active in the whole throttle range, until you disarm."
   },
   "rx_min_usec": {
     "desc": "Minimum valid pulse length [usec]. Pulses shorter than minimum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.",
@@ -271,7 +271,7 @@
     "desc": ""
   },
   "blackbox_p_ratio": {
-    "desc": "Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the *Blackbox logging rate* option in hz units."
+    "desc": "Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the *Blackbox logging rate* option in Hz."
   },
   "blackbox_device": {
     "desc": "TODO: Device used for logging blackbox stats.",
@@ -378,7 +378,7 @@
     "desc": "GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at `0` to disable."
   },
   "vbat_max_cell_voltage": {
-    "desc": "TODO: Maximum voltage of a single cell in the battery. Not sure what this is used for?",
+    "desc": "Maximum voltage of a single cell in the battery. Used for battery PID compensation [vbat_pid_gain](#vbat_pid_gain), so be sure to set accordingly if enabling this option.",
     "aka": "Maximum Cell Voltage"
   },
   "vbat_full_cell_voltage": {
@@ -393,7 +393,7 @@
     "aka": "Warning Cell Voltage"
   },
   "vbat_hysteresis": {
-    "desc": ""
+    "desc": "Sets the hysteresis value for low-battery alarms, in 0.1V units, i.e. 1 = 0.1V. The alarm will only go off if the voltage dips this amount below the warning voltage. Can be used to tame alarms that go off too easily with sagging batteries etc."
   },
   "current_meter": {
     "desc": ""
@@ -722,7 +722,7 @@
     "desc": ""
   },
   "profile_name": {
-    "desc": ""
+    "desc": "Name of the PID profile. Can be seen in OSD using [osd_pid_profile_name_pos](#osd_pid_profile_name_pos)."
   },
   "dyn_lpf_dterm_min_hz": {
     "desc": ""
@@ -749,7 +749,8 @@
     "desc": ""
   },
   "vbat_pid_gain": {
-    "desc": ""
+    "desc": "Increases the PID values to compensate when Vbat gets lower. This will give more constant flight characteristics throughout the flight. The amount of compensation that is applied is calculated from the [vbat_max_cell_voltage](#vbat_max_cell_voltage), so make sure that is set to something appropriate.",
+    "aka": "Vbat PID Compensation"
   },
   "pid_at_min_throttle": {
     "desc": ""
@@ -1512,7 +1513,7 @@
     "aka": "Low Power Disarm"
   },
   "vtx_freq": {
-    "desc": "The frequency to be used by the VTX. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set [vtx_band](#vtx_band) and [vtx_channel](#vtx_channel).",
+    "desc": "The frequency to be used by the VTX in MHz. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set [vtx_band](#vtx_band) and [vtx_channel](#vtx_channel).",
     "aka": "Frequency"
   },
   "vtx_pit_mode_freq": {
