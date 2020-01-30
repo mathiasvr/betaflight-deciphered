@@ -5,9 +5,11 @@ This is an attempt to document the variables of [Betaflight 4.1](https://github.
 When using the Betaflight command line interface or examining a diff, it can sometimes be difficult to understand what certain settings is supposed to do. This is intended to be used as a reference to quickly look this information up.
 
 As I'm not an expert, any contributions or help with creating this document will be greatly appreciated!
-Parts of this document has been based on information from [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator).
-
 If you have trouble understanding any of the explanations, please open an issue so we can rewrite it and hopefully clear things up.
+
+Descriptions and other information is organized into a `json` file, with the intent to generate consistent documentation and allow other possible future integration.
+
+This document is based on information from old Betaflight/Cleanflight docs, [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator), and various other sources.
 
 # Betaflight CLI Variables
 Betaflight can be configured through a CLI by setting the following list of variables, which can also be saved and loaded from a diff. Variables are read by entering `get <variable_name>` into the CLI, and written with `set <variable_name> = <value>`.
