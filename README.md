@@ -73,13 +73,19 @@ The listed entries includes default and allowed values.
 - Default: `ALL`
 - Allowed: `OFF`, `YAW`, `ALL`
 
+Axis where gyro overflow detection applies. Intended to deal with overflow issues on ICM gyros. The default is to be on, for all axes. It is unwise to disable this if your quad has an ICM gyro. It is not needed or helpful for MPU gyros. ICM gyros are susceptible to overflow-inversion problems if exposed to very high turn rates. If enabled and set to `ALL`, overflow protection will kick in and disable all PIDs whenever any axis exceeds 1950 degrees/second.
+
 ## `yaw_spin_recovery`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
+This new feature, enabled by default in betaflight 3.4, reduces the severity and duration of un-commanded severe yaw spins. For example, if a quadcopter clips a gate, tree, branch or other object and causes a high rate yaw spin, it may go into a 'never-ending' uncontrollable spin. Typically it makes a distinctive warbling noise and climbs rapidly - the so-called Yaw Spin To The Moon (YSTTM) problem. 3.4 introduces two code features that should bring such spins under control more quickly and cleanly. Yaw Spin Recovery is intended primarily for FPV pilots, and works best with MPU gyros. LOS acro pilots who use high yaw rates may prefer to disable this function.
+
 ## `yaw_spin_threshold`
 - Default: `1950`
 - Allowed: `500` - `1950`
+
+The 'threshold' value is the spin rate, in degrees per second, at which the spin protection kicks in. The default threshold of `1950` was chosen to minimise false triggering. For FPV, a lower value, e.g. 100-200 above your maximum configured yaw rate, is recommended. For example, a quad with a maximum configured yaw rate of 700 degrees/sec: Too low a threshold may cause false triggering, and delay return to normal control.
 
 ## `gyro_to_use`
 - Default: `FIRST`
@@ -1125,13 +1131,19 @@ These are values (in us) by how much RC input can be different before it's consi
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
+TODO: Set this to OFF to completely disable the feature. Note that there will be no protection against runaway takeoff events and the firmware will behave as it did before the feature was implemented.
+
 ## `runaway_takeoff_deactivate_delay`
 - Default: `500`
 - Allowed: `100` - `1000`
 
+TODO: This is the amount of successful flight time in milliseconds that must be accumulated to deactivate the feature. Valid values range from 100 (0.1 seconds) to 1000 (1 second). The default value of 500 (0.5 seconds) seems to be very reliable and shouldn't need to be adjusted. The goal is to deactivate the logic after a "reasonable" but short period of time once we've determined the craft is flying normally. However we want it to deactivate before we might reach the first point where a crash or other event may occur (like at the first gate during a race). Raising this value will delay the deactivation and it's possible that a crash or gate/branch clip could cause an unintended disarm. Lowering this value too much could result in the logic deactivating too soon and not providing protection in a runaway event. It's important to note that the delay is the accumulated amount of flight time where the other criteria like throttle level, stick activity, etc. are met. Thus the "real" elapsed time before deactivation may be longer than 0.5 seconds if the throttle was dropping below the limit or if the R/P/Y sticks were centered. The actual behavior can be viewed by using blackbox logging.
+
 ## `runaway_takeoff_deactivate_throttle_percent`
 - Default: `20`
 - Allowed: `0` - `100`
+
+TODO: Determines the minimum throttle percentage threshold where successful flight can be considered. Valid values range from 0 to 100. Along with throttle level the logic also requires activity on the roll, pitch or yaw sticks along with the PID controller successfully controlling the craft with the PID_sum staying under control. When these conditions are met the logic accumulates successful flight time. Generally you won't need to adjust this value as most quads require around 25% or more throttle to takeoff/hover. The exception may be if you have and extremely powerful or light craft that is capable of flying well below 25% throttle. In this case you may want to lower this value closer to your actual hover throttle percent. If this value is set too low it's possible that the logic will deactivate too quickly and may not trigger in a real runaway event. Setting it too high will result in the logic taking more flight time to deactivate as it only accumulates flight time when the throttle is above the setting.
 
 ## `profile_name`
 
@@ -1488,6 +1500,8 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 - Default: `0`
 - Allowed: `0` - `100`
 
+TODO: https://github.com/betaflight/betaflight/pull/7304.
+
 ## `transient_throttle_limit`
 - Default: `0`
 - Allowed: `0` - `30`
@@ -1661,6 +1675,8 @@ TODO: Set to 1 to send raw VBat value in 0.1V resolution for receivers that can 
 ## `ledstrip_visual_beeper`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
+
+TODO: When set to `ON`, and the LEDLOW mode is active (i.e. LED strip off), blink the LED strip in synch with beeping, as a visual indicator in cases where the craft is too far away for the beeper to be heard / multiple craft are flying.
 
 ## `ledstrip_visual_beeper_color`
 - Default: `WHITE`
@@ -2372,13 +2388,19 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 - Default: `330`
 - Allowed: `200` - `400`
 
+TODO: Voltage (in 10 mV steps) measured across your camera's floating OSD and GND pins, usually 3V3.
+
 ## `camera_control_key_delay`
 - Default: `180`
 - Allowed: `100` - `500`
 
+TODO: The duration of each key press (in ms presence at the camera_control pin, after consulting with RunCam it was set to 180 ms to accommodate most cameras, while some of them accept as low as 125 ms.
+
 ## `camera_control_internal_resistance`
 - Default: `470`
 - Allowed: `10` - `1000`
+
+TODO: The internal resistance (in 100 Ohm steps) of your camera, most HS1177 derivatives have 47 kΩ, but that's not guaranteed. You'll have to derive this value for your camera in case the default one doesn't work.
 
 ## `camera_control_button_resistance`
 - Default: `450,270,150,68,0`
@@ -2403,6 +2425,8 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 ## `usb_hid_cdc`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
+
+TODO: Allows using your flight controller as a USB HID joystick. Useful if your Transmitter does not suppurt HID. Support is currently only available on F4 / F7 boards.
 
 ## `usb_msc_pin_pullup`
 - Default: `ON`
