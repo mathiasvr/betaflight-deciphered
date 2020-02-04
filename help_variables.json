@@ -292,16 +292,16 @@
     "desc": "Determines when to enable blackbox logging. E.g. flipping a switch or when testing motors in BF Configurator."
   },
   "min_throttle": {
-    "desc": "TODO: These are minimum values (in us) that are sent to esc when armed."
+    "desc": "These are minimum values (in us) that are sent to ESC when armed. This should be set to a value that reliably spins the motors. You can choose a value by performing a motor test in BF Configurator, and increase the motor speed until the motor spins properly."
   },
   "max_throttle": {
-    "desc": "TODO: These are maximum values (in us) that are sent to esc when armed."
+    "desc": "These are maximum values (in us) that are sent to ESC when armed. You can perform a motor test in BF Configurator to select this value. Usually the maximum of `2000` is fine. If you want less throttle you should not change this value, but instead use [throttle_limit_percent](#throttle_limit_percent)."
   },
   "min_command": {
-    "desc": "This is the PWM value sent to ESCs when they are not armed. If ESCs beep slowly when powered up, try decreasing this value. It can also be used for calibrating all ESCs at once."
+    "desc": "This is the PWM value sent to ESCs when they are not armed. It should be less than your BLHeli minimum throttle configuration, to stop motors from spinning. If ESCs beep slowly when powered up, try decreasing this value. It can also be used for calibrating all ESCs at once."
   },
   "dshot_idle_value": {
-    "desc": "This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. 2000 equals 20 percent.",
+    "desc": "This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. Specified in percent * `100`, i.e. `500` equals `5` percent of maximum throttle.",
     "aka": "Motor Idle Throttle Value [percent]"
   },
   "dshot_burst": {
@@ -1149,7 +1149,8 @@
     "desc": ""
   },
   "osd_units": {
-    "desc": ""
+    "desc": "Sets whether to use the `Metric` or `Imperial` unit system for numerical readouts in the On Screen Display (OSD).",
+    "aka": "Units"
   },
   "osd_warn_arming_disable": {
     "desc": ""
@@ -1482,7 +1483,8 @@
     "desc": ""
   },
   "osd_profile": {
-    "desc": "GUESS: Selects the active OSD Profile."
+    "desc": "Sets the active OSD profile.",
+    "aka": "Active OSD Profile"
   },
   "osd_profile_1_name": {
     "desc": "Name of OSD Profile 1. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos)."
@@ -1549,7 +1551,8 @@
     "desc": ""
   },
   "vcd_video_system": {
-    "desc": "Sets the analog color system used by the connected FPV camera."
+    "desc": "Sets the expected analog color system used by the connected FPV camera. Typically this can be left on `AUTO`.",
+    "aka": "Video Format"
   },
   "vcd_h_offset": {
     "desc": ""
