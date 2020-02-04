@@ -463,26 +463,26 @@ Determines when to enable blackbox logging. E.g. flipping a switch or when testi
 - Default: `1070`
 - Allowed: `750` - `2250`
 
-TODO: These are minimum values (in us) that are sent to esc when armed.
+These are minimum values (in us) that are sent to ESC when armed. This should be set to a value that reliably spins the motors. You can choose a value by performing a motor test in BF Configurator, and increase the motor speed until the motor spins properly.
 
 ## `max_throttle`
 - Default: `2000`
 - Allowed: `750` - `2250`
 
-TODO: These are maximum values (in us) that are sent to esc when armed.
+These are maximum values (in us) that are sent to ESC when armed. You can perform a motor test in BF Configurator to select this value. Usually the maximum of `2000` is fine. If you want less throttle you should not change this value, but instead use [throttle_limit_percent](#throttle_limit_percent).
 
 ## `min_command`
 - Default: `1000`
 - Allowed: `750` - `2250`
 
-This is the PWM value sent to ESCs when they are not armed. If ESCs beep slowly when powered up, try decreasing this value. It can also be used for calibrating all ESCs at once.
+This is the PWM value sent to ESCs when they are not armed. It should be less than your BLHeli minimum throttle configuration, to stop motors from spinning. If ESCs beep slowly when powered up, try decreasing this value. It can also be used for calibrating all ESCs at once.
 
 ## `dshot_idle_value`
 - Default: `550`
 - Allowed: `0` - `2000`
 - BF Configurator: *Motor Idle Throttle Value [percent]*
 
-This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. 2000 equals 20 percent.
+This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. Specified in percent * `100`, i.e. `500` equals `5` percent of maximum throttle.
 
 ## `dshot_burst`
 - Default: `ON`
@@ -1729,6 +1729,9 @@ TODO: When set to `ON`, and the LEDLOW mode is active (i.e. LED strip off), blin
 ## `osd_units`
 - Default: `METRIC`
 - Allowed: `IMPERIAL`, `METRIC`
+- BF Configurator: *Units*
+
+Sets whether to use the `Metric` or `Imperial` unit system for numerical readouts in the On Screen Display (OSD).
 
 ## `osd_warn_arming_disable`
 - Default: `ON`
@@ -2173,8 +2176,9 @@ TODO: When set to `ON`, and the LEDLOW mode is active (i.e. LED strip off), blin
 ## `osd_profile`
 - Default: `1`
 - Allowed: `1` - `3`
+- BF Configurator: *Active OSD Profile*
 
-GUESS: Selects the active OSD Profile.
+Sets the active OSD profile.
 
 ## `osd_profile_1_name`
 
@@ -2279,8 +2283,9 @@ Use half duplex UART to communicate with the VTX, using only a TX pin in the FC.
 ## `vcd_video_system`
 - Default: `AUTO`
 - Allowed: `AUTO`, `PAL`, `NTSC`
+- BF Configurator: *Video Format*
 
-Sets the analog color system used by the connected FPV camera.
+Sets the expected analog color system used by the connected FPV camera. Typically this can be left on `AUTO`.
 
 ## `vcd_h_offset`
 - Default: `0`
