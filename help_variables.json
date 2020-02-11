@@ -10,7 +10,7 @@
     "section": "master"
   },
   "gyro_sync_denom": {
-    "desc": "Sets the gyro update frequency based on dividing the max loop rate (8kHz). `4` means `8kHz/4 = 2kHz`. Loop time is the reciprocal (`1/Rate`). Don't forget to check CPU usage when playing with this value. It is recommended to set the gyro update frequency in BF Configurator, this takes care of all the required settings. This value also affects the PID loop [pid_process_denom](#pid_process_denom).",
+    "desc": "Sets the gyro update frequency based on dividing the max loop rate (8kHz). `4` means `8kHz/4 = 2kHz`. Loop time is the reciprocal (`1/Rate`). Don't forget to check CPU usage when playing with this value. It is recommended to set the gyro update frequency in BF Configurator, this takes care of all the required settings. This value also affects the PID loop #pid_process_denom.",
     "aka": "Gyro update frequency",
     "default": "1",
     "range": [
@@ -932,7 +932,7 @@
     "section": "master"
   },
   "max_throttle": {
-    "desc": "These are maximum values (in us) that are sent to ESC when armed. You can perform a motor test in BF Configurator to select this value. Usually the maximum of `2000` is fine. If you want less throttle you should not change this value, but instead use [throttle_limit_percent](#throttle_limit_percent).",
+    "desc": "These are maximum values (in us) that are sent to ESC when armed. You can perform a motor test in BF Configurator to select this value. Usually the maximum of `2000` is fine. If you want less throttle you should not change this value, but instead use #throttle_limit_percent.",
     "default": "2000",
     "range": [
       750,
@@ -1203,7 +1203,7 @@
     "section": "master"
   },
   "vbat_max_cell_voltage": {
-    "desc": "Maximum voltage of a single cell in the battery. Used for battery PID compensation [vbat_pid_gain](#vbat_pid_gain), so be sure to set accordingly if enabling this option.",
+    "desc": "Maximum voltage of a single cell in the battery. Used for battery PID compensation #vbat_pid_gain, so be sure to set accordingly if enabling this option.",
     "aka": "Maximum Cell Voltage",
     "default": "430",
     "range": [
@@ -1595,11 +1595,11 @@
     "section": "master"
   },
   "rateprofile_name": {
-    "desc": "Name of the rate profile. Can be seen in OSD using [osd_rate_profile_name_pos](#osd_rate_profile_name_pos).",
+    "desc": "Name of the rate profile. Can be seen in OSD using #osd_rate_profile_name_pos.",
     "section": "rateprofile"
   },
   "thr_mid": {
-    "desc": "Throttle Mid. The [thr_expo](#thr_expo) is centered around this point. Usually this is set around the hovering point.",
+    "desc": "Throttle Mid. The #thr_expo is centered around this point. Usually this is set around the hovering point.",
     "aka": "Throttle MID",
     "default": "50",
     "range": [
@@ -1609,7 +1609,7 @@
     "section": "rateprofile"
   },
   "thr_expo": {
-    "desc": "Throttle Expo. Creates an exponential throttle curve around the [thr_mid](#thr_mid) point. Used to increase throttle resolution, usually to support more fine-grained hovering.",
+    "desc": "Throttle Expo. Creates an exponential throttle curve around the #thr_mid point. Used to increase throttle resolution, usually to support more fine-grained hovering.",
     "aka": "Throttle EXPO",
     "default": "0",
     "range": [
@@ -1719,7 +1719,7 @@
     "section": "rateprofile"
   },
   "tpa_rate": {
-    "desc": "Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond [tpa_breakpoint](#tpa_breakpoint). Used to eliminate fast oscillations at high throttle.",
+    "desc": "Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond #tpa_breakpoint. Used to eliminate fast oscillations at high throttle.",
     "aka": "TPA",
     "default": "65",
     "range": [
@@ -1748,7 +1748,7 @@
     "section": "rateprofile"
   },
   "throttle_limit_type": {
-    "desc": "Select how [throttle_limit_percent](#throttle_limit_percent) should limit maximum throttle. `OFF` disables the feature. `SCALE` will transform the throttle range from 0 to the selected percentage using the full stick travel (linear throttle curve). `CLIP` will set a max throttle percentage and stick travel above that will have no additional effect.",
+    "desc": "Select how #throttle_limit_percent should limit maximum throttle. `OFF` disables the feature. `SCALE` will transform the throttle range from 0 to the selected percentage using the full stick travel (linear throttle curve). `CLIP` will set a max throttle percentage and stick travel above that will have no additional effect.",
     "aka": "Throttle Limit",
     "default": "OFF",
     "allowed": [
@@ -1759,7 +1759,7 @@
     "section": "rateprofile"
   },
   "throttle_limit_percent": {
-    "desc": "Sets the desired maximum throttle percentage, according to [throttle_limit_type](#throttle_limit_type).",
+    "desc": "Sets the desired maximum throttle percentage, according to #throttle_limit_type.",
     "aka": "Throttle Limit %",
     "default": "100",
     "range": [
@@ -2174,7 +2174,7 @@
     "section": "master"
   },
   "pid_process_denom": {
-    "desc": "Determines PID and motor write frequency by dividing the gyro sample rate, determined by [gyro_sync_denom](#gyro_sync_denom). This is automatically set to proper values when setting pid loop frequency in BF Configurator. The maximum frequency for the PID loop is limited by the maximum frequency that updates can be sent by the chosen ESC/motor protocol.",
+    "desc": "Determines PID and motor write frequency by dividing the gyro sample rate, determined by #gyro_sync_denom. This is automatically set to proper values when setting pid loop frequency in BF Configurator. The maximum frequency for the PID loop is limited by the maximum frequency that updates can be sent by the chosen ESC/motor protocol.",
    "aka": "PID loop frequency",
     "default": "4",
     "range": [
@@ -2211,7 +2211,7 @@
     "section": "master"
   },
   "profile_name": {
-    "desc": "Name of the PID profile. Can be seen in OSD using [osd_pid_profile_name_pos](#osd_pid_profile_name_pos).",
+    "desc": "Name of the PID profile. Can be seen in OSD using #osd_pid_profile_name_pos.",
     "section": "profile"
   },
   "dyn_lpf_dterm_min_hz": {
@@ -2287,7 +2287,7 @@
     "section": "profile"
   },
   "vbat_pid_gain": {
-    "desc": "Increases the PID values to compensate when Vbat gets lower. This will give more constant flight characteristics throughout the flight. The amount of compensation that is applied is calculated from the [vbat_max_cell_voltage](#vbat_max_cell_voltage), so make sure that is set to something appropriate.",
+    "desc": "Increases the PID values to compensate when Vbat gets lower. This will give more constant flight characteristics throughout the flight. The amount of compensation that is applied is calculated from the #vbat_max_cell_voltage, so make sure that is set to something appropriate.",
     "aka": "Vbat PID Compensation",
     "default": "OFF",
     "allowed": [
@@ -2297,7 +2297,7 @@
     "section": "profile"
   },
   "pid_at_min_throttle": {
-    "desc": "If enabled, the copter will process the PID algorithm at minimum throttle. With this `OFF` the PID controller does not respond to sticks when throttle values is below [min_check](#min_check).",
+    "desc": "If enabled, the copter will process the PID algorithm at minimum throttle. With this `OFF` the PID controller does not respond to sticks when throttle values is below #min_check.",
     "default": "ON",
     "allowed": [
       "OFF",
@@ -2800,7 +2800,7 @@
     "section": "profile"
   },
   "d_min_roll": {
-    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_pitch](#d_pitch)).",
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_pitch).",
     "aka": "D Min Roll",
     "default": "20",
     "range": [
@@ -2810,7 +2810,7 @@
     "section": "profile"
   },
   "d_min_pitch": {
-    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_pitch](#d_pitch)).",
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_pitch).",
     "aka": "D Min Pitch",
     "default": "22",
     "range": [
@@ -2820,7 +2820,7 @@
     "section": "profile"
   },
   "d_min_yaw": {
-    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_yaw](#d_yaw)).",
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_yaw).",
     "aka": " D Min Yaw",
     "default": "0",
     "range": [
@@ -4463,15 +4463,15 @@
     "section": "master"
   },
   "osd_profile_1_name": {
-    "desc": "Name of OSD Profile 1. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos).",
+    "desc": "Name of OSD Profile 1. Can be displayed in OSD using #osd_profile_name_pos.",
     "section": "master"
   },
   "osd_profile_2_name": {
-    "desc": "Name of OSD Profile 2. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos).",
+    "desc": "Name of OSD Profile 2. Can be displayed in OSD using #osd_profile_name_pos.",
     "section": "master"
   },
   "osd_profile_3_name": {
-    "desc": "Name of OSD Profile 3. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos).",
+    "desc": "Name of OSD Profile 3. Can be displayed in OSD using #osd_profile_name_pos.",
     "section": "master"
   },
   "osd_gps_sats_show_hdop": {
@@ -4618,7 +4618,7 @@
     "section": "master"
   },
   "vtx_channel": {
-    "desc": "The channel (index) to be used by the VTX within the configured [vtx_band](#vtx_band). You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.",
+    "desc": "The channel (index) to be used by the VTX within the configured #vtx_band. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.",
     "aka": "Channel",
     "default": "0",
     "range": [
@@ -4628,7 +4628,7 @@
     "section": "master"
   },
   "vtx_power": {
-    "desc": "TODO: The power level (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work. It can be modified if Pit Mode or [vtx_low_power_disarm](#vtx_low_power_disarm) is enabled.",
+    "desc": "TODO: The power level (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work. It can be modified if Pit Mode or #vtx_low_power_disarm is enabled.",
     "aka": "Power",
     "default": "0",
     "range": [
@@ -4649,7 +4649,7 @@
     "section": "master"
   },
   "vtx_freq": {
-    "desc": "The frequency to be used by the VTX in MHz. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set [vtx_band](#vtx_band) and [vtx_channel](#vtx_channel).",
+    "desc": "The frequency to be used by the VTX in MHz. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set #vtx_band and #vtx_channel.",
     "aka": "Frequency",
     "default": "0",
     "range": [
@@ -5110,7 +5110,7 @@
     "section": "master"
   },
   "gyro_1_align_roll": {
-    "desc": "Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.",
+    "desc": "Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the *First GYRO* (#gyro_1_sensor_align) in BF Configurator.",
     "default": "0",
     "range": [
       -3600,
@@ -5119,7 +5119,7 @@
     "section": "master"
   },
   "gyro_1_align_pitch": {
-    "desc": "Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.",
+    "desc": "Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the *First GYRO* (#gyro_1_sensor_align) in BF Configurator.",
     "default": "0",
     "range": [
       -3600,
@@ -5128,7 +5128,7 @@
     "section": "master"
   },
   "gyro_1_align_yaw": {
-    "desc": "Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the *First GYRO* ([gyro_1_sensor_align](#gyro_1_sensor_align)) in BF Configurator.",
+    "desc": "Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the *First GYRO* (#gyro_1_sensor_align) in BF Configurator.",
     "default": "0",
     "range": [
       -3600,
@@ -5176,7 +5176,7 @@
     "section": "master"
   },
   "gyro_2_sensor_align": {
-    "desc": "Like [gyro_1_sensor_align](#gyro_1_sensor_align), but for the second gyro sensor.",
+    "desc": "Like #gyro_1_sensor_align, but for the second gyro sensor.",
     "default": "CW0",
     "allowed": [
       "DEFAULT",
@@ -5193,7 +5193,7 @@
     "section": "master"
   },
   "gyro_2_align_roll": {
-    "desc": "Like [gyro_1_align_roll](#gyro_1_align_roll), but for the second gyro sensor.",
+    "desc": "Like #gyro_1_align_roll, but for the second gyro sensor.",
     "default": "0",
     "range": [
       -3600,
@@ -5202,7 +5202,7 @@
     "section": "master"
   },
   "gyro_2_align_pitch": {
-    "desc": "Like [gyro_1_align_pitch](#gyro_1_align_pitch), but for the second gyro sensor.",
+    "desc": "Like #gyro_1_align_pitch, but for the second gyro sensor.",
     "default": "0",
     "range": [
       -3600,
@@ -5211,7 +5211,7 @@
     "section": "master"
   },
   "gyro_2_align_yaw": {
-    "desc": "Like [gyro_1_align_yaw](#gyro_1_align_yaw), but for the second gyro sensor.",
+    "desc": "Like #gyro_1_align_yaw, but for the second gyro sensor.",
     "default": "0",
     "range": [
       -3600,
@@ -5406,12 +5406,12 @@
     "section": "master"
   },
   "name": {
-    "desc": "Name of the craft. Used in log and config files, and can be displayed in OSD with [osd_craft_name_pos](#osd_craft_name_pos).",
+    "desc": "Name of the craft. Used in log and config files, and can be displayed in OSD with #osd_craft_name_pos.",
     "aka": "Craft Name",
     "section": "master"
   },
   "display_name": {
-    "desc": "Text that can be displayed in OSD with [osd_display_name_pos](#osd_display_name_pos). E.g. name of the pilot.",
+    "desc": "Text that can be displayed in OSD with #osd_display_name_pos. E.g. name of the pilot.",
     "aka": "Display Name",
     "section": "master"
   },
