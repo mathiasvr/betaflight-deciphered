@@ -26,6 +26,9 @@ The listed entries includes default and allowed values.
 ### `gyro_sync_denom`
 - Default: `1`
 - Range: `1` - `32`
+- BF Configurator: *Gyro update frequency*
+
+Sets the gyro update frequency based on dividing the max loop rate (8kHz). `4` means `8kHz/4 = 2kHz`. Loop time is the reciprocal (`1/Rate`). Don't forget to check CPU usage when playing with this value. It is recommended to set the gyro update frequency in BF Configurator, this takes care of all the required settings. This value also affects the PID loop [pid_process_denom](#pid_process_denom).
 
 ### `gyro_lowpass_type`
 - Default: `PT1`
@@ -1009,6 +1012,9 @@ These are values (in us) by how much RC input can be different before it's consi
 ### `pid_process_denom`
 - Default: `4`
 - Range: `1` - `16`
+- BF Configurator: *PID loop frequency*
+
+Determines PID and motor write frequency by dividing the gyro sample rate, determined by [gyro_sync_denom](#gyro_sync_denom). This is automatically set to proper values when setting pid loop frequency in BF Configurator. The maximum frequency for the PID loop is limited by the maximum frequency that updates can be sent by the chosen ESC/motor protocol.
 
 ### `runaway_takeoff_prevention`
 - Default: `ON`
