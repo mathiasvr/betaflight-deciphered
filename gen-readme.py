@@ -32,6 +32,8 @@ def print_vars_as_markdown():
         print(f"- Allowed: `{'`, `'.join(helpdata['allowed'])}`")
       if 'range' in helpdata:
         print(f"- Range: `{helpdata['range'][0]}` - `{helpdata['range'][1]}`")
+      if 'unit' in helpdata:
+        print(f"- Unit: `{helpdata['unit']}`")
       if 'datatype' in helpdata:
         print(f"- Type: `{helpdata['datatype']}`")
       if 'aka' in helpdata:

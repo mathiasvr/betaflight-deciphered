@@ -94,6 +94,7 @@ This new feature, enabled by default in betaflight 3.4, reduces the severity and
 ### `yaw_spin_threshold`
 - Default: `1950`
 - Range: `500` - `1950`
+- Unit: `deg/s`
 
 The 'threshold' value is the spin rate, in degrees per second, at which the spin protection kicks in. The default threshold of `1950` was chosen to minimise false triggering. For FPV, a lower value, e.g. 100-200 above your maximum configured yaw rate, is recommended. For example, a quad with a maximum configured yaw rate of 700 degrees/sec: Too low a threshold may cause false triggering, and delay return to normal control.
 
@@ -202,6 +203,7 @@ Set default `AUTO` to use magnetometer hardware defined for your board type. Oth
 ### `mag_declination`
 - Default: `0`
 - Range: `-18000` - `18000`
+- Unit: `dddmm`
 
 Current location magnetic declination in dddmm format. For example, -6deg 37min = -637 for Japan. Leading zeros not required. Get your local magnetic declination here: http://magnetic-declination.com/
 
@@ -240,6 +242,7 @@ Pressure sensor sample count.
 ### `baro_noise_lpf`
 - Default: `600`
 - Range: `0` - `1000`
+- Unit: `Hz`
 
 Barometer low-pass filter cut-off frequency in Hz.
 
@@ -252,6 +255,7 @@ Velocity sensor mix in altitude hold. Determines the influence accelerometer and
 ### `mid_rc`
 - Default: `1500`
 - Range: `1200` - `1700`
+- Unit: `us`
 - BF Configurator: *Stick Center*
 
 The value (in us) used to determine if a stick is centered.
@@ -259,6 +263,7 @@ The value (in us) used to determine if a stick is centered.
 ### `min_check`
 - Default: `1050`
 - Range: `750` - `2250`
+- Unit: `us`
 - BF Configurator: *'Stick Low' Threshold*
 
 TODO: The maximum value (in us) for a stick to be recognised as low. I think this is only used for stick commands, and not a to cap channel values.
@@ -266,6 +271,7 @@ TODO: The maximum value (in us) for a stick to be recognised as low. I think thi
 ### `max_check`
 - Default: `1900`
 - Range: `750` - `2250`
+- Unit: `us`
 - BF Configurator: *'Stick High' Threshold*
 
 TODO: The minimum value (in us) for a stick to be recognised as high.
@@ -350,6 +356,7 @@ TODO: Smoothing of RX inputs for Roll, Pitch, Yaw, Throttle.
 ### `fpv_mix_degrees`
 - Default: `0`
 - Range: `0` - `90`
+- Unit: `deg`
 - BF Configurator: *FPV Camera Angle [degrees]*
 
 Camera tilt angle in degrees that should be compensated for when enabling *FPV Angle Mix* mode. It can be used to fly FPV as if the camera was tilted differently. Also known as uptilt compensation.
@@ -393,6 +400,7 @@ Used to bind the spektrum satellite to RX. Set `0` to disable.
 ### `airmode_start_throttle_percent`
 - Default: `25`
 - Range: `0` - `100`
+- Unit: `%`
 
 As a safety feature when having airmode enabled, it will not become active until you throttle up above this value in percent once. After that airmode will be active in the whole throttle range, until you disarm.
 
@@ -476,24 +484,28 @@ Determines when to enable blackbox logging. E.g. flipping a switch or when testi
 ### `min_throttle`
 - Default: `1070`
 - Range: `750` - `2250`
+- Unit: `us`
 
 These are minimum values (in us) that are sent to ESC when armed. This should be set to a value that reliably spins the motors. You can choose a value by performing a motor test in BF Configurator, and increase the motor speed until the motor spins properly.
 
 ### `max_throttle`
 - Default: `2000`
 - Range: `750` - `2250`
+- Unit: `us`
 
 These are maximum values (in us) that are sent to ESC when armed. You can perform a motor test in BF Configurator to select this value. Usually the maximum of `2000` is fine. If you want less throttle you should not change this value, but instead use [throttle_limit_percent](#throttle_limit_percent).
 
 ### `min_command`
 - Default: `1000`
 - Range: `750` - `2250`
+- Unit: `us`
 
 This is the PWM value sent to ESCs when they are not armed. It should be less than your BLHeli minimum throttle configuration, to stop motors from spinning. If ESCs beep slowly when powered up, try decreasing this value. It can also be used for calibrating all ESCs at once.
 
 ### `dshot_idle_value`
 - Default: `550`
 - Range: `0` - `2000`
+- Unit: `bps`
 - BF Configurator: *Motor Idle Throttle Value [percent]*
 
 This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. Specified in percent * `100`, i.e. `500` equals `5` percent of maximum throttle.
@@ -528,6 +540,7 @@ Bidirectional DShot. When enabled lets the DSHOT protocol receive information di
 ### `motor_pwm_rate`
 - Default: `480`
 - Range: `200` - `32000`
+- Unit: `Hz`
 
 TODO: Output frequency (in Hz) for motor pins. Defaults are 400Hz for motor. If setting above 500Hz, will switch to brushed (direct drive) motors mode. For example, setting to 8000 will use brushed mode at 8kHz switching frequency. Up to 32kHz is supported. Default is 16000 for boards with brushed motors. Note, that in brushed mode, min_throttle is offset to zero. For brushed mode, set max_throttle to 2000.
 
@@ -560,6 +573,7 @@ Time for stage 1 to wait for recovery.
 ### `failsafe_off_delay`
 - Default: `10`
 - Range: `0` - `200`
+- Unit: `ds`
 
 Time in deciseconds to wait before turning off motors when failsafe is activated. See Failsafe documentation.
 
@@ -626,12 +640,14 @@ TODO: When feature `SERVO_TILT` is enabled, this can be either NORMAL or MIXTILT
 ### `bat_capacity`
 - Default: `0`
 - Range: `0` - `20000`
+- Unit: `mAh`
 
 GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at `0` to disable.
 
 ### `vbat_max_cell_voltage`
 - Default: `430`
 - Range: `100` - `500`
+- Unit: `cV`
 - BF Configurator: *Maximum Cell Voltage*
 
 Maximum voltage of a single cell in the battery. Used for battery PID compensation [vbat_pid_gain](#vbat_pid_gain), so be sure to set accordingly if enabling this option.
@@ -639,12 +655,14 @@ Maximum voltage of a single cell in the battery. Used for battery PID compensati
 ### `vbat_full_cell_voltage`
 - Default: `410`
 - Range: `100` - `500`
+- Unit: `cV`
 
 TODO: Voltage of a single cell in battery to be considered fully charged. I think used for warning if battery is not fully charged.
 
 ### `vbat_min_cell_voltage`
 - Default: `330`
 - Range: `100` - `500`
+- Unit: `cV`
 - BF Configurator: *Minimum Cell Voltage*
 
 Minimum voltage allowed for a single cell in the battery. Warnings can be issued with beeper and OSD if this happens.
@@ -652,6 +670,7 @@ Minimum voltage allowed for a single cell in the battery. Warnings can be issued
 ### `vbat_warning_cell_voltage`
 - Default: `350`
 - Range: `100` - `500`
+- Unit: `cV`
 - BF Configurator: *Warning Cell Voltage*
 
 Voltage of a single cell in the battery that should issue a warning, which can be detected with beeper and OSD.
@@ -659,6 +678,7 @@ Voltage of a single cell in the battery that should issue a warning, which can b
 ### `vbat_hysteresis`
 - Default: `1`
 - Range: `0` - `250`
+- Unit: `dV`
 
 Sets the hysteresis value for low-battery alarms, in 0.1V units, i.e. 1 = 0.1V. The alarm will only go off if the voltage dips this amount below the warning voltage. Can be used to tame alarms that go off too easily with sagging batteries etc.
 
@@ -814,6 +834,7 @@ TODO: Servo midpoint
 ### `servo_pwm_rate`
 - Default: `50`
 - Range: `50` - `498`
+- Unit: `Hz`
 
 Output frequency (in Hz) servo pins. When using tricopters or gimbal with digital servo, this rate can be increased. Max of 498Hz (for 500Hz pwm period), and min of 50Hz. Most digital servos will support for example 330Hz.
 
@@ -1005,12 +1026,14 @@ Enable automatic detection of GPS baudrate.
 ### `deadband`
 - Default: `0`
 - Range: `0` - `32`
+- Unit: `us`
 
 These are values (in us) by how much RC input can be different before it's considered valid for roll and pitch axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint.
 
 ### `yaw_deadband`
 - Default: `0`
 - Range: `0` - `100`
+- Unit: `Hz`
 
 These are values (in us) by how much RC input can be different before it's considered valid for the yaw axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint.
 
@@ -1770,6 +1793,7 @@ When enabled, the VTX uses the lowest available power when disarmed (except if a
 ### `vtx_freq`
 - Default: `0`
 - Range: `0` - `5999`
+- Unit: `MHz`
 - BF Configurator: *Frequency*
 
 The frequency to be used by the VTX in MHz. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set [vtx_band](#vtx_band) and [vtx_channel](#vtx_channel).
@@ -1777,6 +1801,7 @@ The frequency to be used by the VTX in MHz. Can be set directly if supported by 
 ### `vtx_pit_mode_freq`
 - Default: `0`
 - Range: `0` - `5999`
+- Unit: `MHz`
 - BF Configurator: *Pit Mode frequency*
 
 Frequency to use (in MHz) when the VTX is in pit mode.
@@ -1903,18 +1928,21 @@ GUESS: Data used to bind specific transmitter with receiver, using Frsky SPI pro
 ### `camera_control_ref_voltage`
 - Default: `330`
 - Range: `200` - `400`
+- Unit: `cV`
 
 TODO: Voltage (in 10 mV steps) measured across your camera's floating OSD and GND pins, usually 3V3.
 
 ### `camera_control_key_delay`
 - Default: `180`
 - Range: `100` - `500`
+- Unit: `ms`
 
 TODO: The duration of each key press (in ms presence at the camera_control pin, after consulting with RunCam it was set to 180 ms to accommodate most cameras, while some of them accept as low as 125 ms.
 
 ### `camera_control_internal_resistance`
 - Default: `470`
 - Range: `10` - `1000`
+- Unit: `hOhm`
 
 TODO: The internal resistance (in 100 Ohm steps) of your camera, most HS1177 derivatives have 47 kΩ, but that's not guaranteed. You'll have to derive this value for your camera in case the default one doesn't work.
 
@@ -2404,6 +2432,7 @@ Yaw D parameter
 ### `level_limit`
 - Default: `55`
 - Range: `10` - `90`
+- Unit: `deg`
 
 TODO: The maximum allowed angle in degrees.
 

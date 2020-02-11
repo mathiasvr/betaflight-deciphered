@@ -144,6 +144,7 @@
       500,
       1950
     ],
+    "unit": "deg/s",
     "section": "master"
   },
   "gyro_to_use": {
@@ -383,6 +384,7 @@
       -18000,
       18000
     ],
+    "unit": "dddmm",
     "section": "master"
   },
   "mag_calibration": {
@@ -461,6 +463,7 @@
       0,
       1000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "baro_cf_vel": {
@@ -480,6 +483,7 @@
       1200,
       1700
     ],
+    "unit": "us",
     "section": "master"
   },
   "min_check": {
@@ -490,6 +494,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "max_check": {
@@ -500,6 +505,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "rssi_channel": {
@@ -663,6 +669,7 @@
       0,
       90
     ],
+    "unit": "deg",
     "section": "master"
   },
   "max_aux_channels": {
@@ -756,6 +763,7 @@
       0,
       100
     ],
+    "unit": "%",
     "section": "master"
   },
   "rx_min_usec": {
@@ -920,6 +928,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "max_throttle": {
@@ -929,6 +938,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "min_command": {
@@ -938,6 +948,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "dshot_idle_value": {
@@ -948,6 +959,7 @@
       0,
       2000
     ],
+    "unit": "bps",
     "section": "master"
   },
   "dshot_burst": {
@@ -1022,6 +1034,7 @@
       200,
       32000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "motor_pwm_inversion": {
@@ -1078,6 +1091,7 @@
       0,
       200
     ],
+    "unit": "ds",
     "section": "master"
   },
   "failsafe_throttle": {
@@ -1185,6 +1199,7 @@
       0,
       20000
     ],
+    "unit": "mAh",
     "section": "master"
   },
   "vbat_max_cell_voltage": {
@@ -1195,6 +1210,7 @@
       100,
       500
     ],
+    "unit": "cV",
     "section": "master"
   },
   "vbat_full_cell_voltage": {
@@ -1204,6 +1220,7 @@
       100,
       500
     ],
+    "unit": "cV",
     "section": "master"
   },
   "vbat_min_cell_voltage": {
@@ -1214,6 +1231,7 @@
       100,
       500
     ],
+    "unit": "cV",
     "section": "master"
   },
   "vbat_warning_cell_voltage": {
@@ -1224,6 +1242,7 @@
       100,
       500
     ],
+    "unit": "cV",
     "section": "master"
   },
   "vbat_hysteresis": {
@@ -1233,6 +1252,7 @@
       0,
       250
     ],
+    "unit": "dV",
     "section": "master"
   },
   "current_meter": {
@@ -1544,6 +1564,7 @@
       50,
       498
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "servo_lowpass_hz": {
@@ -2130,6 +2151,7 @@
       0,
       32
     ],
+    "unit": "us",
     "section": "master"
   },
   "yaw_deadband": {
@@ -2139,6 +2161,7 @@
       0,
       100
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "yaw_control_reversed": {
@@ -2700,6 +2723,7 @@
       10,
       90
     ],
+    "unit": "deg",
     "section": "profile"
   },
   "horizon_tilt_effect": {
@@ -4632,6 +4656,7 @@
       0,
       5999
     ],
+    "unit": "MHz",
     "section": "master"
   },
   "vtx_pit_mode_freq": {
@@ -4642,6 +4667,7 @@
       0,
       5999
     ],
+    "unit": "MHz",
     "section": "master"
   },
   "vtx_halfduplex": {
@@ -4902,6 +4928,7 @@
       200,
       400
     ],
+    "unit": "cV",
     "section": "master"
   },
   "camera_control_key_delay": {
@@ -4911,6 +4938,7 @@
       100,
       500
     ],
+    "unit": "ms",
     "section": "master"
   },
   "camera_control_internal_resistance": {
@@ -4920,6 +4948,7 @@
       10,
       1000
     ],
+    "unit": "hOhm",
     "section": "master"
   },
   "camera_control_button_resistance": {
