@@ -302,9 +302,13 @@ GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal
 - Default: `AUTO`
 - Allowed: `OFF`, `PRESET`, `AUTO`, `MANUAL`
 
+TODO: This feature can cause the CPU to work harder to be able to run higher d setpoint weights and get cleaner motor outputs. Set to OFF if CPU loading is too high. Note: Auto rc interpolation detects rx speed based on the reported speed by rx itself. But some receivers like also X4RS can report 9ms interval while it is actually 18ms on roll and pitch when using more channels than 8.
+
 ### `rc_interp_ch`
 - Default: `RPYT`
 - Allowed: `RP`, `RPY`, `RPYT`, `T`, `RPT`
+
+TODO: Smoothing of RX inputs for Roll, Pitch, Yaw, Throttle.
 
 ### `rc_interp_int`
 - Default: `19`
@@ -2187,7 +2191,7 @@ Increases the PID values to compensate when Vbat gets lower. This will give more
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
-TODO: If enabled, the copter will process the pid algorithm at minimum throttle.
+If enabled, the copter will process the PID algorithm at minimum throttle. With this `OFF` the PID controller does not respond to sticks when throttle values is below [min_check](#min_check).
 
 ### `anti_gravity_mode`
 - Default: `SMOOTH`
@@ -2196,6 +2200,8 @@ TODO: If enabled, the copter will process the pid algorithm at minimum throttle.
 ### `anti_gravity_threshold`
 - Default: `250`
 - Range: `20` - `1000`
+
+To improve stability in fast changing G forces during flight. This applies to quick throttle jumps where multirotor can go through weightless transitions. In these cases the iterm can cause unwanted effects like pitching up or yawing due to strong changes in accumulation polarities.
 
 ### `anti_gravity_gain`
 - Default: `5000`
@@ -2393,6 +2399,8 @@ Yaw D parameter
 ### `level_limit`
 - Default: `55`
 - Range: `10` - `90`
+
+TODO: The maximum allowed angle in degrees.
 
 ### `horizon_tilt_effect`
 - Default: `75`

@@ -558,7 +558,7 @@
     "section": "master"
   },
   "rc_interp": {
-    "desc": "",
+    "desc": "TODO: This feature can cause the CPU to work harder to be able to run higher d setpoint weights and get cleaner motor outputs. Set to OFF if CPU loading is too high. Note: Auto rc interpolation detects rx speed based on the reported speed by rx itself. But some receivers like also X4RS can report 9ms interval while it is actually 18ms on roll and pitch when using more channels than 8.",
     "default": "AUTO",
     "allowed": [
       "OFF",
@@ -569,7 +569,7 @@
     "section": "master"
   },
   "rc_interp_ch": {
-    "desc": "",
+    "desc": "TODO: Smoothing of RX inputs for Roll, Pitch, Yaw, Throttle.",
     "default": "RPYT",
     "allowed": [
       "RP",
@@ -2274,7 +2274,7 @@
     "section": "profile"
   },
   "pid_at_min_throttle": {
-    "desc": "TODO: If enabled, the copter will process the pid algorithm at minimum throttle.",
+    "desc": "If enabled, the copter will process the PID algorithm at minimum throttle. With this `OFF` the PID controller does not respond to sticks when throttle values is below [min_check](#min_check).",
     "default": "ON",
     "allowed": [
       "OFF",
@@ -2292,7 +2292,7 @@
     "section": "profile"
   },
   "anti_gravity_threshold": {
-    "desc": "",
+    "desc": "To improve stability in fast changing G forces during flight. This applies to quick throttle jumps where multirotor can go through weightless transitions. In these cases the iterm can cause unwanted effects like pitching up or yawing due to strong changes in accumulation polarities.",
     "default": "250",
     "range": [
       20,
@@ -2694,7 +2694,7 @@
     "section": "profile"
   },
   "level_limit": {
-    "desc": "",
+    "desc": "TODO: The maximum allowed angle in degrees.",
     "default": "55",
     "range": [
       10,
