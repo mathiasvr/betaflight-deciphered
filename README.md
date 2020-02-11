@@ -553,7 +553,7 @@ TODO: Output frequency (in Hz) for motor pins. Defaults are 400Hz for motor. If 
 - Range: `4` - `255`
 - BF Configurator: *Motor poles (number of magnets on the motor bell)*
 
-This setting is used for some features like the RPM Filter.<br><br>Represents the number of magnets that are on the bell of the motor. <b>Do NOT count the stators</b> where the windings are located. Typical 5" motors have 14 magnets, smaller ones like 3" or less usually have 12 magnets.
+Represents the number of magnets that are on the bell of the motor. **Do NOT count the stators** where the windings are located. This setting is used for features such as the RPM Filter. Typical 5" motors have 14 magnets, smaller ones like 3" or less usually have 12 magnets.
 
 ### `thr_corr_value`
 - Default: `0`
