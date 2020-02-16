@@ -9,18 +9,26 @@ def print_vars_as_markdown():
 
   sections = {'master': [], 'profile': [], 'rateprofile': []}
 
+  doc_keys = 0
   for key in help_variables_data:
     assert help_variables_data[key]['section'] in sections
     # if help_variables_data[key]['section'] not in sections:
       # sections[help_variables_data[key]['section']] = []
 
-    help_variables_data[key]['name'] = key 
+    help_variables_data[key]['name'] = key
     sections[help_variables_data[key]['section']].append(help_variables_data[key])
 
-    
+    desc = help_variables_data[key]['desc']
+    if desc != '' and not desc.upper().startswith('TODO') and not desc.upper().startswith('GUESS'):
+      doc_keys += 1
+
+  # print('Total doc: ', doc_keys, '/', total_keys)
+  percent = int(doc_keys / len(help_variables_data) * 100)
+  print(f'Documentation: {percent}%<br><progress min="0" max="100" value="{percent}"></progress>')
+
   for sec in sections:
     print(f"\n## Section `{sec}`")
-    
+
     for helpdata in sections[sec]:
 
   # for key in help_variables_data:
