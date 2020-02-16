@@ -111,6 +111,7 @@ TODO: Selects the gyro(s) that should be used.
 ### `dyn_notch_width_percent`
 - Default: `8`
 - Range: `0` - `20`
+- Unit: `%`
 
 ### `dyn_notch_q`
 - Default: `120`
@@ -705,10 +706,12 @@ Sets the hysteresis value for low-battery alarms, in 0.1V units, i.e. 1 = 0.1V. 
 ### `cbat_alert_percent`
 - Default: `10`
 - Range: `0` - `100`
+- Unit: `%`
 
 ### `vbat_cutoff_percent`
 - Default: `100`
 - Range: `0` - `100`
+- Unit: `%`
 
 ### `force_battery_cell_count`
 - Default: `0`
@@ -788,6 +791,7 @@ Configures the mixer to expect the motor direction to be reversed and the propel
 ### `crashflip_motor_percent`
 - Default: `0`
 - Range: `0` - `100`
+- Unit: `%`
 
 ### `3d_deadband_low`
 - Default: `1406`
@@ -1033,7 +1037,7 @@ These are values (in us) by how much RC input can be different before it's consi
 ### `yaw_deadband`
 - Default: `0`
 - Range: `0` - `100`
-- Unit: `Hz`
+- Unit: `us`
 
 These are values (in us) by how much RC input can be different before it's considered valid for the yaw axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint.
 
@@ -1063,6 +1067,7 @@ TODO: This is the amount of successful flight time in milliseconds that must be 
 ### `runaway_takeoff_deactivate_throttle_percent`
 - Default: `20`
 - Range: `0` - `100`
+- Unit: `%`
 
 TODO: Determines the minimum throttle percentage threshold where successful flight can be considered. Valid values range from 0 to 100. Along with throttle level the logic also requires activity on the roll, pitch or yaw sticks along with the PID controller successfully controlling the craft with the PID_sum staying under control. When these conditions are met the logic accumulates successful flight time. Generally you won't need to adjust this value as most quads require around 25% or more throttle to takeoff/hover. The exception may be if you have and extremely powerful or light craft that is capable of flying well below 25% throttle. In this case you may want to lower this value closer to your actual hover throttle percent. If this value is set too low it's possible that the logic will deactivate too quickly and may not trigger in a real runaway event. Setting it too high will result in the logic taking more flight time to deactivate as it only accumulates flight time when the throttle is above the setting.
 
@@ -1235,10 +1240,12 @@ TODO: When set to `ON`, and the LEDLOW mode is active (i.e. LED strip off), blin
 ### `ledstrip_beacon_period_ms`
 - Default: `500`
 - Range: `50` - `10000`
+- Unit: `ms`
 
 ### `ledstrip_beacon_percent`
 - Default: `50`
 - Range: `0` - `100`
+- Unit: `%`
 
 ### `ledstrip_beacon_armed_only`
 - Default: `OFF`
@@ -2342,6 +2349,7 @@ Adds an angle limiting mode for pilots who are learning to fly in acro mode. The
 ### `acro_trainer_lookahead_ms`
 - Default: `50`
 - Range: `10` - `200`
+- Unit: `ms`
 
 ### `acro_trainer_debug_axis`
 - Default: `ROLL`
@@ -2524,6 +2532,7 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 ### `launch_trigger_throttle_percent`
 - Default: `20`
 - Range: `0` - `90`
+- Unit: `%`
 
 ### `launch_angle_limit`
 - Default: `0`
@@ -2668,6 +2677,7 @@ Select how [throttle_limit_percent](#throttle_limit_percent) should limit maximu
 ### `throttle_limit_percent`
 - Default: `100`
 - Range: `25` - `100`
+- Unit: `%`
 - BF Configurator: *Throttle Limit %*
 
 Sets the desired maximum throttle percentage, according to [throttle_limit_type](#throttle_limit_type).
