@@ -7,13 +7,13 @@ When using the Betaflight command line interface or examining a diff, it can som
 As I'm not an expert, any contributions or help with creating this document will be greatly appreciated!
 If you have trouble understanding any of the explanations, please open an issue so we can rewrite it and hopefully clear things up.
 
-Descriptions and other information is organized into a `json` file, with the intent to generate consistent documentation and allow other possible future integration.
+Descriptions and other information is organized into a [JSON file](help_variables.json), with the intent to generate consistent documentation and allow other possible future integration.
 
-This document is based on information from old Betaflight/Cleanflight docs, [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator), and various other sources.
+This document is based on information from previous Betaflight/Cleanflight docs, [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator), as well as Betaflight source code and various other sources.
 
 # Betaflight CLI Variables
-Betaflight can be configured through a CLI by setting the following list of variables, which can also be saved and loaded from a diff. Variables are read by entering `get <variable_name>` into the CLI, and written with `set <variable_name> = <value>`.
-The listed entries includes default and allowed values.
+Betaflight can be configured through a CLI by setting the following list of variables.
+Variables are read by entering `get <variable_name>`, and written with `set <variable_name> = <value>`.
 
 **Sections**
 - [Master](#section-master): General variables, always in effect. 
@@ -277,7 +277,7 @@ The value (in us) used to determine if a stick is centered.
 - Unit: `us`
 - BF Configurator: *'Stick Low' Threshold*
 
-TODO: The maximum value (in us) for a stick to be recognised as low. I think this is only used for stick commands, and not a to cap channel values.
+The maximum value (in us) for a stick to be recognised as low. Used for stick commands and [pid_at_min_throttle](#pid_at_min_throttle).
 
 ### `max_check`
 - Default: `1900`
@@ -285,7 +285,7 @@ TODO: The maximum value (in us) for a stick to be recognised as low. I think thi
 - Unit: `us`
 - BF Configurator: *'Stick High' Threshold*
 
-TODO: The minimum value (in us) for a stick to be recognised as high.
+The minimum value (in us) for a stick to be recognised as high. Used for stick commands, etc.
 
 ### `rssi_channel`
 - Default: `0`

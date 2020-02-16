@@ -498,7 +498,7 @@
     "section": "master"
   },
   "min_check": {
-    "desc": "TODO: The maximum value (in us) for a stick to be recognised as low. I think this is only used for stick commands, and not a to cap channel values.",
+    "desc": "The maximum value (in us) for a stick to be recognised as low. Used for stick commands and #pid_at_min_throttle.",
     "aka": "'Stick Low' Threshold",
     "default": "1050",
     "range": [
@@ -509,7 +509,7 @@
     "section": "master"
   },
   "max_check": {
-    "desc": "TODO: The minimum value (in us) for a stick to be recognised as high.",
+    "desc": "The minimum value (in us) for a stick to be recognised as high. Used for stick commands, etc.",
     "aka": "'Stick High' Threshold",
     "default": "1900",
     "range": [
