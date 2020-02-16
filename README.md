@@ -42,6 +42,7 @@ Sets the gyro update frequency based on dividing the max loop rate (8kHz). `4` m
 ### `gyro_lowpass_hz`
 - Default: `200`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `gyro_lowpass2_type`
 - Default: `PT1`
@@ -50,22 +51,27 @@ Sets the gyro update frequency based on dividing the max loop rate (8kHz). `4` m
 ### `gyro_lowpass2_hz`
 - Default: `250`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `gyro_notch1_hz`
 - Default: `0`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `gyro_notch1_cutoff`
 - Default: `0`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `gyro_notch2_hz`
 - Default: `0`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `gyro_notch2_cutoff`
 - Default: `0`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `gyro_calib_duration`
 - Default: `125`
@@ -120,14 +126,17 @@ TODO: Selects the gyro(s) that should be used.
 ### `dyn_notch_min_hz`
 - Default: `150`
 - Range: `60` - `1000`
+- Unit: `Hz`
 
 ### `dyn_lpf_gyro_min_hz`
 - Default: `200`
 - Range: `0` - `1000`
+- Unit: `Hz`
 
 ### `dyn_lpf_gyro_max_hz`
 - Default: `500`
 - Range: `0` - `1000`
+- Unit: `Hz`
 
 ### `gyro_filter_debug_axis`
 - Default: `ROLL`
@@ -142,6 +151,7 @@ This is used to suggest which accelerometer driver should load, or to force no a
 ### `acc_lpf_hz`
 - Default: `10`
 - Range: `0` - `400`
+- Unit: `Hz`
 
 ### `acc_trim_pitch`
 - Default: `0`
@@ -333,10 +343,12 @@ TODO: Smoothing of RX inputs for Roll, Pitch, Yaw, Throttle.
 ### `rc_smoothing_input_hz`
 - Default: `0`
 - Range: `0` - `255`
+- Unit: `Hz`
 
 ### `rc_smoothing_derivative_hz`
 - Default: `0`
 - Range: `0` - `255`
+- Unit: `Hz`
 
 ### `rc_smoothing_debug_axis`
 - Default: `ROLL`
@@ -614,6 +626,7 @@ Just disarm the craft instead of executing the selected failsafe procedure when 
 ### `align_board_roll`
 - Default: `0`
 - Range: `-180` - `360`
+- Unit: `deg`
 - BF Configurator: *Roll Degrees*
 
 Assigns how the flight controller board is aligned on the roll axis.
@@ -621,6 +634,7 @@ Assigns how the flight controller board is aligned on the roll axis.
 ### `align_board_pitch`
 - Default: `0`
 - Range: `-180` - `360`
+- Unit: `deg`
 - BF Configurator: *Pitch Degrees*
 
 Assigns how the flight controller board is aligned on the pitch axis.
@@ -628,6 +642,7 @@ Assigns how the flight controller board is aligned on the pitch axis.
 ### `align_board_yaw`
 - Default: `0`
 - Range: `-180` - `360`
+- Unit: `deg`
 - BF Configurator: *Yaw Degrees*
 
 Assigns how the flight controller board is aligned on the yaw axis.
@@ -845,6 +860,7 @@ Output frequency (in Hz) servo pins. When using tricopters or gimbal with digita
 ### `servo_lowpass_hz`
 - Default: `0`
 - Range: `0` - `400`
+- Unit: `Hz`
 
 ### `tri_unarmed_servo`
 - Default: `ON`
@@ -865,6 +881,7 @@ Special character used to trigger reboot.
 ### `serial_update_rate_hz`
 - Default: `100`
 - Range: `100` - `2000`
+- Unit: `Hz`
 
 ### `imu_dcm_kp`
 - Default: `2500`
@@ -881,6 +898,7 @@ TODO: Inertial Measurement Unit KI Gain.
 ### `small_angle`
 - Default: `25`
 - Range: `0` - `180`
+- Unit: `deg`
 - BF Configurator: *Maximum ARM Angle [degrees]*
 
 Craft will not ARM if tilted more than specified number of degrees. Only applies if accelerometer is enabled. Setting to 180 will effectivly disable check.
@@ -888,8 +906,9 @@ Craft will not ARM if tilted more than specified number of degrees. Only applies
 ### `auto_disarm_delay`
 - Default: `5`
 - Range: `0` - `60`
+- Unit: `s`
 
-Delay before automatic disarming.
+Automatically disarm multicopter after this delay in seconds of zero throttle. Disabled when `0`. The `MOTOR_STOP` feature must be enabled for this to take effect.
 
 ### `gyro_cal_on_first_arm`
 - Default: `OFF`
@@ -1061,6 +1080,7 @@ TODO: Set this to OFF to completely disable the feature. Note that there will be
 ### `runaway_takeoff_deactivate_delay`
 - Default: `500`
 - Range: `100` - `1000`
+- Unit: `ms`
 
 TODO: This is the amount of successful flight time in milliseconds that must be accumulated to deactivate the feature. Valid values range from 100 (0.1 seconds) to 1000 (1 second). The default value of 500 (0.5 seconds) seems to be very reliable and shouldn't need to be adjusted. The goal is to deactivate the logic after a "reasonable" but short period of time once we've determined the craft is flying normally. However we want it to deactivate before we might reach the first point where a crash or other event may occur (like at the first gate during a race). Raising this value will delay the deactivation and it's possible that a crash or gate/branch clip could cause an unintended disarm. Lowering this value too much could result in the logic deactivating too soon and not providing protection in a runaway event. It's important to note that the delay is the accumulated amount of flight time where the other criteria like throttle level, stick activity, etc. are met. Thus the "real" elapsed time before deactivation may be longer than 0.5 seconds if the throttle was dropping below the limit or if the R/P/Y sticks were centered. The actual behavior can be viewed by using blackbox logging.
 
@@ -2191,10 +2211,12 @@ Name of the PID profile. Can be seen in OSD using [osd_pid_profile_name_pos](#os
 ### `dyn_lpf_dterm_min_hz`
 - Default: `70`
 - Range: `0` - `1000`
+- Unit: `Hz`
 
 ### `dyn_lpf_dterm_max_hz`
 - Default: `170`
 - Range: `0` - `1000`
+- Unit: `Hz`
 
 ### `dterm_lowpass_type`
 - Default: `PT1`
@@ -2203,6 +2225,7 @@ Name of the PID profile. Can be seen in OSD using [osd_pid_profile_name_pos](#os
 ### `dterm_lowpass_hz`
 - Default: `150`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `dterm_lowpass2_type`
 - Default: `PT1`
@@ -2211,14 +2234,17 @@ Name of the PID profile. Can be seen in OSD using [osd_pid_profile_name_pos](#os
 ### `dterm_lowpass2_hz`
 - Default: `150`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `dterm_notch_hz`
 - Default: `0`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `dterm_notch_cutoff`
 - Default: `0`
 - Range: `0` - `4000`
+- Unit: `Hz`
 
 ### `vbat_pid_gain`
 - Default: `OFF`
@@ -2330,6 +2356,7 @@ To improve stability in fast changing G forces during flight. This applies to qu
 ### `yaw_lowpass_hz`
 - Default: `0`
 - Range: `0` - `500`
+- Unit: `Hz`
 
 ### `throttle_boost`
 - Default: `5`
@@ -2582,7 +2609,7 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 
 ### `rateprofile_name`
 
-Name of the rate profile. Can be seen in OSD using [osd_rate_profile_name_pos](#osd_rate_profile_name_pos).
+Name of the rate profile. Can be displayed in OSD using [osd_rate_profile_name_pos](#osd_rate_profile_name_pos).
 
 ### `thr_mid`
 - Default: `50`
@@ -2685,17 +2712,20 @@ Sets the desired maximum throttle percentage, according to [throttle_limit_type]
 ### `roll_rate_limit`
 - Default: `1998`
 - Range: `200` - `1998`
+- Unit: `deg/s`
 
 Maximum velocity (deg/s) for roll. Caps a roll rate curve that would otherwise become higher.
 
 ### `pitch_rate_limit`
 - Default: `1998`
 - Range: `200` - `1998`
+- Unit: `deg/s`
 
 Maximum velocity (deg/s) for pitch. Caps a pitch rate curve that would otherwise become higher.
 
 ### `yaw_rate_limit`
 - Default: `1998`
 - Range: `200` - `1998`
+- Unit: `deg/s`
 
 Maximum velocity (deg/s) for yaw. Caps a yaw rate curve that would otherwise become higher.

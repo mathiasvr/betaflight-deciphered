@@ -1615,7 +1615,7 @@
     "section": "master"
   },
   "rateprofile_name": {
-    "desc": "Name of the rate profile. Can be seen in OSD using #osd_rate_profile_name_pos.",
+    "desc": "Name of the rate profile. Can be displayed in OSD using #osd_rate_profile_name_pos.",
     "section": "rateprofile"
   },
   "thr_mid": {
@@ -2226,6 +2226,7 @@
       100,
       1000
     ],
+    "unit": "ms",
     "section": "master"
   },
   "runaway_takeoff_deactivate_throttle_percent": {
