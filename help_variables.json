@@ -35,6 +35,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "gyro_lowpass2_type": {
@@ -53,6 +54,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "gyro_notch1_hz": {
@@ -62,6 +64,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "gyro_notch1_cutoff": {
@@ -71,6 +74,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "gyro_notch2_hz": {
@@ -80,6 +84,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "gyro_notch2_cutoff": {
@@ -89,6 +94,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "gyro_calib_duration": {
@@ -194,6 +200,7 @@
       60,
       1000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "dyn_lpf_gyro_min_hz": {
@@ -203,6 +210,7 @@
       0,
       1000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "dyn_lpf_gyro_max_hz": {
@@ -212,6 +220,7 @@
       0,
       1000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "gyro_filter_debug_axis": {
@@ -255,6 +264,7 @@
       0,
       400
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "acc_trim_pitch": {
@@ -612,6 +622,7 @@
       0,
       255
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "rc_smoothing_derivative_hz": {
@@ -621,6 +632,7 @@
       0,
       255
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "rc_smoothing_debug_axis": {
@@ -1162,6 +1174,7 @@
       -180,
       360
     ],
+    "unit": "deg",
     "section": "master"
   },
   "align_board_pitch": {
@@ -1172,6 +1185,7 @@
       -180,
       360
     ],
+    "unit": "deg",
     "section": "master"
   },
   "align_board_yaw": {
@@ -1182,6 +1196,7 @@
       -180,
       360
     ],
+    "unit": "deg",
     "section": "master"
   },
   "gimbal_mode": {
@@ -1578,6 +1593,7 @@
       0,
       400
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "tri_unarmed_servo": {
@@ -1780,6 +1796,7 @@
       200,
       1998
     ],
+    "unit": "deg/s",
     "section": "rateprofile"
   },
   "pitch_rate_limit": {
@@ -1789,6 +1806,7 @@
       200,
       1998
     ],
+    "unit": "deg/s",
     "section": "rateprofile"
   },
   "yaw_rate_limit": {
@@ -1798,6 +1816,7 @@
       200,
       1998
     ],
+    "unit": "deg/s",
     "section": "rateprofile"
   },
   "reboot_character": {
@@ -1816,6 +1835,7 @@
       100,
       2000
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "imu_dcm_kp": {
@@ -1844,15 +1864,17 @@
       0,
       180
     ],
+    "unit": "deg",
     "section": "master"
   },
   "auto_disarm_delay": {
-    "desc": "Delay before automatic disarming.",
+    "desc": "Automatically disarm multicopter after this delay in seconds of zero throttle. Disabled when `0`. The `MOTOR_STOP` feature must be enabled for this to take effect.",
     "default": "5",
     "range": [
       0,
       60
     ],
+    "unit": "s",
     "section": "master"
   },
   "gyro_cal_on_first_arm": {
@@ -2227,6 +2249,7 @@
       0,
       1000
     ],
+    "unit": "Hz",
     "section": "profile"
   },
   "dyn_lpf_dterm_max_hz": {
@@ -2236,6 +2259,7 @@
       0,
       1000
     ],
+    "unit": "Hz",
     "section": "profile"
   },
   "dterm_lowpass_type": {
@@ -2254,6 +2278,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "profile"
   },
   "dterm_lowpass2_type": {
@@ -2272,6 +2297,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "profile"
   },
   "dterm_notch_hz": {
@@ -2281,6 +2307,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "profile"
   },
   "dterm_notch_cutoff": {
@@ -2290,6 +2317,7 @@
       0,
       4000
     ],
+    "unit": "Hz",
     "section": "profile"
   },
   "vbat_pid_gain": {
@@ -2530,6 +2558,7 @@
       0,
       500
     ],
+    "unit": "Hz",
     "section": "profile"
   },
   "throttle_boost": {
