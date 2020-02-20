@@ -1743,14 +1743,17 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 Sets the active OSD profile.
 
 ### `osd_profile_1_name`
+- Type: `String[16]`
 
 Name of OSD Profile 1. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos).
 
 ### `osd_profile_2_name`
+- Type: `String[16]`
 
 Name of OSD Profile 2. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos).
 
 ### `osd_profile_3_name`
+- Type: `String[16]`
 
 Name of OSD Profile 3. Can be displayed in OSD using [osd_profile_name_pos](#osd_profile_name_pos).
 
@@ -2190,11 +2193,13 @@ Like [gyro_1_align_yaw](#gyro_1_align_yaw), but for the second gyro sensor.
 - Range: `0` - `4294967295`
 
 ### `name`
+- Type: `String[16]`
 - BF Configurator: *Craft Name*
 
 Name of the craft. Used in log and config files, and can be displayed in OSD with [osd_craft_name_pos](#osd_craft_name_pos).
 
 ### `display_name`
+- Type: `String[16]`
 - BF Configurator: *Display Name*
 
 Text that can be displayed in OSD with [osd_display_name_pos](#osd_display_name_pos). E.g. name of the pilot.
@@ -2206,6 +2211,7 @@ Text that can be displayed in OSD with [osd_display_name_pos](#osd_display_name_
 ## Section `profile`
 
 ### `profile_name`
+- Type: `String[8]`
 
 Name of the PID profile. Can be seen in OSD using [osd_pid_profile_name_pos](#osd_pid_profile_name_pos).
 
@@ -2609,6 +2615,7 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 ## Section `rateprofile`
 
 ### `rateprofile_name`
+- Type: `String[8]`
 
 Name of the rate profile. Can be displayed in OSD using [osd_rate_profile_name_pos](#osd_rate_profile_name_pos).
 

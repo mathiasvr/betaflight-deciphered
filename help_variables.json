@@ -1616,6 +1616,7 @@
   },
   "rateprofile_name": {
     "desc": "Name of the rate profile. Can be displayed in OSD using #osd_rate_profile_name_pos.",
+    "datatype": "String[8]",
     "section": "rateprofile"
   },
   "thr_mid": {
@@ -2241,6 +2242,7 @@
   },
   "profile_name": {
     "desc": "Name of the PID profile. Can be seen in OSD using #osd_pid_profile_name_pos.",
+    "datatype": "String[8]",
     "section": "profile"
   },
   "dyn_lpf_dterm_min_hz": {
@@ -4504,14 +4506,17 @@
   },
   "osd_profile_1_name": {
     "desc": "Name of OSD Profile 1. Can be displayed in OSD using #osd_profile_name_pos.",
+    "datatype": "String[16]",
     "section": "master"
   },
   "osd_profile_2_name": {
     "desc": "Name of OSD Profile 2. Can be displayed in OSD using #osd_profile_name_pos.",
+    "datatype": "String[16]",
     "section": "master"
   },
   "osd_profile_3_name": {
     "desc": "Name of OSD Profile 3. Can be displayed in OSD using #osd_profile_name_pos.",
+    "datatype": "String[16]",
     "section": "master"
   },
   "osd_gps_sats_show_hdop": {
@@ -5448,11 +5453,13 @@
   "name": {
     "desc": "Name of the craft. Used in log and config files, and can be displayed in OSD with #osd_craft_name_pos.",
     "aka": "Craft Name",
+    "datatype": "String[16]",
     "section": "master"
   },
   "display_name": {
     "desc": "Text that can be displayed in OSD with #osd_display_name_pos. E.g. name of the pilot.",
     "aka": "Display Name",
+    "datatype": "String[16]",
     "section": "master"
   },
   "position_alt_source": {
