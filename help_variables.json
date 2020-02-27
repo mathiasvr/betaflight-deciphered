@@ -20,7 +20,8 @@
     "section": "master"
   },
   "gyro_lowpass_type": {
-    "desc": "",
+    "desc": "TODO: Type of gyro dynamic lowpass filter. Maybe also static lowpass filter type if not using dynamic filter.",
+    "aka": "Gyro Lowpass 1 Dynamic Filter Type",
     "default": "PT1",
     "allowed": [
       "PT1",
@@ -29,7 +30,8 @@
     "section": "master"
   },
   "gyro_lowpass_hz": {
-    "desc": "",
+    "desc": "TODO: I think this is only used if not using dynamic filter.",
+    "aka": "Gyro Lowpass 1 Cutoff Frequency [Hz]",
     "default": "200",
     "range": [
       0,
@@ -40,6 +42,7 @@
   },
   "gyro_lowpass2_type": {
     "desc": "",
+    "aka": "Gyro Lowpass 2 Filter Type",
     "default": "PT1",
     "allowed": [
       "PT1",
@@ -49,6 +52,7 @@
   },
   "gyro_lowpass2_hz": {
     "desc": "",
+    "aka": "Gyro Lowpass 2 Cutoff Frequency [Hz]",
     "default": "250",
     "range": [
       0,
@@ -135,7 +139,7 @@
     "section": "master"
   },
   "yaw_spin_recovery": {
-    "desc": "This new feature, enabled by default in betaflight 3.4, reduces the severity and duration of un-commanded severe yaw spins. For example, if a quadcopter clips a gate, tree, branch or other object and causes a high rate yaw spin, it may go into a 'never-ending' uncontrollable spin. Typically it makes a distinctive warbling noise and climbs rapidly - the so-called Yaw Spin To The Moon (YSTTM) problem. 3.4 introduces two code features that should bring such spins under control more quickly and cleanly. Yaw Spin Recovery is intended primarily for FPV pilots, and works best with MPU gyros. LOS acro pilots who use high yaw rates may prefer to disable this function.",
+    "desc": "This new feature, enabled by default in Betaflight 3.4, reduces the severity and duration of un-commanded severe yaw spins. For example, if a quadcopter clips a gate, tree, branch or other object and causes a high rate yaw spin, it may go into a 'never-ending' uncontrollable spin. Typically it makes a distinctive warbling noise and climbs rapidly - the so-called Yaw Spin To The Moon (YSTTM) problem. 3.4 introduces two code features that should bring such spins under control more quickly and cleanly. Yaw Spin Recovery is intended primarily for FPV pilots, and works best with MPU gyros. LOS acro pilots who use high yaw rates may prefer to disable this function.",
     "default": "ON",
     "allowed": [
       "OFF",
@@ -164,7 +168,8 @@
     "section": "master"
   },
   "dyn_notch_range": {
-    "desc": "",
+    "desc": "The dynamic notch has three frequency ranges in which it can operate: `LOW` (80-330hz) for lower revving quads like 6+ inches, `MEDIUM` (140-550hz) for a normal 5 inch quad, `HIGH` (230-800hz) for very high revving 2.5-3 inch quads. `AUTO` option selects the range depending on the value of the Gyro Dynamic Lowpass 1 Filter's max cutoff frequency.",
+    "aka": "Dynamic Notch Filter Range",
     "default": "MEDIUM",
     "allowed": [
       "HIGH",
@@ -175,7 +180,8 @@
     "section": "master"
   },
   "dyn_notch_width_percent": {
-    "desc": "",
+    "desc": "This sets the width between two dynamic notch filters. Setting it at 0 will disable the second dynamic notch filter and will reduce filter delay, however it may make motor temperatures higher.",
+    "aka": "Dynamic Notch Width Percent",
     "default": "8",
     "range": [
       0,
@@ -185,7 +191,8 @@
     "section": "master"
   },
   "dyn_notch_q": {
-    "desc": "",
+    "desc": "Q factor adjust how narrow or wide the dynamic notch filters are. Higher value makes it narrower and more precise and lower value makes it wider and broader. Having a really low value will greatly increase filter delay.",
+    "aka": "Dynamic Notch Q",
     "default": "120",
     "range": [
       1,
@@ -194,7 +201,8 @@
     "section": "master"
   },
   "dyn_notch_min_hz": {
-    "desc": "",
+    "desc": "Defines the lowest dynamic notch center frequency below which the dynamic notch will not go.",
+    "aka": "Dynamic Notch Min Hz",
     "default": "150",
     "range": [
       60,
@@ -205,6 +213,7 @@
   },
   "dyn_lpf_gyro_min_hz": {
     "desc": "",
+    "aka": "Gyro Lowpass 1 Dynamic Min Cutoff Frequency [Hz]",
     "default": "200",
     "range": [
       0,
@@ -215,6 +224,7 @@
   },
   "dyn_lpf_gyro_max_hz": {
     "desc": "",
+    "aka": "Gyro Lowpass 1 Dynamic Max Cutoff Frequency [Hz]",
     "default": "500",
     "range": [
       0,
@@ -2247,6 +2257,7 @@
   },
   "dyn_lpf_dterm_min_hz": {
     "desc": "",
+    "aka": "D Term Lowpass 1 Dynamic Min Cutoff Frequency [Hz]",
     "default": "70",
     "range": [
       0,
@@ -2257,6 +2268,7 @@
   },
   "dyn_lpf_dterm_max_hz": {
     "desc": "",
+    "aka": "D Term Lowpass 1 Dynamic Max Cutoff Frequency [Hz]",
     "default": "170",
     "range": [
       0,
@@ -2267,6 +2279,7 @@
   },
   "dterm_lowpass_type": {
     "desc": "",
+    "aka": "D Term Lowpass 1 Dynamic Filter Type",
     "default": "PT1",
     "allowed": [
       "PT1",
@@ -2276,6 +2289,7 @@
   },
   "dterm_lowpass_hz": {
     "desc": "",
+    "aka": "D Term Lowpass 1 Cutoff Frequency [Hz]",
     "default": "150",
     "range": [
       0,
@@ -2286,6 +2300,7 @@
   },
   "dterm_lowpass2_type": {
     "desc": "",
+    "aka": "D Term Lowpass 2 Filter Type",
     "default": "PT1",
     "allowed": [
       "PT1",
@@ -2295,6 +2310,7 @@
   },
   "dterm_lowpass2_hz": {
     "desc": "",
+    "aka": "D Term Lowpass 2 Cutoff Frequency [Hz]",
     "default": "150",
     "range": [
       0,
@@ -2860,7 +2876,7 @@
   },
   "d_min_yaw": {
     "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_yaw).",
-    "aka": " D Min Yaw",
+    "aka": "D Min Yaw",
     "default": "0",
     "range": [
       0,
@@ -2879,7 +2895,8 @@
     "section": "profile"
   },
   "d_min_advance": {
-    "desc": "Makes D go up earlier by using setpoint instead of gyro to determine sharp moves. aka D Min Advance",
+    "desc": "Makes D go up earlier by using setpoint instead of gyro to determine sharp moves.",
+    "aka": "D Min Advance",
     "default": "20",
     "range": [
       0,
@@ -5337,7 +5354,8 @@
     "section": "master"
   },
   "gyro_rpm_notch_harmonics": {
-    "desc": "",
+    "desc": "Number of harmonics per motor. A value of 3 (recommended for most quads) will generate 3 notch filters, per motor for each axis, totaling 36 notches. One at the base motor frequency and two harmonics at multiples of that base frequency.",
+    "aka": "Gyro RPM Filter Harmonics Number",
     "default": "3",
     "range": [
       0,
@@ -5355,12 +5373,14 @@
     "section": "master"
   },
   "gyro_rpm_notch_min": {
-    "desc": "",
+    "desc": "Minimum frequency that will be used by the RPM Filter.",
+    "aka": "Gyro RPM Filter Min Frequency [Hz]",
     "default": "100",
     "range": [
       50,
       200
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "dterm_rpm_notch_harmonics": {
