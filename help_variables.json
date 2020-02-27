@@ -3516,6 +3516,33 @@
     ],
     "section": "master"
   },
+  "sdio_clk_bypass": {
+    "desc": "",
+    "default": "OFF",
+    "allowed": [
+      "OFF",
+      "ON"
+    ],
+    "section": "master"
+  },
+  "sdio_use_cache": {
+    "desc": "",
+    "default": "OFF",
+    "allowed": [
+      "OFF",
+      "ON"
+    ],
+    "section": "master"
+  },
+  "sdio_use_4bit_width": {
+    "desc": "",
+    "default": "OFF",
+    "allowed": [
+      "OFF",
+      "ON"
+    ],
+    "section": "master"
+  },
   "osd_units": {
     "desc": "Sets whether to use the `Metric` or `Imperial` unit system for numerical readouts in the On Screen Display (OSD).",
     "aka": "Units",
@@ -5494,33 +5521,6 @@
       "DEFAULT",
       "BARO_ONLY",
       "GPS_ONLY"
-    ],
-    "section": "master"
-  },
-  "sdio_clk_bypass": {
-    "desc": "",
-    "default": "OFF",
-    "allowed": [
-      "OFF",
-      "ON"
-    ],
-    "section": "master"
-  },
-  "sdio_use_cache": {
-    "desc": "",
-    "default": "OFF",
-    "allowed": [
-      "OFF",
-      "ON"
-    ],
-    "section": "master"
-  },
-  "sdio_use_4bit_width": {
-    "desc": "",
-    "default": "OFF",
-    "allowed": [
-      "OFF",
-      "ON"
     ],
     "section": "master"
   }
