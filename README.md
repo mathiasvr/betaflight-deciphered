@@ -2248,6 +2248,18 @@ Text that can be displayed in OSD with [osd_display_name_pos](#osd_display_name_
 - Default: `DEFAULT`
 - Allowed: `DEFAULT`, `BARO_ONLY`, `GPS_ONLY`
 
+### `sdio_clk_bypass`
+- Default: `OFF`
+- Allowed: `OFF`, `ON`
+
+### `sdio_use_cache`
+- Default: `OFF`
+- Allowed: `OFF`, `ON`
+
+### `sdio_use_4bit_width`
+- Default: `OFF`
+- Allowed: `OFF`, `ON`
+
 ## Section `profile`
 
 ### `profile_name`

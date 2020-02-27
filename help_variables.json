@@ -2218,7 +2218,7 @@
   },
   "pid_process_denom": {
     "desc": "Determines PID and motor write frequency by dividing the gyro sample rate, determined by #gyro_sync_denom. This is automatically set to proper values when setting pid loop frequency in BF Configurator. The maximum frequency for the PID loop is limited by the maximum frequency that updates can be sent by the chosen ESC/motor protocol.",
-   "aka": "PID loop frequency",
+    "aka": "PID loop frequency",
     "default": "4",
     "range": [
       1,
@@ -5494,6 +5494,33 @@
       "DEFAULT",
       "BARO_ONLY",
       "GPS_ONLY"
+    ],
+    "section": "master"
+  },
+  "sdio_clk_bypass": {
+    "desc": "",
+    "default": "OFF",
+    "allowed": [
+      "OFF",
+      "ON"
+    ],
+    "section": "master"
+  },
+  "sdio_use_cache": {
+    "desc": "",
+    "default": "OFF",
+    "allowed": [
+      "OFF",
+      "ON"
+    ],
+    "section": "master"
+  },
+  "sdio_use_4bit_width": {
+    "desc": "",
+    "default": "OFF",
+    "allowed": [
+      "OFF",
+      "ON"
     ],
     "section": "master"
   }
