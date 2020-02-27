@@ -7,9 +7,13 @@ When using the Betaflight command line interface or examining a diff, it can som
 As I'm not an expert, any contributions or help with creating this document will be greatly appreciated!
 If you have trouble understanding any of the explanations, please open an issue so we can rewrite it and hopefully clear things up.
 
-Descriptions and other information is organized into a [JSON file](help_variables.json), with the intent to generate consistent documentation and allow other possible future integration.
+Documentation is based on information from previous Betaflight/Cleanflight docs, [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator), as well as Betaflight source code and various other sources.
 
-This document is based on information from previous Betaflight/Cleanflight docs, [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator), as well as Betaflight source code and various other sources.
+## Integration
+> **Update:** I'm currently working on an app that uses this documentation to help learn about your Betaflight configuration.
+https://github.com/mathiasvr/betaflight-inspector
+
+Descriptions and other information is organized into a [JSON file](help_variables.json), with the intent to generate consistent documentation and allow other possible future integration.
 
 # Betaflight CLI Variables
 Betaflight can be configured through a CLI by setting the following list of variables.
