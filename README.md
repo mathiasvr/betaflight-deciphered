@@ -447,6 +447,7 @@ As a safety feature when having airmode enabled, it will not become active until
 ### `rx_min_usec`
 - Default: `885`
 - Range: `750` - `2250`
+- Unit: `us`
 - BF Configurator: *Minimum length*
 
 Minimum valid pulse length [usec]. Pulses shorter than minimum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.
@@ -454,6 +455,7 @@ Minimum valid pulse length [usec]. Pulses shorter than minimum are invalid and w
 ### `rx_max_usec`
 - Default: `2115`
 - Range: `750` - `2250`
+- Unit: `us`
 - BF Configurator: *Maximum length*
 
 Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.
@@ -606,6 +608,7 @@ Represents the number of magnets that are on the bell of the motor. **Do NOT cou
 ### `failsafe_delay`
 - Default: `4`
 - Range: `0` - `200`
+- Unit: `ds`
 - BF Configurator: *Guard time for stage 2 activation after signal lost [1 = 0.1 sec.]*
 
 Time for stage 1 to wait for recovery.
@@ -633,6 +636,7 @@ This option determines what happens when Failsafe is activated through AUX switc
 ### `failsafe_throttle_low_delay`
 - Default: `100`
 - Range: `0` - `300`
+- Unit: `ds`
 - BF Configurator: *Failsafe Throttle Low Delay [1 = 0.1 sec.]*
 
 Just disarm the craft instead of executing the selected failsafe procedure when the throttle was low for this amount of time.
@@ -645,6 +649,7 @@ Just disarm the craft instead of executing the selected failsafe procedure when 
 ### `failsafe_recovery_delay`
 - Default: `20`
 - Range: `0` - `200`
+- Unit: `ds`
 
 ### `failsafe_stick_threshold`
 - Default: `30`

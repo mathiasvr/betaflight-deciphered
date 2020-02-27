@@ -797,6 +797,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "rx_max_usec": {
@@ -807,6 +808,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "serialrx_halfduplex": {
@@ -1105,6 +1107,7 @@
       0,
       200
     ],
+    "unit": "ds",
     "section": "master"
   },
   "failsafe_off_delay": {
@@ -1145,6 +1148,7 @@
       0,
       300
     ],
+    "unit": "ds",
     "section": "master"
   },
   "failsafe_procedure": {
@@ -1165,6 +1169,7 @@
       0,
       200
     ],
+    "unit": "ds",
     "section": "master"
   },
   "failsafe_stick_threshold": {
