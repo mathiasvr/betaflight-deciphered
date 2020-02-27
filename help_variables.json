@@ -1219,7 +1219,7 @@
     "section": "master"
   },
   "bat_capacity": {
-    "desc": "GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at `0` to disable.",
+    "desc": "Capacity of the battery in mAh. Can be used with current meter to detect remaining battery capacity. Leave at `0` to disable.",
     "default": "0",
     "range": [
       0,
@@ -1282,7 +1282,7 @@
     "section": "master"
   },
   "current_meter": {
-    "desc": "",
+    "desc": "TODO: The `VIRTUAL` current sensor, once calibrated, estimates the current value from throttle position.",
     "default": "ADC",
     "allowed": [
       "NONE",

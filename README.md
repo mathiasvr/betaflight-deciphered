@@ -685,7 +685,7 @@ TODO: When feature `SERVO_TILT` is enabled, this can be either NORMAL or MIXTILT
 - Range: `0` - `20000`
 - Unit: `mAh`
 
-GUESS: Capacity of the battery in mAh. Can be used with current meter to detect low battery. Leave at `0` to disable.
+Capacity of the battery in mAh. Can be used with current meter to detect remaining battery capacity. Leave at `0` to disable.
 
 ### `vbat_max_cell_voltage`
 - Default: `430`
@@ -728,6 +728,8 @@ Sets the hysteresis value for low-battery alarms, in 0.1V units, i.e. 1 = 0.1V. 
 ### `current_meter`
 - Default: `ADC`
 - Allowed: `NONE`, `ADC`, `VIRTUAL`, `ESC`, `MSP`
+
+TODO: The `VIRTUAL` current sensor, once calibrated, estimates the current value from throttle position.
 
 ### `battery_meter`
 - Default: `ADC`
