@@ -2860,7 +2860,7 @@
     "section": "profile"
   },
   "d_min_roll": {
-    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_pitch).",
+    "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_roll).",
     "aka": "D Min Roll",
     "default": "20",
     "range": [

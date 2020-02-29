@@ -2576,7 +2576,7 @@ Integrated Yaw is a feature which corrects a fundamental issue with quad control
 - Range: `0` - `100`
 - BF Configurator: *D Min Roll*
 
-Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_pitch](#d_pitch)).
+Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains ([d_roll](#d_roll)).
 
 ### `d_min_pitch`
 - Default: `22`
