@@ -1,6 +1,6 @@
 # Betaflight Deciphered
 
-![Progress](https://img.shields.io/badge/Documentation-20%25-blueviolet)
+![Progress](https://img.shields.io/badge/Documentation-21%25-blueviolet)
 
 This is an attempt to document the variables of [Betaflight 4.1](https://github.com/betaflight/betaflight), motivated by my previous trouble to easily look up certain information.
 
@@ -2610,10 +2610,17 @@ Makes D go up earlier by using setpoint instead of gyro to determine sharp moves
 ### `motor_output_limit`
 - Default: `100`
 - Range: `1` - `100`
+- Unit: `%`
+- BF Configurator: *Motor Output Limit: Attenuation %*
+
+Attenuates motor commands by the set percentage. Reduces ESC current and motor heat when using higher cell count batteries, e.g. for similar performance from a 6S battery on a 4S build, try 66%; for a 4S battery on a 3S build, try 75%.
 
 ### `auto_profile_cell_count`
 - Default: `0`
 - Range: `-1` - `8`
+- BF Configurator: *Motor Output Limit: Cell Count*
+
+Automatically activates the first profile that has a cell count equal to the connected battery.
 
 ### `launch_control_mode`
 - Default: `NORMAL`
