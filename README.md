@@ -1,6 +1,6 @@
 # Betaflight Deciphered
 
-![Progress](https://img.shields.io/badge/Documentation-21%25-blueviolet)
+![Progress](https://img.shields.io/badge/Documentation-22%25-blueviolet)
 
 This is an attempt to document the variables of [Betaflight 4.1](https://github.com/betaflight/betaflight), motivated by my previous trouble to easily look up certain information.
 
@@ -2328,6 +2328,7 @@ If enabled, the copter will process the PID algorithm at minimum throttle. With 
 ### `anti_gravity_mode`
 - Default: `SMOOTH`
 - Allowed: `SMOOTH`, `STEP`
+- BF Configurator: *Anti Gravity: Mode*
 
 ### `anti_gravity_threshold`
 - Default: `250`
@@ -2338,10 +2339,16 @@ To improve stability in fast changing G forces during flight. This applies to qu
 ### `anti_gravity_gain`
 - Default: `5000`
 - Range: `1000` - `30000`
+- BF Configurator: *Anti Gravity: Gain*
+
+Anti Gravity boosts the I term when fast throttle changes are detected. Higher gain values provide stability and better attitude hold when you pump the throttle.
 
 ### `feedforward_transition`
 - Default: `0`
 - Range: `0` - `100`
+- BF Configurator: *Feedforward transition*
+
+With this parameter, the Feedforward term can be reduced near the center of the sticks, which results in smoother end of flips and rolls. The value represents a point of stick deflection: `0` - stick centered, `100` - full deflection. When the stick is above that point, Feedforward is kept constant at its configured value. When the stick is positioned below that point, Feedforward is reduced proportionally, reaching `0` at the stick center position. Value of `100` gives maximum smoothing effect, while value of `0` keeps the Feedforward fixed at its configured value over the whole stick range.
 
 ### `acc_limit_yaw`
 - Default: `0`
@@ -2390,18 +2397,26 @@ To improve stability in fast changing G forces during flight. This applies to qu
 ### `iterm_rotation`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
+- BF Configurator: *I Term Rotation*
+
+Rotates the current I Term vector properly to other axes as the quad rotates when yawing continuously during rolls and when performing funnels and other tricks. This is appreciated by LOS acro pilots. For FPV the effect is fairly subtle but can result in somewhat more predictable responses during abrupt stick inputs and while performing tricks.
 
 ### `iterm_relax`
 - Default: `RP`
 - Allowed: `OFF`, `RP`, `RPY`, `RP_INC`, `RPY_INC`
+- BF Configurator: *I Term Relax: Axes*
+
+TODO: Limits the accumulation of I Term when fast movements happen. This helps specially to reduce the bounceback at the end of rolls and other fast movements. You can choose the axes in which this is active, and if the fast movement is detectd using the Gyro or the Setpoint (stick).
 
 ### `iterm_relax_type`
 - Default: `SETPOINT`
 - Allowed: `GYRO`, `SETPOINT`
+- BF Configurator: *I Term Relax: Type*
 
 ### `iterm_relax_cutoff`
 - Default: `20`
 - Range: `1` - `100`
+- BF Configurator: *I Term Relax: Cutoff*
 
 ### `iterm_windup`
 - Default: `100`
@@ -2427,6 +2442,9 @@ To improve stability in fast changing G forces during flight. This applies to qu
 ### `throttle_boost`
 - Default: `5`
 - Range: `0` - `100`
+- BF Configurator: *Throttle Boost*
+
+Allows throttle to be temporarily boosted on quick stick movements, which increases acceleration torque to the motors, providing a much faster throttle response.
 
 ### `throttle_boost_cutoff`
 - Default: `15`
@@ -2548,6 +2566,9 @@ TODO: The maximum allowed angle in degrees.
 ### `abs_control_gain`
 - Default: `0`
 - Range: `0` - `20`
+- BF Configurator: *Absolute Control*
+
+To enable Absolute Control, set this to `10`, Smaller quads are ok with `5`. This feature solves some underlying problems of [iterm_rotation](#iterm_rotation) and should hopefully replace it at some point. This feature accumulates the absolute gyro error in quad coordinates and mixes a proportional correction into the setpoint. For it to work you need to enable AirMode and [iterm_relax](#iterm_relax) (for `RP`). If you combine this feature with Integrated Yaw ([use_integrated_yaw](#use_integrated_yaw)), you can set [iterm_relax](#iterm_relax) enabled for `RPY`. You should not enable absolute control and [iterm_rotation](#iterm_rotation) at the same time.
 
 ### `abs_control_limit`
 - Default: `90`
@@ -2566,7 +2587,7 @@ TODO: The maximum allowed angle in degrees.
 - Allowed: `OFF`, `ON`
 - BF Configurator: *Integrated Yaw*
 
-Integrated Yaw is a feature which corrects a fundamental issue with quad control: while the pitch and roll axis are controlled by the thrust differentials the props generate yaw is different. Integrated Yaw fixes this by integrating the output of the yaw pid before applying them to the mixer. This normalizes the way the pids work. You can now tune as any other axis. It requires use of absolute control since no I is needed with Integrated Yaw.
+Integrated Yaw is a feature which corrects a fundamental issue with quad control: while the pitch and roll axis are controlled by the thrust differentials the props generate yaw is different. Integrated Yaw fixes this by integrating the output of the yaw pid before applying them to the mixer. This normalizes the way the pids work. You can now tune as any other axis. It requires use of Absolute Control ([abs_control_gain](#abs_control_gain)) since no I is needed with Integrated Yaw.
 
 ### `integrated_yaw_relax`
 - Default: `200`
