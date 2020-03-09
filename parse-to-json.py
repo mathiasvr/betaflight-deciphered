@@ -44,6 +44,7 @@ while i < len(lines):
         json_variables[name]['allowed'] = [s.strip() for s in matches.groups()[1].split(',')]
       else: # 'range'
          json_variables[name]['range'] = [int(s) for s in matches.groups()[1].split(' - ')]
+         json_variables[name]['default'] = int(json_variables[name]['default'])
          assert len(json_variables[name]['range']) == 2
 
     else:

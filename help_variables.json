@@ -12,7 +12,7 @@
   "gyro_sync_denom": {
     "desc": "Sets the gyro update frequency based on dividing the max loop rate (8kHz). `4` means `8kHz/4 = 2kHz`. Loop time is the reciprocal (`1/Rate`). Don't forget to check CPU usage when playing with this value. It is recommended to set the gyro update frequency in BF Configurator, this takes care of all the required settings. This value also affects the PID loop #pid_process_denom.",
     "aka": "Gyro update frequency",
-    "default": "1",
+    "default": 1,
     "range": [
       1,
       32
@@ -32,7 +32,7 @@
   "gyro_lowpass_hz": {
     "desc": "TODO: I think this is only used if not using dynamic filter.",
     "aka": "Gyro Lowpass 1 Cutoff Frequency [Hz]",
-    "default": "200",
+    "default": 200,
     "range": [
       0,
       4000
@@ -53,7 +53,7 @@
   "gyro_lowpass2_hz": {
     "desc": "",
     "aka": "Gyro Lowpass 2 Cutoff Frequency [Hz]",
-    "default": "250",
+    "default": 250,
     "range": [
       0,
       4000
@@ -63,7 +63,7 @@
   },
   "gyro_notch1_hz": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4000
@@ -73,7 +73,7 @@
   },
   "gyro_notch1_cutoff": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4000
@@ -83,7 +83,7 @@
   },
   "gyro_notch2_hz": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4000
@@ -93,7 +93,7 @@
   },
   "gyro_notch2_cutoff": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4000
@@ -103,7 +103,7 @@
   },
   "gyro_calib_duration": {
     "desc": "",
-    "default": "125",
+    "default": 125,
     "range": [
       50,
       3000
@@ -112,7 +112,7 @@
   },
   "gyro_calib_noise_limit": {
     "desc": "",
-    "default": "48",
+    "default": 48,
     "range": [
       0,
       200
@@ -121,7 +121,7 @@
   },
   "gyro_offset_yaw": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -1000,
       1000
@@ -149,7 +149,7 @@
   },
   "yaw_spin_threshold": {
     "desc": "The 'threshold' value is the spin rate, in degrees per second, at which the spin protection kicks in. The default threshold of `1950` was chosen to minimise false triggering. For FPV, a lower value, e.g. 100-200 above your maximum configured yaw rate, is recommended. For example, a quad with a maximum configured yaw rate of 700 degrees/sec: Too low a threshold may cause false triggering, and delay return to normal control.",
-    "default": "1950",
+    "default": 1950,
     "range": [
       500,
       1950
@@ -182,7 +182,7 @@
   "dyn_notch_width_percent": {
     "desc": "This sets the width between two dynamic notch filters. Setting it at 0 will disable the second dynamic notch filter and will reduce filter delay, however it may make motor temperatures higher.",
     "aka": "Dynamic Notch Width Percent",
-    "default": "8",
+    "default": 8,
     "range": [
       0,
       20
@@ -193,7 +193,7 @@
   "dyn_notch_q": {
     "desc": "Q factor adjust how narrow or wide the dynamic notch filters are. Higher value makes it narrower and more precise and lower value makes it wider and broader. Having a really low value will greatly increase filter delay.",
     "aka": "Dynamic Notch Q",
-    "default": "120",
+    "default": 120,
     "range": [
       1,
       1000
@@ -203,7 +203,7 @@
   "dyn_notch_min_hz": {
     "desc": "Defines the lowest dynamic notch center frequency below which the dynamic notch will not go.",
     "aka": "Dynamic Notch Min Hz",
-    "default": "150",
+    "default": 150,
     "range": [
       60,
       1000
@@ -214,7 +214,7 @@
   "dyn_lpf_gyro_min_hz": {
     "desc": "",
     "aka": "Gyro Lowpass 1 Dynamic Min Cutoff Frequency [Hz]",
-    "default": "200",
+    "default": 200,
     "range": [
       0,
       1000
@@ -225,7 +225,7 @@
   "dyn_lpf_gyro_max_hz": {
     "desc": "",
     "aka": "Gyro Lowpass 1 Dynamic Max Cutoff Frequency [Hz]",
-    "default": "500",
+    "default": 500,
     "range": [
       0,
       1000
@@ -269,7 +269,7 @@
   },
   "acc_lpf_hz": {
     "desc": "",
-    "default": "10",
+    "default": 10,
     "range": [
       0,
       400
@@ -279,7 +279,7 @@
   },
   "acc_trim_pitch": {
     "desc": "Accelerometer trim (Pitch)",
-    "default": "0",
+    "default": 0,
     "range": [
       -300,
       300
@@ -288,7 +288,7 @@
   },
   "acc_trim_roll": {
     "desc": "Accelerometer trim (Roll)",
-    "default": "0",
+    "default": 0,
     "range": [
       -300,
       300
@@ -320,7 +320,7 @@
   },
   "mag_align_roll": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -329,7 +329,7 @@
   },
   "mag_align_pitch": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -338,7 +338,7 @@
   },
   "mag_align_yaw": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -359,7 +359,7 @@
   },
   "mag_i2c_device": {
     "desc": "",
-    "default": "1",
+    "default": 1,
     "range": [
       0,
       3
@@ -368,7 +368,7 @@
   },
   "mag_i2c_address": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       119
@@ -377,7 +377,7 @@
   },
   "mag_spi_device": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -400,7 +400,7 @@
   },
   "mag_declination": {
     "desc": "Current location magnetic declination in dddmm format. For example, -6deg 37min = -637 for Japan. Leading zeros not required. Get your local magnetic declination here: http://magnetic-declination.com/",
-    "default": "0",
+    "default": 0,
     "range": [
       -18000,
       18000
@@ -428,7 +428,7 @@
   },
   "baro_spi_device": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       5
@@ -437,7 +437,7 @@
   },
   "baro_i2c_device": {
     "desc": "",
-    "default": "1",
+    "default": 1,
     "range": [
       0,
       5
@@ -446,7 +446,7 @@
   },
   "baro_i2c_address": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       119
@@ -470,7 +470,7 @@
   },
   "baro_tab_size": {
     "desc": "Pressure sensor sample count.",
-    "default": "21",
+    "default": 21,
     "range": [
       0,
       48
@@ -479,7 +479,7 @@
   },
   "baro_noise_lpf": {
     "desc": "Barometer low-pass filter cut-off frequency in Hz.",
-    "default": "600",
+    "default": 600,
     "range": [
       0,
       1000
@@ -489,7 +489,7 @@
   },
   "baro_cf_vel": {
     "desc": "Velocity sensor mix in altitude hold. Determines the influence accelerometer and barometer sensors have in the velocity estimation. `1000` for pure accelerometer altitude, 0 for pure barometer altitude.",
-    "default": "985",
+    "default": 985,
     "range": [
       0,
       1000
@@ -499,7 +499,7 @@
   "mid_rc": {
     "desc": "The value (in us) used to determine if a stick is centered.",
     "aka": "Stick Center",
-    "default": "1500",
+    "default": 1500,
     "range": [
       1200,
       1700
@@ -510,7 +510,7 @@
   "min_check": {
     "desc": "The maximum value (in us) for a stick to be recognised as low. Used for stick commands and #pid_at_min_throttle.",
     "aka": "'Stick Low' Threshold",
-    "default": "1050",
+    "default": 1050,
     "range": [
       750,
       2250
@@ -521,7 +521,7 @@
   "max_check": {
     "desc": "The minimum value (in us) for a stick to be recognised as high. Used for stick commands, etc.",
     "aka": "'Stick High' Threshold",
-    "default": "1900",
+    "default": 1900,
     "range": [
       750,
       2250
@@ -532,7 +532,7 @@
   "rssi_channel": {
     "desc": "Receiver (RX) channel (AUX channel + 4) that contains the RSSI signal.",
     "aka": "RSSI Channel",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       18
@@ -550,7 +550,7 @@
   },
   "rssi_scale": {
     "desc": "GUESS: Scales the RSSI value.",
-    "default": "100",
+    "default": 100,
     "range": [
       1,
       255
@@ -559,7 +559,7 @@
   },
   "rssi_offset": {
     "desc": "GUESS: Offsets the RSSI value by a given amount.",
-    "default": "0",
+    "default": 0,
     "range": [
       -100,
       100
@@ -577,7 +577,7 @@
   },
   "rssi_src_frame_lpf_period": {
     "desc": "",
-    "default": "30",
+    "default": 30,
     "range": [
       0,
       255
@@ -609,7 +609,7 @@
   },
   "rc_interp_int": {
     "desc": "",
-    "default": "19",
+    "default": 19,
     "range": [
       1,
       50
@@ -627,7 +627,7 @@
   },
   "rc_smoothing_input_hz": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       255
@@ -637,7 +637,7 @@
   },
   "rc_smoothing_derivative_hz": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       255
@@ -677,7 +677,7 @@
   },
   "rc_smoothing_auto_smoothness": {
     "desc": "",
-    "default": "10",
+    "default": 10,
     "range": [
       0,
       50
@@ -687,7 +687,7 @@
   "fpv_mix_degrees": {
     "desc": "Camera tilt angle in degrees that should be compensated for when enabling *FPV Angle Mix* mode. It can be used to fly FPV as if the camera was tilted differently. Also known as uptilt compensation.",
     "aka": "FPV Camera Angle [degrees]",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       90
@@ -697,7 +697,7 @@
   },
   "max_aux_channels": {
     "desc": "",
-    "default": "14",
+    "default": 14,
     "range": [
       0,
       14
@@ -736,7 +736,7 @@
   },
   "spektrum_sat_bind": {
     "desc": "Used to bind the spektrum satellite to RX. Set `0` to disable.",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       10
@@ -754,7 +754,7 @@
   },
   "srxl2_unit_id": {
     "desc": "",
-    "default": "1",
+    "default": 1,
     "range": [
       0,
       15
@@ -781,7 +781,7 @@
   },
   "airmode_start_throttle_percent": {
     "desc": "As a safety feature when having airmode enabled, it will not become active until you throttle up above this value in percent once. After that airmode will be active in the whole throttle range, until you disarm.",
-    "default": "25",
+    "default": 25,
     "range": [
       0,
       100
@@ -792,7 +792,7 @@
   "rx_min_usec": {
     "desc": "Minimum valid pulse length [usec]. Pulses shorter than minimum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.",
     "aka": "Minimum length",
-    "default": "885",
+    "default": 885,
     "range": [
       750,
       2250
@@ -803,7 +803,7 @@
   "rx_max_usec": {
     "desc": "Maximum valid pulse length [usec]. Pulses longer than maximum are invalid and will trigger application of individual channel fallback settings for AUX channels or entering stage 1 for flightchannels.",
     "aka": "Maximum length",
-    "default": "2115",
+    "default": 2115,
     "range": [
       750,
       2250
@@ -845,7 +845,7 @@
   },
   "rx_spi_bus": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -863,7 +863,7 @@
   },
   "adc_device": {
     "desc": "",
-    "default": "1",
+    "default": 1,
     "range": [
       0,
       3
@@ -872,7 +872,7 @@
   },
   "adc_vrefint_calibration": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       2000
@@ -881,7 +881,7 @@
   },
   "adc_tempsensor_calibration30": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       2000
@@ -890,7 +890,7 @@
   },
   "adc_tempsensor_calibration110": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       2000
@@ -908,7 +908,7 @@
   },
   "blackbox_p_ratio": {
     "desc": "Describes how many blackbox P-frames (delta) are written for every I-frame (absolute). This can also be defined as the ratio: `I-frame interval` / `P-frame interval`. It can be adjusted in BF Configurator with the *Blackbox logging rate* option in Hz.",
-    "default": "32",
+    "default": 32,
     "range": [
       0,
       32767
@@ -948,7 +948,7 @@
   },
   "min_throttle": {
     "desc": "These are minimum values (in us) that are sent to ESC when armed. This should be set to a value that reliably spins the motors. You can choose a value by performing a motor test in BF Configurator, and increase the motor speed until the motor spins properly.",
-    "default": "1070",
+    "default": 1070,
     "range": [
       750,
       2250
@@ -958,7 +958,7 @@
   },
   "max_throttle": {
     "desc": "These are maximum values (in us) that are sent to ESC when armed. You can perform a motor test in BF Configurator to select this value. Usually the maximum of `2000` is fine. If you want less throttle you should not change this value, but instead use #throttle_limit_percent.",
-    "default": "2000",
+    "default": 2000,
     "range": [
       750,
       2250
@@ -968,7 +968,7 @@
   },
   "min_command": {
     "desc": "This is the PWM value sent to ESCs when they are not armed. It should be less than your BLHeli minimum throttle configuration, to stop motors from spinning. If ESCs beep slowly when powered up, try decreasing this value. It can also be used for calibrating all ESCs at once.",
-    "default": "1000",
+    "default": 1000,
     "range": [
       750,
       2250
@@ -979,7 +979,7 @@
   "dshot_idle_value": {
     "desc": "This is the *idle* value of throttle that is sent to the ESCs when the craft is armed and the throttle stick is at minimum position. Specified in percent * `100`, i.e. `500` equals `5` percent of maximum throttle.",
     "aka": "Motor Idle Throttle Value [percent]",
-    "default": "550",
+    "default": 550,
     "range": [
       0,
       2000
@@ -1054,7 +1054,7 @@
   },
   "motor_pwm_rate": {
     "desc": "TODO: Output frequency (in Hz) for motor pins. Defaults are 400Hz for motor. If setting above 500Hz, will switch to brushed (direct drive) motors mode. For example, setting to 8000 will use brushed mode at 8kHz switching frequency. Up to 32kHz is supported. Default is 16000 for boards with brushed motors. Note, that in brushed mode, min_throttle is offset to zero. For brushed mode, set max_throttle to 2000.",
-    "default": "480",
+    "default": 480,
     "range": [
       200,
       32000
@@ -1074,7 +1074,7 @@
   "motor_poles": {
     "desc": "Represents the number of magnets that are on the bell of the motor. **Do NOT count the stators** where the windings are located. This setting is used for features such as the RPM Filter. Typical 5\" motors have 14 magnets, smaller ones like 3\" or less usually have 12 magnets.",
     "aka": "Motor poles (number of magnets on the motor bell)",
-    "default": "14",
+    "default": 14,
     "range": [
       4,
       255
@@ -1083,7 +1083,7 @@
   },
   "thr_corr_value": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       150
@@ -1092,7 +1092,7 @@
   },
   "thr_corr_angle": {
     "desc": "",
-    "default": "800",
+    "default": 800,
     "range": [
       1,
       900
@@ -1102,7 +1102,7 @@
   "failsafe_delay": {
     "desc": "Time for stage 1 to wait for recovery.",
     "aka": "Guard time for stage 2 activation after signal lost [1 = 0.1 sec.]",
-    "default": "4",
+    "default": 4,
     "range": [
       0,
       200
@@ -1112,7 +1112,7 @@
   },
   "failsafe_off_delay": {
     "desc": "Time in deciseconds to wait before turning off motors when failsafe is activated. See Failsafe documentation.",
-    "default": "10",
+    "default": 10,
     "range": [
       0,
       200
@@ -1122,7 +1122,7 @@
   },
   "failsafe_throttle": {
     "desc": "Throttle level used for landing when failsafe is enabled. See Failsafe documentation.",
-    "default": "1000",
+    "default": 1000,
     "range": [
       750,
       2250
@@ -1143,7 +1143,7 @@
   "failsafe_throttle_low_delay": {
     "desc": "Just disarm the craft instead of executing the selected failsafe procedure when the throttle was low for this amount of time.",
     "aka": "Failsafe Throttle Low Delay [1 = 0.1 sec.]",
-    "default": "100",
+    "default": 100,
     "range": [
       0,
       300
@@ -1164,7 +1164,7 @@
   },
   "failsafe_recovery_delay": {
     "desc": "",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       200
@@ -1174,7 +1174,7 @@
   },
   "failsafe_stick_threshold": {
     "desc": "",
-    "default": "30",
+    "default": 30,
     "range": [
       0,
       50
@@ -1184,7 +1184,7 @@
   "align_board_roll": {
     "desc": "Assigns how the flight controller board is aligned on the roll axis.",
     "aka": "Roll Degrees",
-    "default": "0",
+    "default": 0,
     "range": [
       -180,
       360
@@ -1195,7 +1195,7 @@
   "align_board_pitch": {
     "desc": "Assigns how the flight controller board is aligned on the pitch axis.",
     "aka": "Pitch Degrees",
-    "default": "0",
+    "default": 0,
     "range": [
       -180,
       360
@@ -1206,7 +1206,7 @@
   "align_board_yaw": {
     "desc": "Assigns how the flight controller board is aligned on the yaw axis.",
     "aka": "Yaw Degrees",
-    "default": "0",
+    "default": 0,
     "range": [
       -180,
       360
@@ -1225,7 +1225,7 @@
   },
   "bat_capacity": {
     "desc": "Capacity of the battery in mAh. Can be used with current meter to detect remaining battery capacity. Leave at `0` to disable.",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       20000
@@ -1236,7 +1236,7 @@
   "vbat_max_cell_voltage": {
     "desc": "Maximum voltage of a single cell in the battery. Used for battery PID compensation #vbat_pid_gain, so be sure to set accordingly if enabling this option.",
     "aka": "Maximum Cell Voltage",
-    "default": "430",
+    "default": 430,
     "range": [
       100,
       500
@@ -1246,7 +1246,7 @@
   },
   "vbat_full_cell_voltage": {
     "desc": "TODO: Voltage of a single cell in battery to be considered fully charged. I think used for warning if battery is not fully charged.",
-    "default": "410",
+    "default": 410,
     "range": [
       100,
       500
@@ -1257,7 +1257,7 @@
   "vbat_min_cell_voltage": {
     "desc": "Minimum voltage allowed for a single cell in the battery. Warnings can be issued with beeper and OSD if this happens.",
     "aka": "Minimum Cell Voltage",
-    "default": "330",
+    "default": 330,
     "range": [
       100,
       500
@@ -1268,7 +1268,7 @@
   "vbat_warning_cell_voltage": {
     "desc": "Voltage of a single cell in the battery that should issue a warning, which can be detected with beeper and OSD.",
     "aka": "Warning Cell Voltage",
-    "default": "350",
+    "default": 350,
     "range": [
       100,
       500
@@ -1278,7 +1278,7 @@
   },
   "vbat_hysteresis": {
     "desc": "Sets the hysteresis value for low-battery alarms, in 0.1V units, i.e. 1 = 0.1V. The alarm will only go off if the voltage dips this amount below the warning voltage. Can be used to tame alarms that go off too easily with sagging batteries etc.",
-    "default": "1",
+    "default": 1,
     "range": [
       0,
       250
@@ -1310,7 +1310,7 @@
   },
   "vbat_detect_cell_voltage": {
     "desc": "",
-    "default": "300",
+    "default": 300,
     "range": [
       0,
       2000
@@ -1337,7 +1337,7 @@
   },
   "cbat_alert_percent": {
     "desc": "",
-    "default": "10",
+    "default": 10,
     "range": [
       0,
       100
@@ -1347,7 +1347,7 @@
   },
   "vbat_cutoff_percent": {
     "desc": "",
-    "default": "100",
+    "default": 100,
     "range": [
       0,
       100
@@ -1357,7 +1357,7 @@
   },
   "force_battery_cell_count": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       24
@@ -1366,7 +1366,7 @@
   },
   "vbat_lpf_period": {
     "desc": "",
-    "default": "30",
+    "default": 30,
     "range": [
       0,
       255
@@ -1375,7 +1375,7 @@
   },
   "ibat_lpf_period": {
     "desc": "",
-    "default": "10",
+    "default": 10,
     "range": [
       0,
       255
@@ -1384,7 +1384,7 @@
   },
   "vbat_duration_for_warning": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       150
@@ -1393,7 +1393,7 @@
   },
   "vbat_duration_for_critical": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       150
@@ -1402,7 +1402,7 @@
   },
   "vbat_scale": {
     "desc": "TODO: Result is Vbatt in 0.1V steps. 3.3V = ADC Vref, 4095 = 12bit adc, 110 = 11:1 voltage divider (10k:1k) x 10 for 0.1V. Adjust this slightly if reported pack voltage is different from multimeter reading. You can get current voltage by typing \"status\" in cli.",
-    "default": "110",
+    "default": 110,
     "range": [
       0,
       255
@@ -1411,7 +1411,7 @@
   },
   "vbat_divider": {
     "desc": "",
-    "default": "10",
+    "default": 10,
     "range": [
       1,
       255
@@ -1420,7 +1420,7 @@
   },
   "vbat_multiplier": {
     "desc": "",
-    "default": "1",
+    "default": 1,
     "range": [
       1,
       255
@@ -1429,7 +1429,7 @@
   },
   "ibata_scale": {
     "desc": "",
-    "default": "179",
+    "default": 179,
     "range": [
       -16000,
       16000
@@ -1438,7 +1438,7 @@
   },
   "ibata_offset": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -32000,
       32000
@@ -1447,7 +1447,7 @@
   },
   "ibatv_scale": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -16000,
       16000
@@ -1456,7 +1456,7 @@
   },
   "ibatv_offset": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       16000
@@ -1483,7 +1483,7 @@
   },
   "beeper_frequency": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       16000
@@ -1492,7 +1492,7 @@
   },
   "beeper_dshot_beacon_tone": {
     "desc": "Adjusts the tone of the of the DShot beacon. Higher value equals a higher tone frequency.",
-    "default": "1",
+    "default": 1,
     "range": [
       1,
       5
@@ -1511,7 +1511,7 @@
   },
   "crashflip_motor_percent": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -1521,7 +1521,7 @@
   },
   "3d_deadband_low": {
     "desc": "TODO: Low value of throttle deadband for 3D mode (when stick is in the 3d_deadband_throttle range, the fixed values of 3d_deadband_low / _high are used instead)",
-    "default": "1406",
+    "default": 1406,
     "range": [
       750,
       1500
@@ -1530,7 +1530,7 @@
   },
   "3d_deadband_high": {
     "desc": "TODO: High value of throttle deadband for 3D mode (when stick is in the deadband range, the value in 3d_neutral is used instead)",
-    "default": "1514",
+    "default": 1514,
     "range": [
       1500,
       2250
@@ -1539,7 +1539,7 @@
   },
   "3d_neutral": {
     "desc": "Neutral (stop) throttle value for 3D mode",
-    "default": "1460",
+    "default": 1460,
     "range": [
       750,
       2250
@@ -1548,7 +1548,7 @@
   },
   "3d_deadband_throttle": {
     "desc": "TODO: Throttle signal will be held to a fixed value when throttle is centered with an error margin defined in this parameter.",
-    "default": "50",
+    "default": 50,
     "range": [
       1,
       100
@@ -1557,7 +1557,7 @@
   },
   "3d_limit_low": {
     "desc": "",
-    "default": "1000",
+    "default": 1000,
     "range": [
       750,
       1500
@@ -1566,7 +1566,7 @@
   },
   "3d_limit_high": {
     "desc": "",
-    "default": "2000",
+    "default": 2000,
     "range": [
       1500,
       2250
@@ -1584,7 +1584,7 @@
   },
   "servo_center_pulse": {
     "desc": "TODO: Servo midpoint",
-    "default": "1500",
+    "default": 1500,
     "range": [
       750,
       2250
@@ -1593,7 +1593,7 @@
   },
   "servo_pwm_rate": {
     "desc": "Output frequency (in Hz) servo pins. When using tricopters or gimbal with digital servo, this rate can be increased. Max of 498Hz (for 500Hz pwm period), and min of 50Hz. Most digital servos will support for example 330Hz.",
-    "default": "50",
+    "default": 50,
     "range": [
       50,
       498
@@ -1603,7 +1603,7 @@
   },
   "servo_lowpass_hz": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       400
@@ -1622,7 +1622,7 @@
   },
   "channel_forwarding_start": {
     "desc": "",
-    "default": "4",
+    "default": 4,
     "range": [
       4,
       18
@@ -1637,7 +1637,7 @@
   "thr_mid": {
     "desc": "Throttle Mid. The #thr_expo is centered around this point. Usually this is set around the hovering point.",
     "aka": "Throttle MID",
-    "default": "50",
+    "default": 50,
     "range": [
       0,
       100
@@ -1647,7 +1647,7 @@
   "thr_expo": {
     "desc": "Throttle Expo. Creates an exponential throttle curve around the #thr_mid point. Used to increase throttle resolution, usually to support more fine-grained hovering.",
     "aka": "Throttle EXPO",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -1667,7 +1667,7 @@
   "roll_rc_rate": {
     "desc": "",
     "aka": "Roll RC Rate",
-    "default": "100",
+    "default": 100,
     "range": [
       1,
       255
@@ -1677,7 +1677,7 @@
   "pitch_rc_rate": {
     "desc": "",
     "aka": "Pitch RC Rate",
-    "default": "100",
+    "default": 100,
     "range": [
       1,
       255
@@ -1687,7 +1687,7 @@
   "yaw_rc_rate": {
     "desc": "",
     "aka": "Yaw RC Rate",
-    "default": "100",
+    "default": 100,
     "range": [
       1,
       255
@@ -1697,7 +1697,7 @@
   "roll_expo": {
     "desc": "",
     "aka": "Roll RC Expo",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -1707,7 +1707,7 @@
   "pitch_expo": {
     "desc": "",
     "aka": "Pitch RC Expo",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -1717,7 +1717,7 @@
   "yaw_expo": {
     "desc": "",
     "aka": "Yaw RC Expo",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -1727,7 +1727,7 @@
   "roll_srate": {
     "desc": "",
     "aka": "Roll Super Rate",
-    "default": "70",
+    "default": 70,
     "range": [
       0,
       255
@@ -1737,7 +1737,7 @@
   "pitch_srate": {
     "desc": "",
     "aka": "Pitch Super Rate",
-    "default": "70",
+    "default": 70,
     "range": [
       0,
       255
@@ -1747,7 +1747,7 @@
   "yaw_srate": {
     "desc": "",
     "aka": "Yaw Super Rate",
-    "default": "70",
+    "default": 70,
     "range": [
       0,
       255
@@ -1757,7 +1757,7 @@
   "tpa_rate": {
     "desc": "Throttle PID Attenuation rate. How much to reduce PID gains when throttle is beyond #tpa_breakpoint. Used to eliminate fast oscillations at high throttle.",
     "aka": "TPA",
-    "default": "65",
+    "default": 65,
     "range": [
       0,
       100
@@ -1767,7 +1767,7 @@
   "tpa_breakpoint": {
     "desc": "Throttle PID Attenuation breakpoint. The point at which TPA should take effect. This should be set around the throttle point at which fast oscillations would occur.",
     "aka": "TPA Breakpoint",
-    "default": "1250",
+    "default": 1250,
     "range": [
       750,
       2250
@@ -1797,7 +1797,7 @@
   "throttle_limit_percent": {
     "desc": "Sets the desired maximum throttle percentage, according to #throttle_limit_type.",
     "aka": "Throttle Limit %",
-    "default": "100",
+    "default": 100,
     "range": [
       25,
       100
@@ -1807,7 +1807,7 @@
   },
   "roll_rate_limit": {
     "desc": "Maximum velocity (deg/s) for roll. Caps a roll rate curve that would otherwise become higher.",
-    "default": "1998",
+    "default": 1998,
     "range": [
       200,
       1998
@@ -1817,7 +1817,7 @@
   },
   "pitch_rate_limit": {
     "desc": "Maximum velocity (deg/s) for pitch. Caps a pitch rate curve that would otherwise become higher.",
-    "default": "1998",
+    "default": 1998,
     "range": [
       200,
       1998
@@ -1827,7 +1827,7 @@
   },
   "yaw_rate_limit": {
     "desc": "Maximum velocity (deg/s) for yaw. Caps a yaw rate curve that would otherwise become higher.",
-    "default": "1998",
+    "default": 1998,
     "range": [
       200,
       1998
@@ -1837,7 +1837,7 @@
   },
   "reboot_character": {
     "desc": "Special character used to trigger reboot.",
-    "default": "82",
+    "default": 82,
     "range": [
       48,
       126
@@ -1846,7 +1846,7 @@
   },
   "serial_update_rate_hz": {
     "desc": "",
-    "default": "100",
+    "default": 100,
     "range": [
       100,
       2000
@@ -1856,7 +1856,7 @@
   },
   "imu_dcm_kp": {
     "desc": "TODO: Inertial Measurement Unit KP Gain.",
-    "default": "2500",
+    "default": 2500,
     "range": [
       0,
       32000
@@ -1865,7 +1865,7 @@
   },
   "imu_dcm_ki": {
     "desc": "TODO: Inertial Measurement Unit KI Gain.",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       32000
@@ -1875,7 +1875,7 @@
   "small_angle": {
     "desc": "Craft will not ARM if tilted more than specified number of degrees. Only applies if accelerometer is enabled. Setting to 180 will effectivly disable check.",
     "aka": "Maximum ARM Angle [degrees]",
-    "default": "25",
+    "default": 25,
     "range": [
       0,
       180
@@ -1885,7 +1885,7 @@
   },
   "auto_disarm_delay": {
     "desc": "Automatically disarm multicopter after this delay in seconds of zero throttle. Disabled when `0`. The `MOTOR_STOP` feature must be enabled for this to take effect.",
-    "default": "5",
+    "default": 5,
     "range": [
       0,
       60
@@ -1971,7 +1971,7 @@
   },
   "gps_rescue_angle": {
     "desc": "",
-    "default": "32",
+    "default": 32,
     "range": [
       0,
       200
@@ -1980,7 +1980,7 @@
   },
   "gps_rescue_initial_alt": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       20,
       100
@@ -1989,7 +1989,7 @@
   },
   "gps_rescue_descent_dist": {
     "desc": "",
-    "default": "200",
+    "default": 200,
     "range": [
       30,
       500
@@ -1998,7 +1998,7 @@
   },
   "gps_rescue_landing_alt": {
     "desc": "",
-    "default": "5",
+    "default": 5,
     "range": [
       3,
       10
@@ -2007,7 +2007,7 @@
   },
   "gps_rescue_landing_dist": {
     "desc": "",
-    "default": "10",
+    "default": 10,
     "range": [
       5,
       15
@@ -2016,7 +2016,7 @@
   },
   "gps_rescue_ground_speed": {
     "desc": "",
-    "default": "2000",
+    "default": 2000,
     "range": [
       30,
       3000
@@ -2025,7 +2025,7 @@
   },
   "gps_rescue_throttle_p": {
     "desc": "",
-    "default": "150",
+    "default": 150,
     "range": [
       0,
       500
@@ -2034,7 +2034,7 @@
   },
   "gps_rescue_throttle_i": {
     "desc": "",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       500
@@ -2043,7 +2043,7 @@
   },
   "gps_rescue_throttle_d": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       0,
       500
@@ -2052,7 +2052,7 @@
   },
   "gps_rescue_velocity_p": {
     "desc": "",
-    "default": "80",
+    "default": 80,
     "range": [
       0,
       500
@@ -2061,7 +2061,7 @@
   },
   "gps_rescue_velocity_i": {
     "desc": "",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       500
@@ -2070,7 +2070,7 @@
   },
   "gps_rescue_velocity_d": {
     "desc": "",
-    "default": "15",
+    "default": 15,
     "range": [
       0,
       500
@@ -2079,7 +2079,7 @@
   },
   "gps_rescue_yaw_p": {
     "desc": "",
-    "default": "40",
+    "default": 40,
     "range": [
       0,
       500
@@ -2088,7 +2088,7 @@
   },
   "gps_rescue_throttle_min": {
     "desc": "",
-    "default": "1100",
+    "default": 1100,
     "range": [
       1000,
       2000
@@ -2097,7 +2097,7 @@
   },
   "gps_rescue_throttle_max": {
     "desc": "",
-    "default": "1600",
+    "default": 1600,
     "range": [
       1000,
       2000
@@ -2106,7 +2106,7 @@
   },
   "gps_rescue_ascend_rate": {
     "desc": "",
-    "default": "500",
+    "default": 500,
     "range": [
       100,
       2500
@@ -2115,7 +2115,7 @@
   },
   "gps_rescue_descend_rate": {
     "desc": "",
-    "default": "150",
+    "default": 150,
     "range": [
       100,
       500
@@ -2124,7 +2124,7 @@
   },
   "gps_rescue_throttle_hover": {
     "desc": "",
-    "default": "1280",
+    "default": 1280,
     "range": [
       1000,
       2000
@@ -2143,7 +2143,7 @@
   },
   "gps_rescue_min_sats": {
     "desc": "",
-    "default": "8",
+    "default": 8,
     "range": [
       5,
       50
@@ -2152,7 +2152,7 @@
   },
   "gps_rescue_min_dth": {
     "desc": "",
-    "default": "100",
+    "default": 100,
     "range": [
       50,
       1000
@@ -2189,7 +2189,7 @@
   },
   "deadband": {
     "desc": "These are values (in us) by how much RC input can be different before it's considered valid for roll and pitch axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint.",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       32
@@ -2199,7 +2199,7 @@
   },
   "yaw_deadband": {
     "desc": "These are values (in us) by how much RC input can be different before it's considered valid for the yaw axis. For transmitters with jitter on outputs, this value can be increased. Defaults are zero, but can be increased up to 10 or so if rc inputs twitch while idle. This value is applied either side of the centrepoint.",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -2219,7 +2219,7 @@
   "pid_process_denom": {
     "desc": "Determines PID and motor write frequency by dividing the gyro sample rate, determined by #gyro_sync_denom. This is automatically set to proper values when setting pid loop frequency in BF Configurator. The maximum frequency for the PID loop is limited by the maximum frequency that updates can be sent by the chosen ESC/motor protocol.",
     "aka": "PID loop frequency",
-    "default": "4",
+    "default": 4,
     "range": [
       1,
       16
@@ -2237,7 +2237,7 @@
   },
   "runaway_takeoff_deactivate_delay": {
     "desc": "TODO: This is the amount of successful flight time in milliseconds that must be accumulated to deactivate the feature. Valid values range from 100 (0.1 seconds) to 1000 (1 second). The default value of 500 (0.5 seconds) seems to be very reliable and shouldn't need to be adjusted. The goal is to deactivate the logic after a \"reasonable\" but short period of time once we've determined the craft is flying normally. However we want it to deactivate before we might reach the first point where a crash or other event may occur (like at the first gate during a race). Raising this value will delay the deactivation and it's possible that a crash or gate/branch clip could cause an unintended disarm. Lowering this value too much could result in the logic deactivating too soon and not providing protection in a runaway event. It's important to note that the delay is the accumulated amount of flight time where the other criteria like throttle level, stick activity, etc. are met. Thus the \"real\" elapsed time before deactivation may be longer than 0.5 seconds if the throttle was dropping below the limit or if the R/P/Y sticks were centered. The actual behavior can be viewed by using blackbox logging.",
-    "default": "500",
+    "default": 500,
     "range": [
       100,
       1000
@@ -2247,7 +2247,7 @@
   },
   "runaway_takeoff_deactivate_throttle_percent": {
     "desc": "TODO: Determines the minimum throttle percentage threshold where successful flight can be considered. Valid values range from 0 to 100. Along with throttle level the logic also requires activity on the roll, pitch or yaw sticks along with the PID controller successfully controlling the craft with the PID_sum staying under control. When these conditions are met the logic accumulates successful flight time. Generally you won't need to adjust this value as most quads require around 25% or more throttle to takeoff/hover. The exception may be if you have and extremely powerful or light craft that is capable of flying well below 25% throttle. In this case you may want to lower this value closer to your actual hover throttle percent. If this value is set too low it's possible that the logic will deactivate too quickly and may not trigger in a real runaway event. Setting it too high will result in the logic taking more flight time to deactivate as it only accumulates flight time when the throttle is above the setting.",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       100
@@ -2263,7 +2263,7 @@
   "dyn_lpf_dterm_min_hz": {
     "desc": "",
     "aka": "D Term Lowpass 1 Dynamic Min Cutoff Frequency [Hz]",
-    "default": "70",
+    "default": 70,
     "range": [
       0,
       1000
@@ -2274,7 +2274,7 @@
   "dyn_lpf_dterm_max_hz": {
     "desc": "",
     "aka": "D Term Lowpass 1 Dynamic Max Cutoff Frequency [Hz]",
-    "default": "170",
+    "default": 170,
     "range": [
       0,
       1000
@@ -2295,7 +2295,7 @@
   "dterm_lowpass_hz": {
     "desc": "",
     "aka": "D Term Lowpass 1 Cutoff Frequency [Hz]",
-    "default": "150",
+    "default": 150,
     "range": [
       0,
       4000
@@ -2316,7 +2316,7 @@
   "dterm_lowpass2_hz": {
     "desc": "",
     "aka": "D Term Lowpass 2 Cutoff Frequency [Hz]",
-    "default": "150",
+    "default": 150,
     "range": [
       0,
       4000
@@ -2326,7 +2326,7 @@
   },
   "dterm_notch_hz": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4000
@@ -2336,7 +2336,7 @@
   },
   "dterm_notch_cutoff": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4000
@@ -2375,7 +2375,7 @@
   },
   "anti_gravity_threshold": {
     "desc": "To improve stability in fast changing G forces during flight. This applies to quick throttle jumps where multirotor can go through weightless transitions. In these cases the iterm can cause unwanted effects like pitching up or yawing due to strong changes in accumulation polarities.",
-    "default": "250",
+    "default": 250,
     "range": [
       20,
       1000
@@ -2385,7 +2385,7 @@
   "anti_gravity_gain": {
     "desc": "Anti Gravity boosts the I term when fast throttle changes are detected. Higher gain values provide stability and better attitude hold when you pump the throttle.",
     "aka": "Anti Gravity: Gain",
-    "default": "5000",
+    "default": 5000,
     "range": [
       1000,
       30000
@@ -2395,7 +2395,7 @@
   "feedforward_transition": {
     "desc": "With this parameter, the Feedforward term can be reduced near the center of the sticks, which results in smoother end of flips and rolls. The value represents a point of stick deflection: `0` - stick centered, `100` - full deflection. When the stick is above that point, Feedforward is kept constant at its configured value. When the stick is positioned below that point, Feedforward is reduced proportionally, reaching `0` at the stick center position. Value of `100` gives maximum smoothing effect, while value of `0` keeps the Feedforward fixed at its configured value over the whole stick range.",
     "aka": "Feedforward transition",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -2404,7 +2404,7 @@
   },
   "acc_limit_yaw": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       500
@@ -2413,7 +2413,7 @@
   },
   "acc_limit": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       500
@@ -2422,7 +2422,7 @@
   },
   "crash_dthreshold": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       10,
       2000
@@ -2431,7 +2431,7 @@
   },
   "crash_gthreshold": {
     "desc": "",
-    "default": "400",
+    "default": 400,
     "range": [
       100,
       2000
@@ -2440,7 +2440,7 @@
   },
   "crash_setpoint_threshold": {
     "desc": "",
-    "default": "350",
+    "default": 350,
     "range": [
       50,
       2000
@@ -2449,7 +2449,7 @@
   },
   "crash_time": {
     "desc": "",
-    "default": "500",
+    "default": 500,
     "range": [
       100,
       5000
@@ -2458,7 +2458,7 @@
   },
   "crash_delay": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       500
@@ -2467,7 +2467,7 @@
   },
   "crash_recovery_angle": {
     "desc": "",
-    "default": "10",
+    "default": 10,
     "range": [
       5,
       30
@@ -2476,7 +2476,7 @@
   },
   "crash_recovery_rate": {
     "desc": "",
-    "default": "100",
+    "default": 100,
     "range": [
       50,
       255
@@ -2485,7 +2485,7 @@
   },
   "crash_limit_yaw": {
     "desc": "",
-    "default": "200",
+    "default": 200,
     "range": [
       0,
       1000
@@ -2539,7 +2539,7 @@
   "iterm_relax_cutoff": {
     "desc": "",
     "aka": "I Term Relax: Cutoff",
-    "default": "20",
+    "default": 20,
     "range": [
       1,
       100
@@ -2548,7 +2548,7 @@
   },
   "iterm_windup": {
     "desc": "",
-    "default": "100",
+    "default": 100,
     "range": [
       30,
       100
@@ -2557,7 +2557,7 @@
   },
   "iterm_limit": {
     "desc": "",
-    "default": "400",
+    "default": 400,
     "range": [
       0,
       500
@@ -2566,7 +2566,7 @@
   },
   "pidsum_limit": {
     "desc": "",
-    "default": "500",
+    "default": 500,
     "range": [
       100,
       1000
@@ -2575,7 +2575,7 @@
   },
   "pidsum_limit_yaw": {
     "desc": "",
-    "default": "400",
+    "default": 400,
     "range": [
       100,
       1000
@@ -2584,7 +2584,7 @@
   },
   "yaw_lowpass_hz": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       500
@@ -2595,7 +2595,7 @@
   "throttle_boost": {
     "desc": "Allows throttle to be temporarily boosted on quick stick movements, which increases acceleration torque to the motors, providing a much faster throttle response.",
     "aka": "Throttle Boost",
-    "default": "5",
+    "default": 5,
     "range": [
       0,
       100
@@ -2604,7 +2604,7 @@
   },
   "throttle_boost_cutoff": {
     "desc": "",
-    "default": "15",
+    "default": 15,
     "range": [
       5,
       50
@@ -2614,7 +2614,7 @@
   "acro_trainer_angle_limit": {
     "desc": "Adds an angle limiting mode for pilots who are learning to fly in acro mode. The range valid is 10-80 and must be activated with a switch in the modes tab.",
     "aka": "Acro Trainer Angle Limit",
-    "default": "20",
+    "default": 20,
     "range": [
       10,
       80
@@ -2623,7 +2623,7 @@
   },
   "acro_trainer_lookahead_ms": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       10,
       200
@@ -2642,7 +2642,7 @@
   },
   "acro_trainer_gain": {
     "desc": "",
-    "default": "75",
+    "default": 75,
     "range": [
       25,
       255
@@ -2651,7 +2651,7 @@
   },
   "p_pitch": {
     "desc": "Pitch P parameter",
-    "default": "46",
+    "default": 46,
     "range": [
       0,
       200
@@ -2660,7 +2660,7 @@
   },
   "i_pitch": {
     "desc": "Pitch I parameter",
-    "default": "90",
+    "default": 90,
     "range": [
       0,
       200
@@ -2669,7 +2669,7 @@
   },
   "d_pitch": {
     "desc": "Pitch D parameter",
-    "default": "38",
+    "default": 38,
     "range": [
       0,
       200
@@ -2678,7 +2678,7 @@
   },
   "f_pitch": {
     "desc": "",
-    "default": "95",
+    "default": 95,
     "range": [
       0,
       2000
@@ -2687,7 +2687,7 @@
   },
   "p_roll": {
     "desc": "Roll P parameter",
-    "default": "42",
+    "default": 42,
     "range": [
       0,
       200
@@ -2696,7 +2696,7 @@
   },
   "i_roll": {
     "desc": "Roll I parameter",
-    "default": "85",
+    "default": 85,
     "range": [
       0,
       200
@@ -2705,7 +2705,7 @@
   },
   "d_roll": {
     "desc": "Roll D parameter",
-    "default": "35",
+    "default": 35,
     "range": [
       0,
       200
@@ -2714,7 +2714,7 @@
   },
   "f_roll": {
     "desc": "",
-    "default": "90",
+    "default": 90,
     "range": [
       0,
       2000
@@ -2723,7 +2723,7 @@
   },
   "p_yaw": {
     "desc": "Yaw P parameter",
-    "default": "30",
+    "default": 30,
     "range": [
       0,
       200
@@ -2732,7 +2732,7 @@
   },
   "i_yaw": {
     "desc": "Yaw I parameter",
-    "default": "90",
+    "default": 90,
     "range": [
       0,
       200
@@ -2741,7 +2741,7 @@
   },
   "d_yaw": {
     "desc": "Yaw D parameter",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       200
@@ -2750,7 +2750,7 @@
   },
   "f_yaw": {
     "desc": "",
-    "default": "90",
+    "default": 90,
     "range": [
       0,
       2000
@@ -2759,7 +2759,7 @@
   },
   "angle_level_strength": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       0,
       200
@@ -2768,7 +2768,7 @@
   },
   "horizon_level_strength": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       0,
       200
@@ -2777,7 +2777,7 @@
   },
   "horizon_transition": {
     "desc": "",
-    "default": "75",
+    "default": 75,
     "range": [
       0,
       200
@@ -2786,7 +2786,7 @@
   },
   "level_limit": {
     "desc": "TODO: The maximum allowed angle in degrees.",
-    "default": "55",
+    "default": 55,
     "range": [
       10,
       90
@@ -2796,7 +2796,7 @@
   },
   "horizon_tilt_effect": {
     "desc": "",
-    "default": "75",
+    "default": 75,
     "range": [
       0,
       250
@@ -2815,7 +2815,7 @@
   "abs_control_gain": {
     "desc": "To enable Absolute Control, set this to `10`, Smaller quads are ok with `5`. This feature solves some underlying problems of #iterm_rotation and should hopefully replace it at some point. This feature accumulates the absolute gyro error in quad coordinates and mixes a proportional correction into the setpoint. For it to work you need to enable AirMode and #iterm_relax (for `RP`). If you combine this feature with Integrated Yaw (#use_integrated_yaw), you can set #iterm_relax enabled for `RPY`. You should not enable absolute control and #iterm_rotation at the same time.",
     "aka": "Absolute Control",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       20
@@ -2824,7 +2824,7 @@
   },
   "abs_control_limit": {
     "desc": "",
-    "default": "90",
+    "default": 90,
     "range": [
       10,
       255
@@ -2833,7 +2833,7 @@
   },
   "abs_control_error_limit": {
     "desc": "",
-    "default": "20",
+    "default": 20,
     "range": [
       1,
       45
@@ -2842,7 +2842,7 @@
   },
   "abs_control_cutoff": {
     "desc": "",
-    "default": "11",
+    "default": 11,
     "range": [
       1,
       45
@@ -2861,7 +2861,7 @@
   },
   "integrated_yaw_relax": {
     "desc": "",
-    "default": "200",
+    "default": 200,
     "range": [
       0,
       255
@@ -2871,7 +2871,7 @@
   "d_min_roll": {
     "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_roll).",
     "aka": "D Min Roll",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       100
@@ -2881,7 +2881,7 @@
   "d_min_pitch": {
     "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_pitch).",
     "aka": "D Min Pitch",
-    "default": "22",
+    "default": 22,
     "range": [
       0,
       100
@@ -2891,7 +2891,7 @@
   "d_min_yaw": {
     "desc": "Controls the strength of dampening (D-term) in normal forward flight. During a sharp move or during prop wash, the Active D-gain raises to the Derivative gains (#d_yaw).",
     "aka": "D Min Yaw",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -2901,7 +2901,7 @@
   "d_min_boost_gain": {
     "desc": "Adjusts how fast D gets up to its maximum value and is based on gyro to determine sharp moves and propwash events.",
     "aka": "D Min Gain",
-    "default": "27",
+    "default": 27,
     "range": [
       0,
       100
@@ -2911,7 +2911,7 @@
   "d_min_advance": {
     "desc": "Makes D go up earlier by using setpoint instead of gyro to determine sharp moves.",
     "aka": "D Min Advance",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       200
@@ -2921,7 +2921,7 @@
   "motor_output_limit": {
     "desc": "Attenuates motor commands by the set percentage. Reduces ESC current and motor heat when using higher cell count batteries, e.g. for similar performance from a 6S battery on a 4S build, try 66%; for a 4S battery on a 3S build, try 75%.",
     "aka": "Motor Output Limit: Attenuation %",
-    "default": "100",
+    "default": 100,
     "range": [
       1,
       100
@@ -2932,7 +2932,7 @@
   "auto_profile_cell_count": {
     "desc": "Automatically activates the first profile that has a cell count equal to the connected battery.",
     "aka": "Motor Output Limit: Cell Count",
-    "default": "0",
+    "default": 0,
     "range": [
       -1,
       8
@@ -2960,7 +2960,7 @@
   },
   "launch_trigger_throttle_percent": {
     "desc": "",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       90
@@ -2970,7 +2970,7 @@
   },
   "launch_angle_limit": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       80
@@ -2979,7 +2979,7 @@
   },
   "launch_control_gain": {
     "desc": "",
-    "default": "40",
+    "default": 40,
     "range": [
       0,
       200
@@ -2988,7 +2988,7 @@
   },
   "thrust_linear": {
     "desc": "TODO: https://github.com/betaflight/betaflight/pull/7304.",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -2997,7 +2997,7 @@
   },
   "transient_throttle_limit": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       30
@@ -3016,7 +3016,7 @@
   },
   "ff_spike_limit": {
     "desc": "",
-    "default": "60",
+    "default": 60,
     "range": [
       0,
       255
@@ -3025,7 +3025,7 @@
   },
   "ff_max_rate_limit": {
     "desc": "",
-    "default": "100",
+    "default": 100,
     "range": [
       0,
       150
@@ -3034,7 +3034,7 @@
   },
   "ff_boost": {
     "desc": "",
-    "default": "15",
+    "default": 15,
     "range": [
       0,
       50
@@ -3043,7 +3043,7 @@
   },
   "idle_min_rpm": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       100
@@ -3052,7 +3052,7 @@
   },
   "idle_adjustment_speed": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       25,
       200
@@ -3061,7 +3061,7 @@
   },
   "idle_p": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       10,
       200
@@ -3070,7 +3070,7 @@
   },
   "idle_pid_limit": {
     "desc": "",
-    "default": "200",
+    "default": 200,
     "range": [
       10,
       255
@@ -3079,7 +3079,7 @@
   },
   "idle_max_increase": {
     "desc": "",
-    "default": "150",
+    "default": 150,
     "range": [
       0,
       255
@@ -3106,7 +3106,7 @@
   },
   "frsky_default_lat": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -9000,
       9000
@@ -3115,7 +3115,7 @@
   },
   "frsky_default_long": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -18000,
       18000
@@ -3124,7 +3124,7 @@
   },
   "frsky_gps_format": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       1
@@ -3142,7 +3142,7 @@
   },
   "frsky_vfas_precision": {
     "desc": "TODO: Set to 1 to send raw VBat value in 0.1V resolution for receivers that can handle it, or 0 (default) to use the standard method.",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       1
@@ -3151,7 +3151,7 @@
   },
   "hott_alarm_int": {
     "desc": "",
-    "default": "5",
+    "default": 5,
     "range": [
       0,
       120
@@ -3184,7 +3184,7 @@
   },
   "mavlink_mah_as_heading_divisor": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       30000
@@ -3464,7 +3464,7 @@
   },
   "ledstrip_beacon_period_ms": {
     "desc": "",
-    "default": "500",
+    "default": 500,
     "range": [
       50,
       10000
@@ -3474,7 +3474,7 @@
   },
   "ledstrip_beacon_percent": {
     "desc": "",
-    "default": "50",
+    "default": 50,
     "range": [
       0,
       100
@@ -3521,7 +3521,7 @@
   },
   "sdcard_spi_bus": {
     "desc": "",
-    "default": "3",
+    "default": 3,
     "range": [
       0,
       3
@@ -3702,7 +3702,7 @@
   },
   "osd_rssi_alarm": {
     "desc": "",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       100
@@ -3711,7 +3711,7 @@
   },
   "osd_link_quality_alarm": {
     "desc": "",
-    "default": "80",
+    "default": 80,
     "range": [
       0,
       300
@@ -3720,7 +3720,7 @@
   },
   "osd_rssi_dbm_alarm": {
     "desc": "",
-    "default": "60",
+    "default": 60,
     "range": [
       0,
       130
@@ -3729,7 +3729,7 @@
   },
   "osd_cap_alarm": {
     "desc": "",
-    "default": "2200",
+    "default": 2200,
     "range": [
       0,
       20000
@@ -3738,7 +3738,7 @@
   },
   "osd_alt_alarm": {
     "desc": "",
-    "default": "100",
+    "default": 100,
     "range": [
       0,
       10000
@@ -3747,7 +3747,7 @@
   },
   "osd_esc_temp_alarm": {
     "desc": "",
-    "default": "-128",
+    "default": -128,
     "range": [
       -128,
       127
@@ -3756,7 +3756,7 @@
   },
   "osd_esc_rpm_alarm": {
     "desc": "",
-    "default": "-1",
+    "default": -1,
     "range": [
       -1,
       32767
@@ -3765,7 +3765,7 @@
   },
   "osd_esc_current_alarm": {
     "desc": "",
-    "default": "-1",
+    "default": -1,
     "range": [
       -1,
       32767
@@ -3774,7 +3774,7 @@
   },
   "osd_core_temp_alarm": {
     "desc": "",
-    "default": "70",
+    "default": 70,
     "range": [
       0,
       255
@@ -3783,7 +3783,7 @@
   },
   "osd_ah_max_pit": {
     "desc": "",
-    "default": "20",
+    "default": 20,
     "range": [
       0,
       90
@@ -3792,7 +3792,7 @@
   },
   "osd_ah_max_rol": {
     "desc": "",
-    "default": "40",
+    "default": 40,
     "range": [
       0,
       90
@@ -3810,7 +3810,7 @@
   },
   "osd_tim1": {
     "desc": "",
-    "default": "2560",
+    "default": 2560,
     "range": [
       0,
       32767
@@ -3819,7 +3819,7 @@
   },
   "osd_tim2": {
     "desc": "",
-    "default": "2561",
+    "default": 2561,
     "range": [
       0,
       32767
@@ -3828,7 +3828,7 @@
   },
   "osd_vbat_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3837,7 +3837,7 @@
   },
   "osd_rssi_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3846,7 +3846,7 @@
   },
   "osd_link_quality_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3855,7 +3855,7 @@
   },
   "osd_rssi_dbm_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3864,7 +3864,7 @@
   },
   "osd_tim_1_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3873,7 +3873,7 @@
   },
   "osd_tim_2_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3882,7 +3882,7 @@
   },
   "osd_remaining_time_estimate_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3891,7 +3891,7 @@
   },
   "osd_flymode_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3900,7 +3900,7 @@
   },
   "osd_anti_gravity_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3909,7 +3909,7 @@
   },
   "osd_g_force_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3918,7 +3918,7 @@
   },
   "osd_throttle_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3927,7 +3927,7 @@
   },
   "osd_vtx_channel_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3936,7 +3936,7 @@
   },
   "osd_crosshairs_pos": {
     "desc": "",
-    "default": "205",
+    "default": 205,
     "range": [
       0,
       15359
@@ -3945,7 +3945,7 @@
   },
   "osd_ah_sbar_pos": {
     "desc": "",
-    "default": "206",
+    "default": 206,
     "range": [
       0,
       15359
@@ -3954,7 +3954,7 @@
   },
   "osd_ah_pos": {
     "desc": "",
-    "default": "78",
+    "default": 78,
     "range": [
       0,
       15359
@@ -3963,7 +3963,7 @@
   },
   "osd_current_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3972,7 +3972,7 @@
   },
   "osd_mah_drawn_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3981,7 +3981,7 @@
   },
   "osd_motor_diag_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3990,7 +3990,7 @@
   },
   "osd_craft_name_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -3999,7 +3999,7 @@
   },
   "osd_display_name_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4008,7 +4008,7 @@
   },
   "osd_gps_speed_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4017,7 +4017,7 @@
   },
   "osd_gps_lon_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4026,7 +4026,7 @@
   },
   "osd_gps_lat_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4035,7 +4035,7 @@
   },
   "osd_gps_sats_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4044,7 +4044,7 @@
   },
   "osd_home_dir_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4053,7 +4053,7 @@
   },
   "osd_home_dist_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4062,7 +4062,7 @@
   },
   "osd_flight_dist_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4071,7 +4071,7 @@
   },
   "osd_compass_bar_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4080,7 +4080,7 @@
   },
   "osd_altitude_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4089,7 +4089,7 @@
   },
   "osd_pid_roll_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4098,7 +4098,7 @@
   },
   "osd_pid_pitch_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4107,7 +4107,7 @@
   },
   "osd_pid_yaw_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4116,7 +4116,7 @@
   },
   "osd_debug_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4125,7 +4125,7 @@
   },
   "osd_power_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4134,7 +4134,7 @@
   },
   "osd_pidrate_profile_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4143,7 +4143,7 @@
   },
   "osd_warnings_pos": {
     "desc": "",
-    "default": "14665",
+    "default": 14665,
     "range": [
       0,
       15359
@@ -4152,7 +4152,7 @@
   },
   "osd_avg_cell_voltage_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4161,7 +4161,7 @@
   },
   "osd_pit_ang_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4170,7 +4170,7 @@
   },
   "osd_rol_ang_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4179,7 +4179,7 @@
   },
   "osd_battery_usage_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4188,7 +4188,7 @@
   },
   "osd_disarmed_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4197,7 +4197,7 @@
   },
   "osd_nheading_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4206,7 +4206,7 @@
   },
   "osd_nvario_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4215,7 +4215,7 @@
   },
   "osd_esc_tmp_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4224,7 +4224,7 @@
   },
   "osd_esc_rpm_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4233,7 +4233,7 @@
   },
   "osd_esc_rpm_freq_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4242,7 +4242,7 @@
   },
   "osd_rtc_date_time_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4251,7 +4251,7 @@
   },
   "osd_adjustment_range_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4260,7 +4260,7 @@
   },
   "osd_flip_arrow_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4269,7 +4269,7 @@
   },
   "osd_core_temp_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4278,7 +4278,7 @@
   },
   "osd_log_status_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4287,7 +4287,7 @@
   },
   "osd_stick_overlay_left_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4296,7 +4296,7 @@
   },
   "osd_stick_overlay_right_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4305,7 +4305,7 @@
   },
   "osd_stick_overlay_radio_mode": {
     "desc": "",
-    "default": "2",
+    "default": 2,
     "range": [
       1,
       4
@@ -4314,7 +4314,7 @@
   },
   "osd_rate_profile_name_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4323,7 +4323,7 @@
   },
   "osd_pid_profile_name_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4332,7 +4332,7 @@
   },
   "osd_profile_name_pos": {
     "desc": "",
-    "default": "234",
+    "default": 234,
     "range": [
       0,
       15359
@@ -4558,7 +4558,7 @@
   "osd_profile": {
     "desc": "Sets the active OSD profile.",
     "aka": "Active OSD Profile",
-    "default": "1",
+    "default": 1,
     "range": [
       1,
       3
@@ -4591,7 +4591,7 @@
   },
   "system_hse_mhz": {
     "desc": "",
-    "default": "8",
+    "default": 8,
     "range": [
       0,
       30
@@ -4696,7 +4696,7 @@
   },
   "pwr_on_arm_grace": {
     "desc": "",
-    "default": "5",
+    "default": 5,
     "range": [
       0,
       30
@@ -4716,7 +4716,7 @@
   "vtx_band": {
     "desc": "The band (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.",
     "aka": "Band",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       8
@@ -4726,7 +4726,7 @@
   "vtx_channel": {
     "desc": "The channel (index) to be used by the VTX within the configured #vtx_band. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work.",
     "aka": "Channel",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       8
@@ -4736,7 +4736,7 @@
   "vtx_power": {
     "desc": "TODO: The power level (index) to be used by the VTX. You must configure the VTX Table and set up a VTX communication protocol such as SmartAudio for this to work. It can be modified if Pit Mode or #vtx_low_power_disarm is enabled.",
     "aka": "Power",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       7
@@ -4757,7 +4757,7 @@
   "vtx_freq": {
     "desc": "The frequency to be used by the VTX in MHz. Can be set directly if supported by your VTX, otherwise it is automatically set according to VTX table when you set #vtx_band and #vtx_channel.",
     "aka": "Frequency",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       5999
@@ -4768,7 +4768,7 @@
   "vtx_pit_mode_freq": {
     "desc": "Frequency to use (in MHz) when the VTX is in pit mode.",
     "aka": "Pit Mode frequency",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       5999
@@ -4787,7 +4787,7 @@
   },
   "vtx_spi_bus": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -4807,7 +4807,7 @@
   },
   "vcd_h_offset": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -32,
       31
@@ -4816,7 +4816,7 @@
   },
   "vcd_v_offset": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -15,
       16
@@ -4835,7 +4835,7 @@
   },
   "max7456_spi_bus": {
     "desc": "",
-    "default": "2",
+    "default": 2,
     "range": [
       0,
       3
@@ -4853,7 +4853,7 @@
   },
   "displayport_msp_col_adjust": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -6,
       0
@@ -4862,7 +4862,7 @@
   },
   "displayport_msp_row_adjust": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -3,
       0
@@ -4871,7 +4871,7 @@
   },
   "displayport_max7456_col_adjust": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -6,
       0
@@ -4880,7 +4880,7 @@
   },
   "displayport_max7456_row_adjust": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -3,
       0
@@ -4898,7 +4898,7 @@
   },
   "displayport_max7456_blk": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -4907,7 +4907,7 @@
   },
   "displayport_max7456_wht": {
     "desc": "",
-    "default": "2",
+    "default": 2,
     "range": [
       0,
       3
@@ -4925,7 +4925,7 @@
   },
   "esc_sensor_current_offset": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       16000
@@ -4949,7 +4949,7 @@
   },
   "frsky_spi_offset": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -127,
       127
@@ -4964,7 +4964,7 @@
   },
   "frsky_x_rx_num": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       255
@@ -4992,7 +4992,7 @@
   },
   "led_inversion": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       7
@@ -5001,7 +5001,7 @@
   },
   "dashboard_i2c_bus": {
     "desc": "",
-    "default": "1",
+    "default": 1,
     "range": [
       0,
       3
@@ -5010,7 +5010,7 @@
   },
   "dashboard_i2c_addr": {
     "desc": "",
-    "default": "60",
+    "default": 60,
     "range": [
       8,
       119
@@ -5029,7 +5029,7 @@
   },
   "camera_control_ref_voltage": {
     "desc": "TODO: Voltage (in 10 mV steps) measured across your camera's floating OSD and GND pins, usually 3V3.",
-    "default": "330",
+    "default": 330,
     "range": [
       200,
       400
@@ -5039,7 +5039,7 @@
   },
   "camera_control_key_delay": {
     "desc": "TODO: The duration of each key press (in ms presence at the camera_control pin, after consulting with RunCam it was set to 180 ms to accommodate most cameras, while some of them accept as low as 125 ms.",
-    "default": "180",
+    "default": 180,
     "range": [
       100,
       500
@@ -5049,7 +5049,7 @@
   },
   "camera_control_internal_resistance": {
     "desc": "TODO: The internal resistance (in 100 Ohm steps) of your camera, most HS1177 derivatives have 47 k\u03a9, but that's not guaranteed. You'll have to derive this value for your camera in case the default one doesn't work.",
-    "default": "470",
+    "default": 470,
     "range": [
       10,
       1000
@@ -5115,7 +5115,7 @@
   },
   "flash_spi_bus": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -5124,7 +5124,7 @@
   },
   "rcdevice_init_dev_attempts": {
     "desc": "",
-    "default": "6",
+    "default": 6,
     "range": [
       0,
       10
@@ -5133,7 +5133,7 @@
   },
   "rcdevice_init_dev_attempt_interval": {
     "desc": "",
-    "default": "1000",
+    "default": 1000,
     "range": [
       0,
       5000
@@ -5142,7 +5142,7 @@
   },
   "rcdevice_protocol_version": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       1
@@ -5151,7 +5151,7 @@
   },
   "rcdevice_feature": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       65535
@@ -5172,7 +5172,7 @@
   },
   "gyro_1_spibus": {
     "desc": "",
-    "default": "1",
+    "default": 1,
     "range": [
       0,
       3
@@ -5181,7 +5181,7 @@
   },
   "gyro_1_i2cBus": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -5190,7 +5190,7 @@
   },
   "gyro_1_i2c_address": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       119
@@ -5217,7 +5217,7 @@
   },
   "gyro_1_align_roll": {
     "desc": "Assigns how the gyro sensor roll axis is aligned, independent of board alignment. This is updated by the *First GYRO* (#gyro_1_sensor_align) in BF Configurator.",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -5226,7 +5226,7 @@
   },
   "gyro_1_align_pitch": {
     "desc": "Assigns how the gyro sensor pitch axis is aligned, independent of board alignment. This is updated by the *First GYRO* (#gyro_1_sensor_align) in BF Configurator.",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -5235,7 +5235,7 @@
   },
   "gyro_1_align_yaw": {
     "desc": "Assigns how the gyro sensor yaw axis is aligned, independent of board alignment. This is updated by the *First GYRO* (#gyro_1_sensor_align) in BF Configurator.",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -5256,7 +5256,7 @@
   },
   "gyro_2_spibus": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -5265,7 +5265,7 @@
   },
   "gyro_2_i2cBus": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -5274,7 +5274,7 @@
   },
   "gyro_2_i2c_address": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       119
@@ -5300,7 +5300,7 @@
   },
   "gyro_2_align_roll": {
     "desc": "Like #gyro_1_align_roll, but for the second gyro sensor.",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -5309,7 +5309,7 @@
   },
   "gyro_2_align_pitch": {
     "desc": "Like #gyro_1_align_pitch, but for the second gyro sensor.",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -5318,7 +5318,7 @@
   },
   "gyro_2_align_yaw": {
     "desc": "Like #gyro_1_align_yaw, but for the second gyro sensor.",
-    "default": "0",
+    "default": 0,
     "range": [
       -3600,
       3600
@@ -5390,7 +5390,7 @@
   },
   "timezone_offset_minutes": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       -780,
       780
@@ -5400,7 +5400,7 @@
   "gyro_rpm_notch_harmonics": {
     "desc": "Number of harmonics per motor. A value of 3 (recommended for most quads) will generate 3 notch filters, per motor for each axis, totaling 36 notches. One at the base motor frequency and two harmonics at multiples of that base frequency.",
     "aka": "Gyro RPM Filter Harmonics Number",
-    "default": "3",
+    "default": 3,
     "range": [
       0,
       3
@@ -5409,7 +5409,7 @@
   },
   "gyro_rpm_notch_q": {
     "desc": "",
-    "default": "500",
+    "default": 500,
     "range": [
       1,
       3000
@@ -5419,7 +5419,7 @@
   "gyro_rpm_notch_min": {
     "desc": "Minimum frequency that will be used by the RPM Filter.",
     "aka": "Gyro RPM Filter Min Frequency [Hz]",
-    "default": "100",
+    "default": 100,
     "range": [
       50,
       200
@@ -5429,7 +5429,7 @@
   },
   "dterm_rpm_notch_harmonics": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       3
@@ -5438,7 +5438,7 @@
   },
   "dterm_rpm_notch_q": {
     "desc": "",
-    "default": "500",
+    "default": 500,
     "range": [
       1,
       3000
@@ -5447,7 +5447,7 @@
   },
   "dterm_rpm_notch_min": {
     "desc": "",
-    "default": "100",
+    "default": 100,
     "range": [
       50,
       200
@@ -5456,7 +5456,7 @@
   },
   "rpm_notch_lpf": {
     "desc": "",
-    "default": "150",
+    "default": 150,
     "range": [
       100,
       500
@@ -5465,7 +5465,7 @@
   },
   "flysky_spi_tx_id": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4294967295
@@ -5489,7 +5489,7 @@
   },
   "stats_total_flights": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4294967295
@@ -5498,7 +5498,7 @@
   },
   "stats_total_time_s": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4294967295
@@ -5507,7 +5507,7 @@
   },
   "stats_total_dist_m": {
     "desc": "",
-    "default": "0",
+    "default": 0,
     "range": [
       0,
       4294967295
