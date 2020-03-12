@@ -39,6 +39,8 @@ def print_vars_as_markdown():
 
     for helpdata in sections[sec]:
       print(f"\n### `{helpdata['name']}`")
+      if 'title' in helpdata:
+        print(f"> `{helpdata['title']}`")
       if 'default' in helpdata:
         print(f"- Default: `{helpdata['default']}`")
       if 'allowed' in helpdata:
