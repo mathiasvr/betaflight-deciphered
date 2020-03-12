@@ -928,7 +928,7 @@
     "section": "master"
   },
   "blackbox_record_acc": {
-    "desc": "GUESS: Include accelerometer data in the blackbox logs.",
+    "desc": "Include accelerometer data in the blackbox logs.",
     "default": "ON",
     "allowed": [
       "OFF",
@@ -1288,6 +1288,7 @@
   },
   "current_meter": {
     "desc": "TODO: The `VIRTUAL` current sensor, once calibrated, estimates the current value from throttle position.",
+    "aka": "Current Meter Source",
     "default": "ADC",
     "allowed": [
       "NONE",
@@ -1300,6 +1301,7 @@
   },
   "battery_meter": {
     "desc": "",
+    "aka": "Voltage Meter Source",
     "default": "ADC",
     "allowed": [
       "NONE",
@@ -1402,6 +1404,7 @@
   },
   "vbat_scale": {
     "desc": "TODO: Result is Vbatt in 0.1V steps. 3.3V = ADC Vref, 4095 = 12bit adc, 110 = 11:1 voltage divider (10k:1k) x 10 for 0.1V. Adjust this slightly if reported pack voltage is different from multimeter reading. You can get current voltage by typing \"status\" in cli.",
+    "aka": "Voltage Meter: Scale",
     "default": 110,
     "range": [
       0,
@@ -1411,6 +1414,7 @@
   },
   "vbat_divider": {
     "desc": "",
+    "aka": "Voltage Meter: Divider Value",
     "default": 10,
     "range": [
       1,
@@ -1420,6 +1424,7 @@
   },
   "vbat_multiplier": {
     "desc": "",
+    "aka": "Voltage Meter: Multiplier Value",
     "default": 1,
     "range": [
       1,
@@ -1429,6 +1434,7 @@
   },
   "ibata_scale": {
     "desc": "",
+    "aka": "Amperage Meter: Scale [1/10th mV/A]",
     "default": 179,
     "range": [
       -16000,
@@ -1438,11 +1444,13 @@
   },
   "ibata_offset": {
     "desc": "",
+    "aka": "Amperage Meter: Offset [mA]",
     "default": 0,
     "range": [
       -32000,
       32000
     ],
+    "unit": "mA",
     "section": "master"
   },
   "ibatv_scale": {
@@ -2345,7 +2353,7 @@
     "section": "profile"
   },
   "vbat_pid_gain": {
-    "desc": "Increases the PID values to compensate when Vbat gets lower. This will give more constant flight characteristics throughout the flight. The amount of compensation that is applied is calculated from the #vbat_max_cell_voltage, so make sure that is set to something appropriate.",
+    "desc": "Increases the PID values to compensate when battery voltage gets lower. This will give more constant flight characteristics throughout the flight. The amount of compensation that is applied is calculated from the #vbat_max_cell_voltage, so make sure that is set to something appropriate.",
     "aka": "Vbat PID Compensation",
     "default": "OFF",
     "allowed": [
@@ -4596,7 +4604,8 @@
       0,
       30
     ],
-    "section": "master"
+    "section": "master",
+    "unit": "MHz"
   },
   "task_statistics": {
     "desc": "",
@@ -5018,7 +5027,7 @@
     "section": "master"
   },
   "camera_control_mode": {
-    "desc": "",
+    "desc": "TODO: https://github.com/betaflight/betaflight/wiki/FPV-Camera-Control-(Joystick-Emulation).",
     "default": "HARDWARE_PWM",
     "allowed": [
       "HARDWARE_PWM",
@@ -5452,6 +5461,7 @@
       50,
       200
     ],
+    "unit": "Hz",
     "section": "master"
   },
   "rpm_notch_lpf": {
