@@ -1237,6 +1237,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "failsafe_switch_mode": {
@@ -1344,7 +1345,7 @@
   },
   "bat_capacity": {
     "title": "Battery Capacity",
-    "desc": "Capacity of the battery in mAh. Can be used with current meter to detect remaining battery capacity. Leave at `0` to disable.",
+    "desc": "Capacity of the battery in mAh. Can be used with #current_meter to detect remaining battery capacity. Leave at `0` to disable.",
     "default": 0,
     "range": [
       0,
@@ -1682,6 +1683,7 @@
       750,
       1500
     ],
+    "unit": "us",
     "section": "master"
   },
   "3d_deadband_high": {
@@ -1692,6 +1694,7 @@
       1500,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "3d_neutral": {
@@ -1702,6 +1705,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "3d_deadband_throttle": {
@@ -1721,6 +1725,7 @@
       750,
       1500
     ],
+    "unit": "us",
     "section": "master"
   },
   "3d_limit_high": {
@@ -1730,6 +1735,7 @@
       1500,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "3d_switched_mode": {
@@ -1749,6 +1755,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "master"
   },
   "servo_pwm_rate": {
@@ -1949,6 +1956,7 @@
       750,
       2250
     ],
+    "unit": "us",
     "section": "rateprofile"
   },
   "tpa_mode": {
@@ -2853,13 +2861,14 @@
   },
   "acro_trainer_angle_limit": {
     "title": "Acro Trainer Angle Limit",
-    "desc": "Adds an angle limiting mode for pilots who are learning to fly in acro mode. The range valid is 10-80 and must be activated with a switch in the modes tab.",
+    "desc": "Adds an angle limiting mode for pilots who are learning to fly in acro mode. The mode must be activated with a switch in the modes tab.",
     "aka": "Acro Trainer Angle Limit",
     "default": 20,
     "range": [
       10,
       80
     ],
+    "unit": "deg",
     "section": "profile"
   },
   "acro_trainer_lookahead_ms": {

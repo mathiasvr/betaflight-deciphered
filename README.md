@@ -734,6 +734,7 @@ Time in deciseconds to wait before turning off motors when failsafe is activated
 > `Failsafe Throttle Level`
 - Default: `1000`
 - Range: `750` - `2250`
+- Unit: `us`
 
 Throttle level used for landing when failsafe is enabled. See Failsafe documentation.
 
@@ -811,7 +812,7 @@ TODO: When feature `SERVO_TILT` is enabled, this can be either NORMAL or MIXTILT
 - Range: `0` - `20000`
 - Unit: `mAh`
 
-Capacity of the battery in mAh. Can be used with current meter to detect remaining battery capacity. Leave at `0` to disable.
+Capacity of the battery in mAh. Can be used with [current_meter](#current_meter) to detect remaining battery capacity. Leave at `0` to disable.
 
 ### `vbat_max_cell_voltage`
 > `Maximum Battery Cell Voltage`
@@ -1002,6 +1003,7 @@ Configures the mixer to expect the motor direction to be reversed and the propel
 > `3D Low Throttle Deadband`
 - Default: `1406`
 - Range: `750` - `1500`
+- Unit: `us`
 
 TODO: Low value of throttle deadband for 3D mode (when stick is in the 3d_deadband_throttle range, the fixed values of 3d_deadband_low / _high are used instead)
 
@@ -1009,6 +1011,7 @@ TODO: Low value of throttle deadband for 3D mode (when stick is in the 3d_deadba
 > `3D High Throttle Deadband`
 - Default: `1514`
 - Range: `1500` - `2250`
+- Unit: `us`
 
 TODO: High value of throttle deadband for 3D mode (when stick is in the deadband range, the value in 3d_neutral is used instead)
 
@@ -1016,6 +1019,7 @@ TODO: High value of throttle deadband for 3D mode (when stick is in the deadband
 > `3D Neutral Throttle`
 - Default: `1460`
 - Range: `750` - `2250`
+- Unit: `us`
 
 Neutral (stop) throttle value for 3D mode
 
@@ -1029,10 +1033,12 @@ TODO: Throttle signal will be held to a fixed value when throttle is centered wi
 ### `3d_limit_low`
 - Default: `1000`
 - Range: `750` - `1500`
+- Unit: `us`
 
 ### `3d_limit_high`
 - Default: `2000`
 - Range: `1500` - `2250`
+- Unit: `us`
 
 ### `3d_switched_mode`
 - Default: `OFF`
@@ -1042,6 +1048,7 @@ TODO: Throttle signal will be held to a fixed value when throttle is centered wi
 > `Servo Center Pulse`
 - Default: `1500`
 - Range: `750` - `2250`
+- Unit: `us`
 
 TODO: Servo midpoint
 
@@ -2889,9 +2896,10 @@ Allows throttle to be temporarily boosted on quick stick movements, which increa
 > `Acro Trainer Angle Limit`
 - Default: `20`
 - Range: `10` - `80`
+- Unit: `deg`
 - BF Configurator: *Acro Trainer Angle Limit*
 
-Adds an angle limiting mode for pilots who are learning to fly in acro mode. The range valid is 10-80 and must be activated with a switch in the modes tab.
+Adds an angle limiting mode for pilots who are learning to fly in acro mode. The mode must be activated with a switch in the modes tab.
 
 ### `acro_trainer_lookahead_ms`
 > `TODO: Acro Trainer Lookahead Time`
@@ -3268,6 +3276,7 @@ Throttle PID Attenuation rate. How much to reduce PID gains when throttle is bey
 > `TPA Breakpoint`
 - Default: `1250`
 - Range: `750` - `2250`
+- Unit: `us`
 - BF Configurator: *TPA Breakpoint*
 
 Throttle PID Attenuation breakpoint. The point at which TPA should take effect. This should be set around the throttle point at which fast oscillations would occur.
