@@ -12,7 +12,7 @@ If you have trouble understanding any of the explanations, please open an issue 
 Documentation is based on information from previous Betaflight/Cleanflight docs, [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator), as well as Betaflight source code and various other sources.
 
 ## Integration
-> **Update:** I'm currently working on an app that uses this documentation to help learn about your Betaflight configuration.
+> **Update:** I'm currently working on an app that uses this documentation to help you understand your Betaflight configuration.
 https://github.com/mathiasvr/betaflight-inspector
 
 Descriptions and other information is organized into a [JSON file](help_variables.json), with the intent to generate consistent documentation and allow other possible future integration.
@@ -124,7 +124,7 @@ Axis where gyro overflow detection applies. Intended to deal with overflow issue
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
-This new feature, enabled by default in Betaflight 3.4, reduces the severity and duration of un-commanded severe yaw spins. For example, if a quadcopter clips a gate, tree, branch or other object and causes a high rate yaw spin, it may go into a 'never-ending' uncontrollable spin. Typically it makes a distinctive warbling noise and climbs rapidly - the so-called Yaw Spin To The Moon (YSTTM) problem. 3.4 introduces two code features that should bring such spins under control more quickly and cleanly. Yaw Spin Recovery is intended primarily for FPV pilots, and works best with MPU gyros. LOS acro pilots who use high yaw rates may prefer to disable this function.
+This feature reduces the severity and duration of un-commanded severe yaw spins. For example, if a quadcopter clips a gate, tree, branch or other object and causes a high rate yaw spin, it may go into a 'never-ending' uncontrollable spin. Typically it makes a distinctive warbling noise and climbs rapidly - the so-called Yaw Spin To The Moon (YSTTM) problem. Yaw Spin Recovery is intended primarily for FPV pilots, and works best with MPU gyros. LOS acro pilots who use high yaw rates may prefer to disable this function.
 
 ### `yaw_spin_threshold`
 > `Yaw Spin Threshold`
@@ -283,7 +283,7 @@ Set default `AUTO` to use magnetometer hardware defined for your board type. Oth
 - Range: `-18000` - `18000`
 - Unit: `dddmm`
 
-Current location magnetic declination in dddmm format. For example, -6deg 37min = -637 for Japan. Leading zeros not required. Get your local magnetic declination here: http://magnetic-declination.com/
+Magnetic declination of your current location in `dddmm` format. For example, `-6deg 37min` = `-637` for Japan. Leading zeros not required. Get your local magnetic declination here: http://magnetic-declination.com/
 
 ### `mag_calibration`
 > `Magnetometer Calibration`
@@ -372,7 +372,7 @@ The minimum value (in us) for a stick to be recognised as high. Used for stick c
 - Range: `0` - `18`
 - BF Configurator: *RSSI Channel*
 
-Receiver (RX) channel (AUX channel + 4) that contains the RSSI signal.
+Receiver (RX) channel (AUX channel + 4) that contains an RSSI signal.
 
 ### `rssi_src_frame_errors`
 > `TODO RSSI Source Frame Errors`
@@ -410,7 +410,7 @@ GUESS: Inverts the RSSI value (high value = poor signal, low value = good signal
 - Default: `AUTO`
 - Allowed: `OFF`, `PRESET`, `AUTO`, `MANUAL`
 
-TODO: This feature can cause the CPU to work harder to be able to run higher d setpoint weights and get cleaner motor outputs. Set to OFF if CPU loading is too high. Note: Auto rc interpolation detects rx speed based on the reported speed by rx itself. But some receivers like also X4RS can report 9ms interval while it is actually 18ms on roll and pitch when using more channels than 8.
+TODO: This feature can cause the CPU to work harder to be able to run higher d setpoint weights and get cleaner motor outputs. Set to `OFF` if CPU loading is too high. Note: Auto RC interpolation detects RX speed based on the reported speed by RX itself. But some receivers can report 9ms interval while it is actually 18ms on roll and pitch when using more channels than 8.
 
 ### `rc_interp_ch`
 > `RC Interpolation Channels`
@@ -500,17 +500,14 @@ Used to bind the spektrum satellite to RX. Set `0` to disable.
 - Allowed: `OFF`, `ON`
 
 ### `srxl2_unit_id`
-> `TODO: Srxl2 Unit ID`
 - Default: `1`
 - Range: `0` - `15`
 
 ### `srxl2_baud_fast`
-> `TODO: Srxl2 Baud Fast`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
 ### `sbus_baud_fast`
-> `TODO: SBUS Baud Fast`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
@@ -2424,11 +2421,11 @@ TODO: The internal resistance (in 100 Ohm steps) of your camera, most HS1177 der
 - Type: `Array[4]`
 
 ### `usb_hid_cdc`
-> `TODO: USB HID CDC`
+> `USB HID/CDC Joystick Mode`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
-TODO: Allows using your flight controller as a USB HID joystick. Useful if your Transmitter does not suppurt HID. Support is currently only available on F4 / F7 boards.
+TODO: Allows using your flight controller as a USB HID joystick. Useful if your transmitter does not support HID. Support is currently only available on F4 / F7 boards.
 
 ### `usb_msc_pin_pullup`
 - Default: `ON`

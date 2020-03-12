@@ -154,7 +154,7 @@
   },
   "yaw_spin_recovery": {
     "title": "Yaw Spin Recovery",
-    "desc": "This new feature, enabled by default in Betaflight 3.4, reduces the severity and duration of un-commanded severe yaw spins. For example, if a quadcopter clips a gate, tree, branch or other object and causes a high rate yaw spin, it may go into a 'never-ending' uncontrollable spin. Typically it makes a distinctive warbling noise and climbs rapidly - the so-called Yaw Spin To The Moon (YSTTM) problem. 3.4 introduces two code features that should bring such spins under control more quickly and cleanly. Yaw Spin Recovery is intended primarily for FPV pilots, and works best with MPU gyros. LOS acro pilots who use high yaw rates may prefer to disable this function.",
+    "desc": "This feature reduces the severity and duration of un-commanded severe yaw spins. For example, if a quadcopter clips a gate, tree, branch or other object and causes a high rate yaw spin, it may go into a 'never-ending' uncontrollable spin. Typically it makes a distinctive warbling noise and climbs rapidly - the so-called Yaw Spin To The Moon (YSTTM) problem. Yaw Spin Recovery is intended primarily for FPV pilots, and works best with MPU gyros. LOS acro pilots who use high yaw rates may prefer to disable this function.",
     "default": "ON",
     "allowed": [
       "OFF",
@@ -438,7 +438,7 @@
   },
   "mag_declination": {
     "title": "Magnetic Declination",
-    "desc": "Current location magnetic declination in dddmm format. For example, -6deg 37min = -637 for Japan. Leading zeros not required. Get your local magnetic declination here: http://magnetic-declination.com/",
+    "desc": "Magnetic declination of your current location in `dddmm` format. For example, `-6deg 37min` = `-637` for Japan. Leading zeros not required. Get your local magnetic declination here: http://magnetic-declination.com/",
     "default": 0,
     "range": [
       -18000,
@@ -582,7 +582,7 @@
   },
   "rssi_channel": {
     "title": "RSSI Channel",
-    "desc": "Receiver (RX) channel (AUX channel + 4) that contains the RSSI signal.",
+    "desc": "Receiver (RX) channel (AUX channel + 4) that contains an RSSI signal.",
     "aka": "RSSI Channel",
     "default": 0,
     "range": [
@@ -643,7 +643,7 @@
   },
   "rc_interp": {
     "title": "RC Interpolation",
-    "desc": "TODO: This feature can cause the CPU to work harder to be able to run higher d setpoint weights and get cleaner motor outputs. Set to OFF if CPU loading is too high. Note: Auto rc interpolation detects rx speed based on the reported speed by rx itself. But some receivers like also X4RS can report 9ms interval while it is actually 18ms on roll and pitch when using more channels than 8.",
+    "desc": "TODO: This feature can cause the CPU to work harder to be able to run higher d setpoint weights and get cleaner motor outputs. Set to `OFF` if CPU loading is too high. Note: Auto RC interpolation detects RX speed based on the reported speed by RX itself. But some receivers can report 9ms interval while it is actually 18ms on roll and pitch when using more channels than 8.",
     "default": "AUTO",
     "allowed": [
       "OFF",
@@ -826,7 +826,6 @@
     "section": "master"
   },
   "srxl2_unit_id": {
-    "title": "TODO: Srxl2 Unit ID",
     "desc": "",
     "default": 1,
     "range": [
@@ -836,7 +835,6 @@
     "section": "master"
   },
   "srxl2_baud_fast": {
-    "title": "TODO: Srxl2 Baud Fast",
     "desc": "",
     "default": "ON",
     "allowed": [
@@ -846,7 +844,6 @@
     "section": "master"
   },
   "sbus_baud_fast": {
-    "title": "TODO: SBUS Baud Fast",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -5561,8 +5558,8 @@
     "section": "master"
   },
   "usb_hid_cdc": {
-    "title": "TODO: USB HID CDC",
-    "desc": "TODO: Allows using your flight controller as a USB HID joystick. Useful if your Transmitter does not suppurt HID. Support is currently only available on F4 / F7 boards.",
+    "title": "USB HID/CDC Joystick Mode",
+    "desc": "TODO: Allows using your flight controller as a USB HID joystick. Useful if your transmitter does not support HID. Support is currently only available on F4 / F7 boards.",
     "default": "OFF",
     "allowed": [
       "OFF",
