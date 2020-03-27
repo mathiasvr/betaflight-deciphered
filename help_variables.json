@@ -3951,7 +3951,7 @@
     "section": "master"
   },
   "osd_warn_esc_fail": {
-    "title": "OSD ESC Fail Warning",
+    "title": "OSD ESC Failure Warning",
     "desc": "",
     "default": "ON",
     "allowed": [
@@ -3991,7 +3991,7 @@
     "section": "master"
   },
   "osd_warn_launch_control": {
-    "desc": "",
+    "desc": "OSD Launch Control Warning",
     "default": "ON",
     "allowed": [
       "OFF",
@@ -4176,7 +4176,7 @@
     "section": "master"
   },
   "osd_vbat_pos": {
-    "title": "OSD Vbat Position",
+    "title": "OSD Battery Voltage Position",
     "desc": "",
     "default": 234,
     "range": [
@@ -4306,7 +4306,6 @@
     "section": "master"
   },
   "osd_ah_sbar_pos": {
-    "title": "OSD AH Sbar Position",
     "desc": "",
     "default": 206,
     "range": [
@@ -4316,7 +4315,6 @@
     "section": "master"
   },
   "osd_ah_pos": {
-    "title": "OSD AH Position",
     "desc": "",
     "default": 78,
     "range": [
@@ -4336,7 +4334,7 @@
     "section": "master"
   },
   "osd_mah_drawn_pos": {
-    "title": "OSD Mah Drawn Position",
+    "title": "OSD mAh Drawn Position",
     "desc": "",
     "default": 234,
     "range": [
@@ -4494,7 +4492,7 @@
     "section": "master"
   },
   "osd_debug_pos": {
-    "title": "OSD Debug Position",
+    "title": "OSD Debug Info Position",
     "desc": "",
     "default": 234,
     "range": [
@@ -4504,7 +4502,7 @@
     "section": "master"
   },
   "osd_power_pos": {
-    "title": "OSD Power Position",
+    "title": "OSD Power Consumtion Position",
     "desc": "",
     "default": 234,
     "range": [
@@ -4514,7 +4512,7 @@
     "section": "master"
   },
   "osd_pidrate_profile_pos": {
-    "desc": "",
+    "desc": "OSD PID and Rate Proifle Position",
     "default": 234,
     "range": [
       0,
@@ -4581,7 +4579,7 @@
     "section": "master"
   },
   "osd_nheading_pos": {
-    "title": "OSD Nheading Position",
+    "title": "OSD Numerical Heading Position",
     "desc": "",
     "default": 234,
     "range": [
@@ -4591,7 +4589,7 @@
     "section": "master"
   },
   "osd_nvario_pos": {
-    "title": "OSD Nvario Position",
+    "title": "OSD Numerical Vario Position",
     "desc": "",
     "default": 234,
     "range": [
@@ -4631,7 +4629,7 @@
     "section": "master"
   },
   "osd_rtc_date_time_pos": {
-    "title": "OSD Rtc Date Time Position",
+    "title": "OSD RTC Date and Time Position",
     "desc": "",
     "default": 234,
     "range": [
@@ -4651,7 +4649,7 @@
     "section": "master"
   },
   "osd_flip_arrow_pos": {
-    "title": "OSD Flip Arrow Position",
+    "title": "OSD Flip After Crash Arrow Position",
     "desc": "",
     "default": 234,
     "range": [
@@ -4712,7 +4710,7 @@
   },
   "osd_rate_profile_name_pos": {
     "title": "OSD Rate Profile Name Position",
-    "desc": "",
+    "desc": "Displays the current value of the #rateprofile_name variable.",
     "default": 234,
     "range": [
       0,
@@ -4722,7 +4720,7 @@
   },
   "osd_pid_profile_name_pos": {
     "title": "OSD PID Profile Name Position",
-    "desc": "",
+    "desc": "Displays the current value of the #profile_name variable.",
     "default": 234,
     "range": [
       0,
@@ -4732,7 +4730,7 @@
   },
   "osd_profile_name_pos": {
     "title": "OSD Profile Name Position",
-    "desc": "",
+    "desc": "Displays the name of the active OSD Profile #osd_profile.",
     "default": 234,
     "range": [
       0,
@@ -4741,7 +4739,7 @@
     "section": "master"
   },
   "osd_stat_rtc_date_time": {
-    "title": "OSD Stat RTC Date Time",
+    "title": "OSD Post Flight Statistics: RTC Date and Time",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4751,7 +4749,7 @@
     "section": "master"
   },
   "osd_stat_tim_1": {
-    "title": "OSD Stat Timer 1",
+    "title": "OSD Post Flight Statistics: Timer 1",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4761,7 +4759,7 @@
     "section": "master"
   },
   "osd_stat_tim_2": {
-    "title": "OSD Stat Timer 2",
+    "title": "OSD Post Flight Statistics: Timer 2",
     "desc": "",
     "default": "ON",
     "allowed": [
@@ -4771,7 +4769,7 @@
     "section": "master"
   },
   "osd_stat_max_spd": {
-    "desc": "",
+    "desc": "OSD Post Flight Statistics: Maximum Speed Recorded",
     "default": "ON",
     "allowed": [
       "OFF",
@@ -4780,7 +4778,7 @@
     "section": "master"
   },
   "osd_stat_max_dist": {
-    "title": "OSD Stat Maximum Distance",
+    "title": "OSD Post Flight Statistics: Maximum Distance",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4790,7 +4788,7 @@
     "section": "master"
   },
   "osd_stat_min_batt": {
-    "title": "OSD Stat Minimum Battery",
+    "title": "OSD Post Flight Statistics: Minimum Battery",
     "desc": "",
     "default": "ON",
     "allowed": [
@@ -4800,7 +4798,7 @@
     "section": "master"
   },
   "osd_stat_endbatt": {
-    "desc": "",
+    "desc": "OSD Post Flight Statistics: Battery Voltage at Time of Disarm",
     "default": "OFF",
     "allowed": [
       "OFF",
@@ -4809,7 +4807,7 @@
     "section": "master"
   },
   "osd_stat_battery": {
-    "title": "OSD Stat Battery",
+    "title": "OSD Post Flight Statistics: Battery Voltage",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4819,7 +4817,7 @@
     "section": "master"
   },
   "osd_stat_min_rssi": {
-    "title": "OSD Stat Minimum RSSI",
+    "title": "OSD Post Flight Statistics: Minimum RSSI",
     "desc": "",
     "default": "ON",
     "allowed": [
@@ -4829,7 +4827,7 @@
     "section": "master"
   },
   "osd_stat_max_curr": {
-    "title": "OSD Stat Maximum Current",
+    "title": "OSD Post Flight Statistics: Maximum Current",
     "desc": "",
     "default": "ON",
     "allowed": [
@@ -4839,7 +4837,7 @@
     "section": "master"
   },
   "osd_stat_used_mah": {
-    "title": "OSD Stat Used Mah",
+    "title": "OSD Post Flight Statistics: Battery mAh used.",
     "desc": "",
     "default": "ON",
     "allowed": [
@@ -4849,7 +4847,7 @@
     "section": "master"
   },
   "osd_stat_max_alt": {
-    "title": "OSD Stat Maximum Altitude",
+    "title": "OSD Post Flight Statistics: Maximum Altitude",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4859,7 +4857,7 @@
     "section": "master"
   },
   "osd_stat_bbox": {
-    "title": "OSD Stat Blackbox",
+    "title": "OSD Post Flight Statistics: Blackbox Usage",
     "desc": "",
     "default": "ON",
     "allowed": [
@@ -4869,7 +4867,7 @@
     "section": "master"
   },
   "osd_stat_bb_no": {
-    "desc": "",
+    "desc": "OSD Post Flight Statistics: Blackbox Log Number",
     "default": "ON",
     "allowed": [
       "OFF",
@@ -4878,7 +4876,7 @@
     "section": "master"
   },
   "osd_stat_max_g_force": {
-    "title": "OSD Stat Maximum G Force",
+    "title": "OSD Post Flight Statistics: Maximum G Force",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4888,7 +4886,7 @@
     "section": "master"
   },
   "osd_stat_max_esc_temp": {
-    "title": "OSD Stat Maximum ESC Temperature",
+    "title": "OSD Post Flight Statistics: Maximum ESC Temperature",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4898,7 +4896,7 @@
     "section": "master"
   },
   "osd_stat_max_esc_rpm": {
-    "title": "OSD Stat Maximum ESC RPM",
+    "title": "OSD Post Flight Statistics: Maximum ESC RPM",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4908,7 +4906,7 @@
     "section": "master"
   },
   "osd_stat_min_link_quality": {
-    "title": "OSD Stat Minimum Link Quality",
+    "title": "OSD Post Flight Statistics: Minimum Link Quality",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4918,7 +4916,7 @@
     "section": "master"
   },
   "osd_stat_flight_dist": {
-    "title": "OSD Stat Flight Distance",
+    "title": "OSD Post Flight Statistics: Flight Distance",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4937,7 +4935,7 @@
     "section": "master"
   },
   "osd_stat_total_flights": {
-    "title": "OSD Stat Total Flights",
+    "title": "OSD Post Flight Statistics: Total Flights",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4947,7 +4945,7 @@
     "section": "master"
   },
   "osd_stat_total_time": {
-    "title": "OSD Stat Total Time",
+    "title": "OSD Post Flight Statistics: Total Time",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4957,7 +4955,7 @@
     "section": "master"
   },
   "osd_stat_total_dist": {
-    "title": "OSD Stat Total Distance",
+    "title": "OSD Post Flight Statistics: Total Distance",
     "desc": "",
     "default": "OFF",
     "allowed": [
@@ -4967,7 +4965,7 @@
     "section": "master"
   },
   "osd_stat_min_rssi_dbm": {
-    "title": "OSD Stat Minimum RSSI dBm",
+    "title": "OSD Post Flight Statistics: Minimum RSSI dBm",
     "desc": "",
     "default": "OFF",
     "allowed": [
