@@ -1,6 +1,6 @@
 # Betaflight Deciphered
 
-![Progress](https://img.shields.io/badge/Documentation-22%25-blueviolet)
+![Progress](https://img.shields.io/badge/Documentation-23%25-blueviolet)
 
 This is an attempt to document the variables of [Betaflight 4.1](https://github.com/betaflight/betaflight), motivated by my previous trouble to easily look up certain information.
 
@@ -1610,7 +1610,7 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Allowed: `OFF`, `ON`
 
 ### `osd_warn_esc_fail`
-> `OSD ESC Fail Warning`
+> `OSD ESC Failure Warning`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
@@ -1632,6 +1632,8 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 ### `osd_warn_launch_control`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
+
+OSD Launch Control Warning
 
 ### `osd_warn_no_gps_rescue`
 - Default: `ON`
@@ -1720,7 +1722,7 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Range: `0` - `32767`
 
 ### `osd_vbat_pos`
-> `OSD Vbat Position`
+> `OSD Battery Voltage Position`
 - Default: `234`
 - Range: `0` - `15359`
 
@@ -1785,12 +1787,10 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Range: `0` - `15359`
 
 ### `osd_ah_sbar_pos`
-> `OSD AH Sbar Position`
 - Default: `206`
 - Range: `0` - `15359`
 
 ### `osd_ah_pos`
-> `OSD AH Position`
 - Default: `78`
 - Range: `0` - `15359`
 
@@ -1800,7 +1800,7 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Range: `0` - `15359`
 
 ### `osd_mah_drawn_pos`
-> `OSD Mah Drawn Position`
+> `OSD mAh Drawn Position`
 - Default: `234`
 - Range: `0` - `15359`
 
@@ -1878,18 +1878,20 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Range: `0` - `15359`
 
 ### `osd_debug_pos`
-> `OSD Debug Position`
+> `OSD Debug Info Position`
 - Default: `234`
 - Range: `0` - `15359`
 
 ### `osd_power_pos`
-> `OSD Power Position`
+> `OSD Power Consumtion Position`
 - Default: `234`
 - Range: `0` - `15359`
 
 ### `osd_pidrate_profile_pos`
 - Default: `234`
 - Range: `0` - `15359`
+
+OSD PID and Rate Proifle Position
 
 ### `osd_warnings_pos`
 > `OSD Warnings Position`
@@ -1920,12 +1922,12 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Range: `0` - `15359`
 
 ### `osd_nheading_pos`
-> `OSD Nheading Position`
+> `OSD Numerical Heading Position`
 - Default: `234`
 - Range: `0` - `15359`
 
 ### `osd_nvario_pos`
-> `OSD Nvario Position`
+> `OSD Numerical Vario Position`
 - Default: `234`
 - Range: `0` - `15359`
 
@@ -1945,7 +1947,7 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Range: `0` - `15359`
 
 ### `osd_rtc_date_time_pos`
-> `OSD Rtc Date Time Position`
+> `OSD RTC Date and Time Position`
 - Default: `234`
 - Range: `0` - `15359`
 
@@ -1955,7 +1957,7 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Range: `0` - `15359`
 
 ### `osd_flip_arrow_pos`
-> `OSD Flip Arrow Position`
+> `OSD Flip After Crash Arrow Position`
 - Default: `234`
 - Range: `0` - `15359`
 
@@ -1989,28 +1991,34 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Default: `234`
 - Range: `0` - `15359`
 
+Displays the current value of the [rateprofile_name](#rateprofile_name) variable.
+
 ### `osd_pid_profile_name_pos`
 > `OSD PID Profile Name Position`
 - Default: `234`
 - Range: `0` - `15359`
+
+Displays the current value of the [profile_name](#profile_name) variable.
 
 ### `osd_profile_name_pos`
 > `OSD Profile Name Position`
 - Default: `234`
 - Range: `0` - `15359`
 
+Displays the name of the active OSD Profile [osd_profile](#osd_profile).
+
 ### `osd_stat_rtc_date_time`
-> `OSD Stat RTC Date Time`
+> `OSD Post Flight Statistics: RTC Date and Time`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_tim_1`
-> `OSD Stat Timer 1`
+> `OSD Post Flight Statistics: Timer 1`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_tim_2`
-> `OSD Stat Timer 2`
+> `OSD Post Flight Statistics: Timer 2`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
@@ -2018,13 +2026,15 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
+OSD Post Flight Statistics: Maximum Speed Recorded
+
 ### `osd_stat_max_dist`
-> `OSD Stat Maximum Distance`
+> `OSD Post Flight Statistics: Maximum Distance`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_min_batt`
-> `OSD Stat Minimum Battery`
+> `OSD Post Flight Statistics: Minimum Battery`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
@@ -2032,33 +2042,35 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
+OSD Post Flight Statistics: Battery Voltage at Time of Disarm
+
 ### `osd_stat_battery`
-> `OSD Stat Battery`
+> `OSD Post Flight Statistics: Battery Voltage`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_min_rssi`
-> `OSD Stat Minimum RSSI`
+> `OSD Post Flight Statistics: Minimum RSSI`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_max_curr`
-> `OSD Stat Maximum Current`
+> `OSD Post Flight Statistics: Maximum Current`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_used_mah`
-> `OSD Stat Used Mah`
+> `OSD Post Flight Statistics: Battery mAh used.`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_max_alt`
-> `OSD Stat Maximum Altitude`
+> `OSD Post Flight Statistics: Maximum Altitude`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_bbox`
-> `OSD Stat Blackbox`
+> `OSD Post Flight Statistics: Blackbox Usage`
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
@@ -2066,28 +2078,30 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Default: `ON`
 - Allowed: `OFF`, `ON`
 
+OSD Post Flight Statistics: Blackbox Log Number
+
 ### `osd_stat_max_g_force`
-> `OSD Stat Maximum G Force`
+> `OSD Post Flight Statistics: Maximum G Force`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_max_esc_temp`
-> `OSD Stat Maximum ESC Temperature`
+> `OSD Post Flight Statistics: Maximum ESC Temperature`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_max_esc_rpm`
-> `OSD Stat Maximum ESC RPM`
+> `OSD Post Flight Statistics: Maximum ESC RPM`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_min_link_quality`
-> `OSD Stat Minimum Link Quality`
+> `OSD Post Flight Statistics: Minimum Link Quality`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_flight_dist`
-> `OSD Stat Flight Distance`
+> `OSD Post Flight Statistics: Flight Distance`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
@@ -2096,22 +2110,22 @@ Sets whether to use the `Metric` or `Imperial` unit system for numerical readout
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_total_flights`
-> `OSD Stat Total Flights`
+> `OSD Post Flight Statistics: Total Flights`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_total_time`
-> `OSD Stat Total Time`
+> `OSD Post Flight Statistics: Total Time`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_total_dist`
-> `OSD Stat Total Distance`
+> `OSD Post Flight Statistics: Total Distance`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
 ### `osd_stat_min_rssi_dbm`
-> `OSD Stat Minimum RSSI dBm`
+> `OSD Post Flight Statistics: Minimum RSSI dBm`
 - Default: `OFF`
 - Allowed: `OFF`, `ON`
 
