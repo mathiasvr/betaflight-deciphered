@@ -2,7 +2,7 @@
 import json
 import re
 
-with open('dumps/get_414_defaults.txt', 'r', encoding='utf-8') as file:
+with open('dumps/get_415_defaults.txt', 'r', encoding='utf-8') as file:
   lines = file.read().splitlines()
 
 with open('help_variables.json', 'r', encoding='utf-8') as json_file:
@@ -19,7 +19,7 @@ while i < len(lines):
   if matches:
     name, default_value = matches.groups()
 
-    json_variables[name] = { 'desc': ''}
+    json_variables[name] = {}
     if name in help_variables_data:
       for key in help_variables_data[name]:
         json_variables[name][key] = help_variables_data[name][key]
@@ -67,4 +67,5 @@ while i < len(lines):
   i += 1
 
 with open('help_variables.json', 'w', encoding='utf-8') as json_file:
-  json.dump(json_variables, json_file, indent=2) 
+  json.dump(json_variables, json_file, indent=2)
+  json_file.write('\n')
