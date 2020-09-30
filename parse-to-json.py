@@ -2,7 +2,7 @@
 import json
 import re
 
-with open('dumps/get_415_defaults.txt', 'r', encoding='utf-8') as file:
+with open('dumps/get_422_defaults.txt', 'r', encoding='utf-8') as file:
   lines = file.read().splitlines()
 
 with open('help_variables.json', 'r', encoding='utf-8') as json_file:
@@ -52,8 +52,12 @@ while i < len(lines):
       if matches:
         json_variables[name]['datatype'] = f"Array[{matches.groups()[0]}]"
       else:
-        # reparse entry
-        i -= 1
+        matches = re.match("String length: (.+) - (.+)", lines[i])
+        if matches:
+          json_variables[name]['datatype'] = f"String[{matches.groups()[1]}]"
+        else:
+          # reparse entry
+          i -= 1
 
     assert section
     json_variables[name]['section'] = section
